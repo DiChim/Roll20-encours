@@ -1,0 +1,191 @@
+<table>
+    <tr>
+        <td>
+            Nom : 
+        </td>
+        <td>
+            <input type="text" name="attr_pj_name" />
+        </td>
+        <td>
+            Joueur : 
+        </td>
+        <td>
+            <input type="text" name="attr_joueur" />
+        </td>
+    </tr>
+    <tr>        
+        <td>
+            Points FU : 
+        </td>
+        <td>
+            <input type="number" name="attr_pt_fu" value="0" /> / <input type="number" name="attr_pt_fu_max" value="0" />
+        </td>
+        <td>
+            Résistance : 
+        </td>
+        <td>
+            <input type="number" name="attr_resistance" value="0" /> / <input type="number" name="attr_resistance_max" value="0" />
+        </td>
+    </tr>
+    <tr>        
+        <td>
+            Jets de dés : 
+        </td>
+        <td colspan="3">
+            <input type="number" name="attr_nb_des" value="1" /><b>d6</b> <button type="roll" value="/roll @{nb_des}d6k1" name="roll_des_meilleur">Garde le meilleur</button>
+            <button type="roll" value="/roll @{nb_des}d6kl1" name="roll_des_meilleur">Garde le moins bon</button>
+        </td>
+    </tr>
+    <tr>        
+        <td>
+            Concept principal : 
+        </td>
+        <td colspan="3">
+            <textarea name="attr_concept" rows="3"></textarea>
+        </td>
+    </tr>
+    <tr>        
+        <td>
+            Physique : 
+        </td>
+        <td>
+            <textarea name="attr_physique" rows="3"></textarea>
+        </td>
+        <td>
+            Esprit : 
+        </td>
+        <td>
+            <textarea name="attr_esprit" rows="3"></textarea>
+        </td>
+    </tr>
+    <tr>        
+        <td>
+            Face à l'oposition : 
+        </td>
+        <td>
+            <textarea name="attr_face_opposition" rows="3"></textarea>
+        </td>
+        <td>
+            En amour : 
+        </td>
+        <td>
+            <textarea name="attr_amour" rows="3"></textarea>
+        </td>
+    </tr>
+    <tr>        
+        <td>
+            Je suis : 
+        </td>
+        <td>
+        <select name="attr_jesuis">
+            <option value="alie" selected/>Alié</option>
+            <option value="edrulain"/>Edrulain</option>
+        </select>             
+        </td>
+        <td>
+            Motivation : 
+        </td>
+        <td>
+            <textarea name="attr_motivation" rows="3"></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+        <h3>Amis & Ennemis:</h3>    
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <fieldset class="repeating_relation">            
+                nom:<input type="text" name="attr_relation_nom" /> 
+                <select name="attr_relation_type">
+                <option value="ami" selected/>Ami</option>
+                <option value="ennemi"/>Ennemi</option>
+                </select> 
+                <br/>
+                description:<input type="text" name="attr_relation_descourte" />
+                <br/>
+                Obs:<textarea name="attr_relation_obs"></textarea>
+            </fieldset>  
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+        <h3>Aspects Libres:</h3>    
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <fieldset class="repeating_aspect">            
+                Aspect:<input type="text" name="attr_aspect" /> 
+                <select name="attr_aspect_type">
+                  <option value="+" selected/>(+)</option>
+                  <option value="-"/>(-)</option>
+                </select> 
+                <br/>
+                Obs:<textarea name="attr_aspect_obs"></textarea>
+            </fieldset>    
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+        <h3>Atouts :</h3>   
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <fieldset class="repeating_atout">            
+                Atout:<input type="text" name="attr_atout" /> 
+                Rang:<input type="number" name="attr_atout_rang" value="1" /> 
+            </fieldset>    
+        </td>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+        <h3>Magie :</h3>   
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <fieldset class="repeating_magie">            
+                Magie:<input type="text" name="attr_magie" /> 
+                Rang<input type="number" name="attr_magie_rang" value="1" /> 
+            </fieldset>    
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+        <h3>Prouesses :</h3>   
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <fieldset class="repeating_prouesse">            
+                <input type="text" name="attr_prouesse" /> 
+            </fieldset>    
+        </td>
+    </tr>    
+    <tr>
+        <td colspan="4">
+        <h3>Equipements :</h3>   
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <fieldset class="repeating_equipement">            
+                <input type="text" name="attr_equipement" /> 
+            </fieldset>    
+        </td>
+    </tr>    
+  <tr>
+        <td colspan="4">
+        <h3>Conditions :</h3>
+        Les conditions à faire
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+        </td>
+    </tr>        
+</table>
