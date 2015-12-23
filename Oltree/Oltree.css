@@ -1,0 +1,42 @@
+.charsheet table {
+    width: 100%;
+}
+.charsheet td {
+    padding: 10px;  
+    border: 0 solid #000;
+    vertical-align: text-top;
+}
+
+.sheet-repetition div {
+   margin: 3px;
+}
+
+input[type="text"], input[type="number"], select {
+    background-color: transparent;
+    border: 0 solid #000;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+}
+input[type="text"], select {
+    width: 100%;
+    margin: 0;
+}
+
+textarea {
+    background-color: transparent;
+    border: 0 solid #000;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+}
+
+.sheet-repetition input[type="text"] {
+   width: 80%;
+}
+
+.sheet-repetition textarea {
+   width: 95%;
+}
+
+.sheet-repetition select {
+   width: 10%;
+}

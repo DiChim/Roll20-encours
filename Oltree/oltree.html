@@ -1,0 +1,156 @@
+<table>
+     <tr>
+        <td colspan="4" align="center">
+            <h2>Oltréé !</h2>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Nom : 
+        </td>
+        <td>
+            <input type="text" placeholder="Nom" name="attr_pj_name" />
+        </td>
+        <td>
+            Joueur : 
+        </td>
+        <td>
+            <input type="text" placeholder="Nom du joueur" name="attr_joueur" />
+        </td>
+    </tr>
+    <tr>        
+        <td>
+            Peuple : 
+        </td>
+        <td>
+            <select name="attr_peuple">
+                <option value="Imperial">Imperial</option>
+                <option value="Citadin">Citadin</option>
+                <option value="Cavalier">Cavalier</option>
+                <option value="Norrois">Norrois</option>
+                <option value="Chevaucheur">Chevaucheur</option>
+                <option value="Sidhe">Sidhe</option>
+                <option value="Longue-barbe">Longue-barbe</option>
+                <option value="Nez-de-cuir">Nez-de-cuir</option>
+            </select>
+        </td>
+        <td>
+            Motivation : 
+        </td>
+        <td>
+            <select name="attr_motivation">
+                <option value="Archeologue">Archeologue</option>
+                <option value="Batisseur">Batisseur</option>
+                <option value="Chasseur de trésor">Chasseur de trésor</option>
+                <option value="Chroniqueur">Chroniqueur</option>
+                <option value="Conquérant">Conquérant</option>
+                <option value="Maraudeur">Maraudeur</option>
+                <option value="Mystique">Mystique</option>
+                <option value="Tueur de monstres">Tueur de monstres</option>
+            </select>
+
+        </td>
+        <td>
+            Initiation : 
+        </td>
+        <td>
+            <select name="attr_initiation">
+                <option value="Héritier">Héritier</option>
+                <option value="Adopté">Adopté</option>
+                <option value="Pélerin">Pélerin</option>
+            </select>
+
+        </td>
+    </tr>
+    
+    
+    <tr>        
+        <td>
+            Jets de dés : 
+        </td>
+        <td colspan="3">
+        </td>
+    </tr>
+    <tr>        
+        <td colspan="4">
+            <table>
+                <tr>
+                    <th colspan="2">VOCATIONS</th>
+                    <th colspan="2">ETATS</th>
+                </tr>
+                <tr>
+                    <td>
+                        Soldat/Vigueur
+                    </td>
+                    <td>
+                        <input type="number" name="attr_soldat" value="0"/>
+                    </td>
+                    <td>
+                        Contraint
+                    </td>
+                    <td>
+                        <input type="checkbox" name="attr_contraint" value="1" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Voyageur/Réflexe
+                    </td>
+                    <td>
+                        <input type="number" name="attr_voyageur" value="0" />
+                    </td>
+                    <td>
+                        Affaibli
+                    </td>
+                    <td>
+                        <input type="checkbox" name="attr_affaibli" value="1" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Erudit/Volonté
+                    </td>
+                    <td>
+                        <input type="number" name="attr_erudit"  value="0" />
+                    </td>
+                    <td>
+                        En danger
+                    </td>
+                    <td>
+                        <input type="checkbox" name="attr_en_danger" value="1" />
+                    </td>
+                    
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+        <h3>Langue:</h3>    
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <div class="sheet-repetition">
+                <fieldset class="repeating_relation">            
+                    <input type="text" placeholder="langue" name="attr_langue" /> 
+                    <select name="attr_langue_type">
+                    <option value="parle" selected/>Parlé</option>
+                    <option value="lu"/>Lu</option>
+                    </select> 
+                </fieldset>  
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+        <h3>Observations & Notes :</h3>   
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <textarea name="attr_obs_notes"></textarea>
+        </td>
+    </tr>    
+    
+</table>
