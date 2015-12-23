@@ -37,8 +37,9 @@
             Jets de dés : 
         </td>
         <td colspan="3">
-            <input type="number" name="attr_nb_des" value="1" /><b>d6</b> <button type="roll" value="/roll @{nb_des}d6k1" name="roll_des_meilleur">Garde le meilleur</button>
-            <button type="roll" value="/roll @{nb_des}d6kl1" name="roll_des_meilleur">Garde le moins bon</button>
+            <input type="number" name="attr_nb_des" value="1" /><b>d6</b> 
+            <button type="roll" value="&{template:fu} {{nom=@{pj_name}}} {{jet_nom=garde le meilleur}} {{jet_lib=@{nb_des}d6}} {{jet=[[@{nb_des}d6k1]]}}" name="roll_des_meilleur">Garde le meilleur</button>
+            <button type="roll" value="&{template:fu} {{nom=@{pj_name}}} {{jet_nom=garde le moins bon}} {{jet_lib=@{nb_des}d6}} {{jet=[[@{nb_des}d6kl1]]}}" name="roll_des_pire">Garde le moins bon</button>
         </td>
     </tr>
     <tr>        
@@ -239,3 +240,42 @@
     </tr>    
     
 </table>
+<!-- Template FU -->
+<rolltemplate class="sheet-rolltemplate-fu">
+  <table>
+    <tr>
+      <th colspan="2"> {{nom}}  </th>
+    </tr>
+    <tr>
+      <td colspan="2"> lance <b>{{jet_lib}}</b> et {{jet_nom}} </td>
+    </tr>
+    <tr>
+        <td align="right"><b>Résultat : </b></td>
+        <td> 
+            {{jet}} 
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="sheet-rt-note">            
+            {{#rollTotal() jet 1}}
+                    Non, et ... 
+            {{/rollTotal() jet 1}}      
+            {{#rollTotal() jet 2}}
+                    Non. 
+            {{/rollTotal() jet 2}}      
+            {{#rollTotal() jet 3}}
+                    Non, mais ... 
+            {{/rollTotal() jet 3}}      
+            {{#rollTotal() jet 4}}
+                    Oui, mais ... 
+            {{/rollTotal() jet 4}}      
+            {{#rollTotal() jet 5}}
+                    Oui. 
+            {{/rollTotal() jet 5}}      
+            {{#rollTotal() jet 6}}
+                    Oui, et ... 
+            {{/rollTotal() jet 6}}                  
+        </td>
+    </tr>    
+  </table>
+</rolltemplate>
