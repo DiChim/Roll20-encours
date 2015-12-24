@@ -1,6 +1,6 @@
 <table>
      <tr>
-        <td colspan="4" align="center">
+        <td colspan="6" align="center">
             <h2>Oltréé !</h2>
         </td>
     </tr>
@@ -68,15 +68,16 @@
         <td>
             Jets de dés : 
         </td>
-        <td colspan="3">
+        <td colspan="5">
         </td>
     </tr>
     <tr>        
-        <td colspan="4">
+        <td colspan="6">
             <table>
                 <tr>
                     <th colspan="2">VOCATIONS</th>
                     <th colspan="2">ETATS</th>
+                    <th colspan="4">CARNET DE PATROUILLE</th>
                 </tr>
                 <tr>
                     <td>
@@ -91,6 +92,19 @@
                     <td>
                         <input type="checkbox" name="attr_contraint" value="1" />
                     </td>
+                    <td>
+                        Dés de vie :
+                    </td>
+                    <td>
+                        <input type="number" name="attr_des_vie" value="1"/>                                            
+                    </td>
+                    <td>
+                        PV :
+                    </td>
+                    <td>
+                        <input type="number" name="attr_pv" value="0"/> / <input type="number" name="attr_pv_max" value="0"/>
+                    </td>
+                    
                 </tr>
                 <tr>
                     <td>
@@ -105,6 +119,18 @@
                     <td>
                         <input type="checkbox" name="attr_affaibli" value="1" />
                     </td>
+                    <td>
+                        Mana :
+                    </td>
+                    <td>
+                        <input type="number" name="attr_mana" value="0"/> / <input type="number" name="attr_mana_max" value="0"/>                                             
+                    </td>
+                    <td>
+                        CA :
+                    </td>
+                    <td>
+                        <input type="number" name="attr_ca" value="0"/> / Base : <input type="number" name="attr_ca_base" value="0"/>
+                    </td>                    
                 </tr>
                 <tr>
                     <td>
@@ -119,21 +145,269 @@
                     <td>
                         <input type="checkbox" name="attr_en_danger" value="1" />
                     </td>
-                    
+                    <td>
+                        Vigilance :
+                    </td>
+                    <td>
+                        <input type="number" name="attr_vigilance" value="0"/>
+                    </td>
+                    <td>
+                        Déni :
+                    </td>
+                    <td>
+                        <input type="number" name="attr_deni" value="0"/>
+                    </td>                    
                 </tr>
             </table>
         </td>
     </tr>
     <tr>
-        <td colspan="4">
-        <h3>Langue:</h3>    
+        <td colspan="6">
+            <table>
+                <tr>
+                    <th colspan="8">
+                        METIERS
+                    </th>
+                </tr>    
+                <tr>
+                    <td>
+                        Alchimiste
+                    </td>
+                    <td>
+                        <input type="number" name="attr_metier_alchimiste" value="0"/>
+                    </td>
+                    <td>
+                        Archer
+                    </td>
+                    <td>
+                        <input type="number" name="attr_metier_archer" value="0"/>
+                    </td>
+                    <td>
+                        Assassin
+                    </td>
+                    <td>
+                        <input type="number" name="attr_metier_assassin" value="0"/>
+                    </td>
+                    <td>
+                        Berzekr
+                    </td>
+                    <td>
+                        <input type="number" name="attr_metier_berzekz" value="0"/>
+                    </td>                    
+                </tr>
+                <tr>
+                    <td>
+                        Barde
+                    </td>
+                    <td>
+                        <input type="number" name="attr_metier_barde" value="0"/>
+                    </td>
+                    <td>
+                        Druide
+                    </td>
+                    <td>
+                        <input type="number" name="attr_metier_druide" value="0"/>
+                    </td>
+                    <td>
+                        Guérisseur
+                    </td>
+                    <td>
+                        <input type="number" name="attr_metier_guerisseur" value="0"/>
+                    </td>
+                    <td>
+                        Guerrier
+                    </td>
+                    <td>
+                        <input type="number" name="attr_metier_guerrier" value="0"/>
+                    </td>                    
+                </tr>
+                <tr>
+                    <td>
+                        Magicien
+                    </td>
+                    <td>
+                        <input type="number" name="attr_metier_magicien" value="0"/>
+                    </td>
+                    <td>
+                        Maitre des bêtes
+                    </td>
+                    <td>
+                        <input type="number" name="attr_metier_maitre_bete" value="0"/>
+                    </td>
+                    <td>
+                        Marchand
+                    </td>
+                    <td>
+                        <input type="number" name="attr_metier_marchand" value="0"/>
+                    </td>
+                    <td>
+                        Noble
+                    </td>
+                    <td>
+                        <input type="number" name="attr_metier_noble" value="0"/>
+                    </td>                    
+                </tr>
+                <tr>
+                    <td>
+                        Patrouilleur
+                    </td>
+                    <td>
+                        <input type="number" name="attr_metier_patrouilleur" value="0"/>
+                    </td>
+                    <td>
+                        Prêtre
+                    </td>
+                    <td>
+                        <input type="number" name="attr_metier_pretre" value="0"/>
+                    </td>
+                    <td>
+                        Rodeur
+                    </td>
+                    <td>
+                        <input type="number" name="attr_metier_rodeur" value="0"/>
+                    </td>
+                    <td>
+                        Voleur
+                    </td>
+                    <td>
+                        <input type="number" name="attr_metier_voleur" value="0"/>
+                    </td>                    
+                </tr>
+            </table>
         </td>
     </tr>
     <tr>
-        <td colspan="4">
+        <td colspan="6">
+            <table>
+                <tr>
+                    <th colspan="8">
+                        HARNOIS
+                    </th>
+                </tr>    
+                <tr>
+                    <td>
+                        Lance
+                    </td>
+                    <td>
+                        <input type="checkbox" name="attr_arme_lance" value="1"/>
+                    </td>
+                    <td>
+                        Dague
+                    </td>
+                    <td>
+                        <input type="checkbox" name="attr_arme_dague" value="1"/>
+                    </td>
+                    <td>
+                        Epée
+                    </td>
+                    <td>
+                        <input type="checkbox" name="attr_arme_epee" value="1"/>
+                    </td>
+                    <td>
+                        Epée longue
+                    </td>
+                    <td>
+                        <input type="checkbox" name="attr_arme_epeelongue" value="1"/>
+                    </td>                    
+                </tr>
+                <tr>
+                    <td>
+                        Arc court
+                    </td>
+                    <td>
+                        <input type="checkbox" name="attr_arme_arccourt" value="1"/>
+                    </td>
+                    <td>
+                        Arc long
+                    </td>
+                    <td>
+                        <input type="checkbox" name="attr_arme_arclong" value="1"/>
+                    </td>
+                    <td>
+                        Fronde
+                    </td>
+                    <td>
+                        <input type="checkbox" name="attr_arme_fronde" value="1"/>
+                    </td>
+                    <td>
+                        javeline
+                    </td>
+                    <td>
+                        <input type="checkbox" name="attr_arme_javeline" value="1"/>
+                    </td>                    
+                </tr>
+                <tr>
+                    <td>
+                        <input type="texte" name="attr_arme_libautre1" />
+                    </td>
+                    <td>
+                        <input type="checkbox" name="attr_arme_autre1" value="1"/>
+                    </td>
+                    <td>
+                        <input type="texte" name="attr_arme_libautre2" />
+                    </td>
+                    <td>
+                        <input type="checkbox" name="attr_arme_autre2" value="1"/>
+                    </td>
+                    <td>
+                        <input type="texte" name="attr_arme_libautre3" />
+                    </td>
+                    <td>
+                        <input type="checkbox" name="attr_arme_autre3" value="1"/>
+                    </td>
+                    <td>
+                        <input type="texte" name="attr_arme_libautre4" />
+                    </td>
+                    <td>
+                        <input type="checkbox" name="attr_arme_autre4" value="1"/>
+                    </td>                    
+                </tr>
+                <tr>
+                    <td>
+                        Armure
+                    </td>
+                    <td colspan="3">
+                        <select name="attr_armure">
+                            <option value=""></option>
+                            <option value="vetements_lourds">Vêtements lourds +1</option>
+                            <option value="cuirasse">Cuirasse +2</option>
+                            <option value="broigne">Broigne +3</option>
+                            <option value="cotel">Cotel +4</option>
+                            <option value="laurique">Laurique +6</option>
+                        </select>
+                    </td>
+                    <td>
+                        Bouclier
+                    </td>
+                    <td>
+                        <input type="checkbox" name="attr_bouclier" value="1"/>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="6">
+            <h3>Langue:</h3>    
+        </td>
+    </tr>
+    <tr>
+        <td colspan="6">
             <div class="sheet-repetition">
                 <fieldset class="repeating_relation">            
-                    <input type="text" placeholder="langue" name="attr_langue" /> 
+                    <select name="attr_langue">
+                    <option value=""/></option>
+                    <option value="boiselier"/>Boiselier</option>
+                    <option value="cavalier"/>Cavalier</option>
+                    <option value="citadin"/>Citadin</option>
+                    <option value="draconique"/>Draconique</option>
+                    <option value="elfique"/>Elfique</option>
+                    <option value="impérial"/>Impérial</option>
+                    <option value="noirceux"/>Noirceux</option>
+                    <option value="norrois"/>Norrois</option>
+                    <option value="pierreux"/>Pierreux</option>
+                    <option value="venteux"/>Venteux</option>
+                    </select> 
                     <select name="attr_langue_type">
                     <option value="parle" selected/>Parlé</option>
                     <option value="lu"/>Lu</option>
