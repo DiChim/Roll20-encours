@@ -70,6 +70,8 @@
         </td>
         <td colspan="5">
         A FAIRE
+        <button type="roll" value="&{template:oltree_patrouille} {{nom=@{pj_name}}} {{jet_nom=Jet de patrouille}} {{jet_lib=2d8!}} {{jet=[[2d8!]]}}" name="roll_patrouille"> Jet de Patrouille</button>
+        
         Jet pour tous
         Jet mj
         Jet patrouille
@@ -595,3 +597,20 @@ on("change:en_danger", function() {
 });
 
 </script>
+<!-- Template Oltree -->
+<rolltemplate class="sheet-rolltemplate-oltree_patrouille">
+  <table>
+    <tr>
+      <th colspan="2"> {{jet_nom}} </th>
+    </tr>
+    <tr>
+      <td colspan="2"> <b>{{nom}}</b> lance <b>{{jet_lib}}</b></td>
+    </tr>
+    <tr>
+        <td align="right"><b>Résultat : </b></td>
+        <td> 
+            {{jet}} 
+        </td>
+    </tr>
+  </table>
+</rolltemplate>

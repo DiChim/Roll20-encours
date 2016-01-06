@@ -44,3 +44,30 @@ textarea {
 input[type="text"]:read-only, input[type="number"]:read-only {
   background-color: #d9d9d9;
 }
+
+.sheet-rolltemplate-oltree_patrouille table {
+    width: 100%;
+    background-color: #FFFFE5;
+    border: 1px solid;
+    color: black;
+    font-size: 1em;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+.sheet-rolltemplate-oltree_patrouille th {
+    background-color: #4D2600;
+    color: #ffffff;
+    padding: 2px;
+    border-bottom: 1px solid black;
+    line-height: 1.2em;
+    font-size: 1.1em;
+}
+
+.sheet-rolltemplate-oltree_patrouille .sheet-rt-note {
+    text-align: center;
+    background-color: #4D2600;
+    color: #ffffff;
+    padding: 2px;
+    border-top: 1px solid black;
+    line-height: 1.1em;
+    font-size: 1.05em;
+}
