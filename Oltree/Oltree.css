@@ -40,3 +40,7 @@ textarea {
 .sheet-repetition select {
    width: 10%;
 }
+
+input[type="text"]:read-only, input[type="number"]:read-only {
+  background-color: #d9d9d9;
+}

@@ -153,7 +153,7 @@
                         Vigilance :
                     </td>
                     <td>
-                        <input type="number" name="attr_vigilance" value="0" title="10 + voyageur + bonus assassin" />
+                        <input type="number" name="attr_vigilance" value="0" title="10 + voyageur + bonus assassin" readonly/>                        
                     </td>
                     <td>
                         Déni :
@@ -531,3 +531,21 @@
     </tr>    
     
 </table>
+<!-- Les scripts -->
+<script type="text/worker">
+//Vigilance
+function majVigilance(){
+    getAttrs(["voyageur", "metier_assassin"], function(values) {
+        setAttrs({
+          vigilance: 10 + parseInt(values.voyageur) + Math.floor(parseInt(values.metier_assassin) / 2)
+      });
+   });    
+}
+on("change:voyageur", function() {
+    majVigilance();
+});
+on("change:metier_assassin", function() {
+    majVigilance();
+});
+
+</script>
