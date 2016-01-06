@@ -127,13 +127,13 @@
                         Mana :
                     </td>
                     <td>
-                        <input type="number" name="attr_mana" value="0"/> / <input type="number" name="attr_mana_max" value="0" title="2 DV + Erudit"/>                                             
+                        <input type="number" name="attr_mana" value="0"/> / <input type="number" name="attr_mana_max" value="0" title="2 DV + Erudit" readonly />                                             
                     </td>
                     <td>
                         CA :
                     </td>
                     <td>
-                        <input type="number" name="attr_ca" value="0"/> / Base : <input type="number" name="attr_ca_base" value="0" title="10 + Armure + Bouclier + Bonus guerrier"/>
+                        <input type="number" name="attr_ca" value="0"/> / Base : <input type="number" name="attr_ca_base" value="0" title="10 + Armure + Bouclier + Bonus guerrier" readonly/>
                     </td>                    
                 </tr>
                 <tr>
@@ -372,12 +372,12 @@
                     </td>
                     <td colspan="3">
                         <select name="attr_armure">
-                            <option value=""></option>
-                            <option value="vetements_lourds">Vêtements lourds +1</option>
-                            <option value="cuirasse">Cuirasse +2</option>
-                            <option value="broigne">Broigne +3</option>
-                            <option value="cotel">Cotel +4</option>
-                            <option value="laurique">Laurique +6</option>
+                            <option value="0"></option>
+                            <option value="1">Vêtements lourds +1</option>
+                            <option value="2">Cuirasse +2</option>
+                            <option value="3">Broigne +3</option>
+                            <option value="4">Cotel +4</option>
+                            <option value="6">Laurique +6</option>
                         </select>
                     </td>
                     <td>
@@ -546,6 +546,52 @@ on("change:voyageur", function() {
 });
 on("change:metier_assassin", function() {
     majVigilance();
+});
+
+//Mana_Max
+function majManaMax(){
+    getAttrs(["erudit", "des_vie"], function(values) {        
+        setAttrs({
+          mana_max: 2* parseInt(values.des_vie) + parseInt(values.erudit)
+      });
+   });    
+}
+on("change:erudit", function() {
+    majManaMax();
+});
+on("change:des_vie", function() {
+    majManaMax();
+});
+
+//CA Base
+function majCaBase(){
+    getAttrs(["bouclier", "armure","metier_guerrier","en_danger"], function(values) {
+        if (isNaN(values.bouclier)){
+            lebouclier = 0;        
+        } else {
+            lebouclier = values.bouclier;
+        }
+        if (isNaN(values.en_danger)||(values.en_danger != 1)){
+            lendanger = 0;        
+        } else {
+            lendanger = -2;
+        }
+        setAttrs({
+          ca_base: 10 + parseInt(lebouclier) + parseInt(values.armure) + Math.floor(parseInt(values.metier_guerrier) / 2) + lendanger,
+      });
+   });    
+}
+on("change:bouclier", function() {
+    majCaBase();
+});
+on("change:armure", function() {
+    majCaBase();
+});
+on("change:metier_guerrier", function() {
+    majCaBase();
+});
+on("change:en_danger", function() {
+    majCaBase();
 });
 
 </script>
