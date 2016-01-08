@@ -74,7 +74,7 @@
         
         <button type="roll" value="&{template:oltree} {{nom=@{pj_name}}} {{jetM_lib=@{type_des}}} {{jetM=[[@{type_des}]]}} {{jetP_lib=@{type_des}}} {{jetP=[[@{type_des}]]}} {{jetE_lib=@{des_exaltation}}} {{jetE=[[@{des_exaltation}]]}}" name="roll_tous"> Jet pour tous</button>
         <button type="roll" value="/w gm &{template:oltree} {{nom=@{pj_name}}} {{jetM_lib=@{type_des}}} {{jetM=[[@{type_des}]]}} {{jetP_lib=@{type_des}}} {{jetP=[[@{type_des}]]}} {{jetE_lib=@{des_exaltation}}} {{jetE=[[@{des_exaltation}]]}}" name="roll_tous"> Jet pour le MJ</button>        
-        <button type="roll" value="&{template:oltree_patrouille} {{nom=@{pj_name}}} {{jet_nom=Jet de patrouille}} {{jet_lib=2d8!}} {{jet=[[2d8!]]}}" name="roll_patrouille"> Jet de Patrouille</button>
+        <button type="roll" value="&{template:oltree_patrouille} {{nom=@{pj_name}}} {{jet_nom=Jet de patrouille}} {{jet_lib=2d8!-?{Modificateur|@{metier_rodeur}}}} {{jet=[[2d8!-?{Modificateur|@{metier_rodeur}}]]}}" name="roll_patrouille"> Jet de Patrouille</button>
         </td>
     </tr>
     <tr>        
