@@ -69,12 +69,12 @@
             Jets de dés : 
         </td>
         <td colspan="5">
-        A FAIRE
-        <button type="roll" value="&{template:oltree_patrouille} {{nom=@{pj_name}}} {{jet_nom=Jet de patrouille}} {{jet_lib=2d8!}} {{jet=[[2d8!]]}}" name="roll_patrouille"> Jet de Patrouille</button>
+        <input type="hidden" name="attr_type_des" value="1d8!" readonly/>
+        <input type="hidden" name="attr_des_exaltation" value="1d8!" readonly/>
         
-        Jet pour tous
-        Jet mj
-        Jet patrouille
+        <button type="roll" value="&{template:oltree} {{nom=@{pj_name}}} {{jetM_lib=@{type_des}}} {{jetM=[[@{type_des}]]}} {{jetP_lib=@{type_des}}} {{jetP=[[@{type_des}]]}} {{jetE_lib=@{des_exaltation}}} {{jetE=[[@{des_exaltation}]]}}" name="roll_tous"> Jet pour tous</button>
+        <button type="roll" value="/w gm &{template:oltree} {{nom=@{pj_name}}} {{jetM_lib=@{type_des}}} {{jetM=[[@{type_des}]]}} {{jetP_lib=@{type_des}}} {{jetP=[[@{type_des}]]}} {{jetE_lib=@{des_exaltation}}} {{jetE=[[@{des_exaltation}]]}}" name="roll_tous"> Jet pour le MJ</button>        
+        <button type="roll" value="&{template:oltree_patrouille} {{nom=@{pj_name}}} {{jet_nom=Jet de patrouille}} {{jet_lib=2d8!}} {{jet=[[2d8!]]}}" name="roll_patrouille"> Jet de Patrouille</button>
         </td>
     </tr>
     <tr>        
@@ -596,15 +596,79 @@ on("change:en_danger", function() {
     majCaBase();
 });
 
+//Les des selon l'état
+function majTypeDes(){
+    getAttrs(["affaibli"], function(values) {
+        if (isNaN(values.affaibli)||(values.affaibli != 1)){
+            ledes = "1d8!";        
+        } else {
+            ledes = "1d8";
+        }        
+        setAttrs({
+          type_des: ledes
+      });
+   });    
+}
+
+function majDesExaltation(){
+    getAttrs(["contraint","affaibli"], function(values) {
+        if (isNaN(values.contraint)||(values.contraint != 1)){
+            if (isNaN(values.affaibli)||(values.affaibli != 1)){
+                ledes = "1d8!";        
+            } else {
+                ledes = "1d8";
+            }        
+        } else {
+            ledes = "0";
+        }        
+        setAttrs({
+          des_exaltation: ledes
+      });
+   });    
+}
+on("change:affaibli", function() {
+    majTypeDes();
+    majDesExaltation();
+});
+on("change:contraint", function() {
+    majDesExaltation();
+});
+
 </script>
 <!-- Template Oltree -->
+<rolltemplate class="sheet-rolltemplate-oltree">
+  <table>
+    <tr>
+      <th colspan="3"> {{nom}} </th>
+    </tr>
+    <tr>
+      <td><b>Dés de Maitrise :</b></td>
+      <td>{{jetM_lib}}</td>
+      <td>{{jetM}}</td>
+    </tr>
+    <tr>
+      <td><b>Dés de Prouesse :</b></td>
+      <td>{{jetP_lib}}</td>
+      <td>{{jetP}}</td>
+    </tr>
+    {{#^rollTotal() jetE 0}}
+    <tr>
+      <td><b>Dés d'Exaltation :</b></td>
+      <td>{{jetE_lib}}</td>
+      <td>{{jetE}}</td>
+    </tr>
+    {{/^rollTotal() jetE 0}}
+  </table>
+</rolltemplate>
+
+<!-- Template Patrouille -->
 <rolltemplate class="sheet-rolltemplate-oltree_patrouille">
   <table>
     <tr>
       <th colspan="2"> {{jet_nom}} </th>
     </tr>
     <tr>
-      <td colspan="2"> <b>{{nom}}</b> lance <b>{{jet_lib}}</b></td>
+      <td colspan="2"><b>{{nom}}</b> lance <b>{{jet_lib}}</b></td>
     </tr>
     <tr>
         <td align="right"><b>Résultat : </b></td>
