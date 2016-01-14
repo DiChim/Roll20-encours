@@ -7,6 +7,12 @@
     vertical-align: text-top;
 }
 
+.charsheet th {
+    padding: 5px;  
+    border: 0 solid #000;
+    background-color: #CCC;
+}
+
 .sheet-repetition div {
    margin: 3px;
 }

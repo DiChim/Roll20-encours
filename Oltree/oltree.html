@@ -1,7 +1,7 @@
 <table>
      <tr>
         <td colspan="6" align="center">
-            <h2>Oltréé !</h2>
+            <img width="200px" src="http://sf.music.free.fr/oltree.jpg" />
         </td>
     </tr>
     <tr>
@@ -61,9 +61,7 @@
             </select>
 
         </td>
-    </tr>
-    
-    
+    </tr>        
     <tr>        
         <td>
             Jets de dés : 
@@ -135,7 +133,7 @@
                         CA :
                     </td>
                     <td>
-                        <input type="number" name="attr_ca" value="0"/> / Base : <input type="number" name="attr_ca_base" value="0" title="10 + Armure + Bouclier + Bonus guerrier" readonly/>
+                        <input type="number" name="attr_ca" value="0"/> / Base : <input type="number" name="attr_ca_base" value="10" title="10 + Armure + Bouclier + Bonus guerrier" readonly/>
                     </td>                    
                 </tr>
                 <tr>
@@ -393,14 +391,14 @@
         </td>
     </tr>
     <tr>
-        <td colspan="6">
-            <h3>Langue :</h3>    
-        </td>
+        <th colspan="6">
+            LANGUE   
+        </th>
     </tr>
     <tr>
         <td colspan="6">
             <div class="sheet-repetition">
-                <fieldset class="repeating_relation">            
+                <fieldset class="repeating_langue">            
                     <select name="attr_langue">
                     <option value=""/></option>
                     <option value="boiselier"/>Boiselier</option>
@@ -423,111 +421,130 @@
         </td>
     </tr>
     <tr>
-        <td colspan="6">
-            <h3>Dans le sac :</h3>    
-        </td>
+        <th colspan="6">
+            DANS LE SAC
+        </th>
     </tr>
     <tr>
         <td colspan="6">
             <div class="sheet-repetition">
-                <fieldset class="repeating_relation">            
+                <fieldset class="repeating_sac">            
                     <input class="sheet-lib-repetition" type="text" name="attr_dans_sac" />
                 </fieldset>  
             </div>
         </td>
     </tr>    
     <tr>
-        <td colspan="6">
-            <h3>Ressources immobilisées :</h3>    
-        </td>
+        <th colspan="6">
+            RESSOURCES IMMOBILISEES
+        </th>
     </tr>
     <tr>
         <td colspan="6">
             <div class="sheet-repetition">
-                <fieldset class="repeating_relation">            
-                    <input class="sheet-lib-repetition" type="text" name="attr_ressource_immobilisee" />
+                <fieldset class="repeating_ressource">            
+                    <input class="sheet-lib-repetition" type="text" name="attr_ressource" />
                 </fieldset>  
             </div>
         </td>
     </tr>    
     <tr>
-        <td colspan="6">
-            <h3>Grimoire :</h3>    
-        </td>
+        <th colspan="6">
+            GRIMOIRE
+        </thd>
     </tr>
     <tr>
         <td colspan="6">
             <div class="sheet-repetition">
-                <fieldset class="repeating_relation">            
+                <fieldset class="repeating_grimoire">            
                     <input class="sheet-lib-repetition" type="text" name="attr_grimoire" />
                 </fieldset>  
             </div>
         </td>
     </tr>    
     <tr>
-        <td colspan="6">
-            <h3>Compagnons animaux :</h3>    
-        </td>
+        <th colspan="6">
+            COMPAGNONS ANIMAUX
+        </thd>
     </tr>
     <tr>
         <td colspan="6">
             <div class="sheet-repetition">
-                <fieldset class="repeating_relation">            
+                <fieldset class="repeating_compagnon">            
                     <input class="sheet-lib-repetition" type="text" name="attr_commpagnon" />
                 </fieldset>  
             </div>
         </td>
-    </tr>   
+    </tr>       
     <tr>
-        <td colspan="6">
-            <span title="+2 aux jets de perception" ><h3>Suivants - Porteurs :</h3></span>
-        </td>
+        <td colspan="6" valign="top">
+            <table>
+                <tr>
+                    <td>
+                        <table>    
+                            <tr>
+                                <th>
+                                    <span title="+2 aux jets de perception" >PORTEURS</span>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="sheet-repetition">
+                                        <fieldset class="repeating_porteur">            
+                                            <input class="sheet-lib-repetition" type="text" name="attr_porteur" />
+                                        </fieldset>  
+                                    </div>
+                                </td>
+                            </tr>        
+                        </table>
+                    </td>
+                    <td>
+                        <table>    
+                            <tr>
+                                <th>
+                                    <span title="2 DV par rang. CA 13" >MERCENAIRES</span>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="sheet-repetition_mercenaire">
+                                        <fieldset class="repeating_relation">            
+                                            <input class="sheet-lib-repetition" type="text" name="attr_mercenaire" />
+                                        </fieldset>  
+                                    </div>
+                                </td>
+                            </tr>                               
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <th>
+                                    <span title="+4 dans un domaine particulier" >SPECIALISTES</span>    
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="sheet-repetition">
+                                        <fieldset class="repeating_specialiste">            
+                                            <input class="sheet-lib-repetition" type="text" name="attr_specialiste"/>
+                                        </fieldset>  
+                                    </div>
+                                </td>
+                            </tr>            
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>        
+    </tr>
+    <tr>
+        <th colspan="6">
+            OBSERVATIONS & NOTES
+        </th>
     </tr>
     <tr>
         <td colspan="6">
-            <div class="sheet-repetition">
-                <fieldset class="repeating_relation">            
-                    <input class="sheet-lib-repetition" type="text" name="attr_porteur" title="+2 aux jets de perception" />
-                </fieldset>  
-            </div>
-        </td>
-    </tr>    
-    <tr>
-        <td colspan="6">
-            <span title="2 DV par rang. CA 13" ><h3>Suivants - Mercenaires :</h3></span>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="6">
-            <div class="sheet-repetition">
-                <fieldset class="repeating_relation">            
-                    <input class="sheet-lib-repetition" type="text" name="attr_mercenaire" />
-                </fieldset>  
-            </div>
-        </td>
-    </tr>    
-    <tr>
-        <td colspan="6">
-            <span title="+4 dans un domaine particulier" ><h3>Suivants - Spécialistes :</h3></span>    
-        </td>
-    </tr>
-    <tr>
-        <td colspan="6">
-            <div class="sheet-repetition">
-                <fieldset class="repeating_relation">            
-                    <input class="sheet-lib-repetition" type="text" name="attr_specialiste"/>
-                </fieldset>  
-            </div>
-        </td>
-    </tr>    
-    
-    <tr>
-        <td colspan="4">
-        <h3>Observations & Notes :</h3>   
-        </td>
-    </tr>
-    <tr>
-        <td colspan="4">
             <textarea name="attr_obs_notes"></textarea>
         </td>
     </tr>    
