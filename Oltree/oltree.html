@@ -1,4 +1,6 @@
-<div align="center"><img width="200px" src="http://sf.music.free.fr/oltree.jpg" /></div>
+<div align="center">
+    <img width="200px" src="http://sf.music.free.fr/oltree.jpg" />
+</div>
 <input type="radio" name="attr_tab" class="sheet-tab sheet-tab1" value="1" title="Patrouilleur" checked="checked" style="margin-left:1px;"/>
 <span class="sheet-tab sheet-tab1">Patrouilleur</span>
 <input type="radio" name="attr_tab" class="sheet-tab sheet-tab2" value="2" title="PNJ"/>
@@ -6,555 +8,555 @@
 <div class="sheet-section sheet-section-core">
     <div class="sheet-table sheet-header-row">&nbsp;</div>
         <div>
-<table>
-    <tr>
-        <td>
-            Nom : 
-        </td>
-        <td>
-            <input type="text" placeholder="Nom" name="attr_pj_name" />
-        </td>
-        <td>
-            Joueur : 
-        </td>
-        <td>
-            <input type="text" placeholder="Nom du joueur" name="attr_joueur" />
-        </td>
-    </tr>
-    <tr>        
-        <td>
-            Peuple : 
-        </td>
-        <td>
-            <select name="attr_peuple">
-                <option value="Imperial">Imperial</option>
-                <option value="Citadin">Citadin</option>
-                <option value="Cavalier">Cavalier</option>
-                <option value="Norrois">Norrois</option>
-                <option value="Chevaucheur">Chevaucheur</option>
-                <option value="Sidhe">Sidhe</option>
-                <option value="Longue-barbe">Longue-barbe</option>
-                <option value="Nez-de-cuir">Nez-de-cuir</option>
-            </select>
-        </td>
-        <td>
-            Motivation : 
-        </td>
-        <td>
-            <select name="attr_motivation">
-                <option value="Archeologue">Archeologue</option>
-                <option value="Batisseur">Batisseur</option>
-                <option value="Chasseur de trésor">Chasseur de trésor</option>
-                <option value="Chroniqueur">Chroniqueur</option>
-                <option value="Conquérant">Conquérant</option>
-                <option value="Maraudeur">Maraudeur</option>
-                <option value="Mystique">Mystique</option>
-                <option value="Tueur de monstres">Tueur de monstres</option>
-            </select>
-
-        </td>
-        <td>
-            Initiation : 
-        </td>
-        <td>
-            <select name="attr_initiation">
-                <option value="Héritier">Héritier</option>
-                <option value="Adopté">Adopté</option>
-                <option value="Pélerin">Pélerin</option>
-            </select>
-
-        </td>
-    </tr>        
-    <tr>        
-        <td>
-            Jets de dés : 
-        </td>
-        <td colspan="5">
-        <input type="hidden" name="attr_type_des" value="1d8!" readonly/>
-        <input type="hidden" name="attr_des_exaltation" value="1d8!" readonly/>
-        
-        <button type="roll" value="&{template:oltree} {{nom=@{pj_name}}} {{jetM_lib=@{type_des}}} {{jetM=[[@{type_des}]]}} {{jetP_lib=@{type_des}}} {{jetP=[[@{type_des}]]}} {{jetE_lib=@{des_exaltation}}} {{jetE=[[@{des_exaltation}]]}}" name="roll_tous"> Jet pour tous</button>
-        <button type="roll" value="/w gm &{template:oltree} {{nom=@{pj_name}}} {{jetM_lib=@{type_des}}} {{jetM=[[@{type_des}]]}} {{jetP_lib=@{type_des}}} {{jetP=[[@{type_des}]]}} {{jetE_lib=@{des_exaltation}}} {{jetE=[[@{des_exaltation}]]}}" name="roll_tous"> Jet pour le MJ</button>        
-        <button type="roll" value="&{template:oltree_patrouille} {{nom=@{pj_name}}} {{jet_nom=Jet de patrouille}} {{jet_lib=2d8!-?{Modificateur|@{metier_rodeur}}}} {{jet=[[2d8!-?{Modificateur|@{metier_rodeur}}]]}}" name="roll_patrouille"> Jet de Patrouille</button>
-        </td>
-    </tr>
-    <tr>        
-        <td colspan="6">
             <table>
                 <tr>
-                    <th colspan="2">VOCATIONS</th>
-                    <th colspan="2">ETATS</th>
-                    <th colspan="4">CARNET DE PATROUILLE</th>
+                    <td>
+                        Nom : 
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Nom" name="attr_pj_name" />
+                    </td>
+                    <td>
+                        Joueur : 
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Nom du joueur" name="attr_joueur" />
+                    </td>
                 </tr>
-                <tr>
-                    <td>
-                        Soldat/Vigueur
-                    </td>
-                    <td>
-                        <input type="number" name="attr_soldat" value="0"/>
-                    </td>
-                    <td>
-                        Contraint
-                    </td>
-                    <td>
-                        <input type="checkbox" name="attr_contraint" value="1" title="Pas de dé d'exaltation" />
-                    </td>
-                    <td>
-                        Dés de vie :
-                    </td>
-                    <td>
-                        <input type="number" name="attr_des_vie" value="1"/>                                            
-                    </td>
-                    <td>
-                        PV :
-                    </td>
-                    <td>
-                        <input type="number" name="attr_pv" value="0"/> / <input type="number" name="attr_pv_max" value="0" title="1D8 par DV + Soldat" />
-                    </td>
-                    
-                </tr>
-                <tr>
-                    <td>
-                        Voyageur/Réflexe
-                    </td>
-                    <td>
-                        <input type="number" name="attr_voyageur" value="0" />
-                    </td>
-                    <td>
-                        Affaibli
-                    </td>
-                    <td>
-                        <input type="checkbox" name="attr_affaibli" value="1" title="Les dés ne sont pas explosifs" />
-                    </td>
-                    <td>
-                        Mana :
-                    </td>
-                    <td>
-                        <input type="number" name="attr_mana" value="0"/> / <input type="number" name="attr_mana_max" value="0" title="2 DV + Erudit" readonly />                                             
-                    </td>
-                    <td>
-                        CA :
-                    </td>
-                    <td>
-                        <input type="number" name="attr_ca" value="0"/> / Base : <input type="number" name="attr_ca_base" value="10" title="10 + Armure + Bouclier + Bonus guerrier" readonly/>
-                    </td>                    
-                </tr>
-                <tr>
-                    <td>
-                        Erudit/Volonté
-                    </td>
-                    <td>
-                        <input type="number" name="attr_erudit"  value="0" />
-                    </td>
-                    <td>
-                        En danger
-                    </td>
-                    <td>
-                        <input type="checkbox" name="attr_en_danger" value="1" title="-2 à la CA. -2 aux jets de reflexes" />
-                    </td>
-                    <td>
-                        Vigilance :
-                    </td>
-                    <td>
-                        <input type="number" name="attr_vigilance" value="0" title="10 + voyageur + bonus assassin" readonly/>                        
-                    </td>
-                    <td>
-                        Déni :
-                    </td>
-                    <td>
-                        <input type="number" name="attr_deni" value="0"/>
-                    </td>                    
-                </tr>
-            </table>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="6">
-            <table>
-                <tr>
-                    <th colspan="8">
-                        METIERS
-                    </th>
-                </tr>    
-                <tr>
-                    <td>
-                        Alchimiste
-                    </td>
-                    <td>
-                        <input type="number" name="attr_metier_alchimiste" value="0" title="Fabriquer des potions entre deux séances"/>
-                    </td>
-                    <td>
-                        Archer
-                    </td>
-                    <td>
-                        <input type="number" name="attr_metier_archer" value="0" title="Ajouter le rand aux dégats à distance. Portée + 5m/rang."/>
-                    </td>
-                    <td>
-                        Assassin
-                    </td>
-                    <td>
-                        <input type="number" name="attr_metier_assassin" value="0" title="Attaque sournoise: 1d8 dégâts en plus par rang et par scène"/>
-                    </td>
-                    <td>
-                        Berzekr
-                    </td>
-                    <td>
-                        <input type="number" name="attr_metier_berzekz" value="0" title="Ajouter le rang à l'attaque. CA=11. 1 Mana/Tour. Totem Sanglier, Ours ou Loup"/>
-                    </td>                    
-                </tr>
-                <tr>
-                    <td>
-                        Barde
-                    </td>
-                    <td>
-                        <input type="number" name="attr_metier_barde" value="0" title="Ajouter le rang aux jets de connaissance. 1 fois par scène donner un bonus à un allié"/>
-                    </td>
-                    <td>
-                        Druide
-                    </td>
-                    <td>
-                        <input type="number" name="attr_metier_druide" value="0" title="Choisir une liturgie chtonienne par 2 rangs"/>
-                    </td>
-                    <td>
-                        Guérisseur
-                    </td>
-                    <td>
-                        <input type="number" name="attr_metier_guerisseur" value="0" title="Soigner 4*érudit*rang PV par jour. Dépenser 3 manas pour ajouter un rang"/>
-                    </td>
-                    <td>
-                        Guerrier
-                    </td>
-                    <td>
-                        <input type="number" name="attr_metier_guerrier" value="0" title="Ajouter le rang aux dégâts en corps à corps. Ajouter +1 à la CA par 2 rangs. Une fois par scène donner un bonus à un allié"/>
-                    </td>                    
-                </tr>
-                <tr>
-                    <td>
-                        Magicien
-                    </td>
-                    <td>
-                        <input type="number" name="attr_metier_magicien" value="0" title="Choisir 2 sorts par rang au début de l'aventure"/>
-                    </td>
-                    <td>
-                        Maitre des bêtes
-                    </td>
-                    <td>
-                        <input type="number" name="attr_metier_maitre_bete" value="0" title="Choisir 1 DV de compagnons par rang"/>
-                    </td>
-                    <td>
-                        Marchand
-                    </td>
-                    <td>
-                        <input type="number" name="attr_metier_marchand" value="0" title="Ajouter le rang pour négocier et convaincre. Une fois par séance demander des pourparlers"/>
-                    </td>
-                    <td>
-                        Noble
-                    </td>
-                    <td>
-                        <input type="number" name="attr_metier_noble" value="0" title="Ajouter le rang pour traiter avec les autorité. Attirer des suivants."/>
-                    </td>                    
-                </tr>
-                <tr>
-                    <td>
-                        Patrouilleur
-                    </td>
-                    <td>
-                        <input type="number" name="attr_metier_patrouilleur" value="0" title="Repartir le rang entre la CA et l'attaque. Ajouter le rang à un jet de sauvegarde 1 fois par jour."/>
-                    </td>
-                    <td>
-                        Prêtre
-                    </td>
-                    <td>
-                        <input type="number" name="attr_metier_pretre" value="0" title="Choisir un mystère par rang dans son panthéon"/>
-                    </td>
-                    <td>
-                        Rodeur
-                    </td>
-                    <td>
-                        <input type="number" name="attr_metier_rodeur" value="0" title="Ajouter le rang pour les jets en extérieur. Modifier le jet des cartes de patrouille"/>
-                    </td>
-                    <td>
-                        Voleur
-                    </td>
-                    <td>
-                        <input type="number" name="attr_metier_voleur" value="0"title="Ajouter le rang aux jets de subterfuge, de vol, de discretion, d'ahtlétisme, du survie urbaine. Relancer un jet une fois par scène."/>
-                    </td>                    
-                </tr>
-            </table>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="6">
-            <table>
-                <tr>
-                    <th colspan="8">
-                        HARNOIS
-                    </th>
-                </tr>    
-                <tr>
-                    <td>
-                        Lance
-                    </td>
-                    <td>
-                        <input type="checkbox" name="attr_arme_lance" value="1" title="+1 à la CA contre les adversaire sans bouclier. + dégâts contre grandes créatures"/>
-                    </td>
-                    <td>
-                        Dague
-                    </td>
-                    <td>
-                        <input type="checkbox" name="attr_arme_dague" value="1" title="-1 à la CA contre adversaires avec armes plus longues ou bouclier"/>
-                    </td>
-                    <td>
-                        Epée
-                    </td>
-                    <td>
-                        <input type="checkbox" name="attr_arme_epee" value="1" title="Bouclier possible"/>
-                    </td>
-                    <td>
-                        Epée longue
-                    </td>
-                    <td>
-                        <input type="checkbox" name="attr_arme_epeelongue" value="1" title="+2 aux dégâts. Pas de bouciler"/>
-                    </td>                    
-                </tr>
-                <tr>
-                    <td>
-                        Arc court
-                    </td>
-                    <td>
-                        <input type="checkbox" name="attr_arme_arccourt" value="1" title="Portée utile : 50m. -1/5m jusqu'à 150m"/>
-                    </td>
-                    <td>
-                        Arc long
-                    </td>
-                    <td>
-                        <input type="checkbox" name="attr_arme_arclong" value="1" title="Portée utile : 100m. -1/10m jusqu'à 250m"/>
-                    </td>
-                    <td>
-                        Fronde
-                    </td>
-                    <td>
-                        <input type="checkbox" name="attr_arme_fronde" value="1" title="Portée utile : 30m. -1/5m jusqu'à 100m"/>
-                    </td>
-                    <td>
-                        javeline
-                    </td>
-                    <td>
-                        <input type="checkbox" name="attr_arme_javeline" value="1" title="Portée utile : 20m. -1/5m jusqu'à 70m. bonus de dégâts du guerrier"/>
-                    </td>                    
-                </tr>
-                <tr>
-                    <td>
-                        <input type="text" name="attr_arme_libautre1" />
-                    </td>
-                    <td>
-                        <input type="checkbox" name="attr_arme_autre1" value="1"/>
-                    </td>
-                    <td>
-                        <input type="text" name="attr_arme_libautre2" />
-                    </td>
-                    <td>
-                        <input type="checkbox" name="attr_arme_autre2" value="1"/>
-                    </td>
-                    <td>
-                        <input type="text" name="attr_arme_libautre3" />
-                    </td>
-                    <td>
-                        <input type="checkbox" name="attr_arme_autre3" value="1"/>
-                    </td>
-                    <td>
-                        <input type="text" name="attr_arme_libautre4" />
-                    </td>
-                    <td>
-                        <input type="checkbox" name="attr_arme_autre4" value="1"/>
-                    </td>                    
-                </tr>
-                <tr>
-                    <td>
-                        Armure
-                    </td>
-                    <td colspan="3">
-                        <select name="attr_armure">
-                            <option value="0"></option>
-                            <option value="1">Vêtements lourds +1</option>
-                            <option value="2">Cuirasse +2</option>
-                            <option value="3">Broigne +3</option>
-                            <option value="4">Cotel +4</option>
-                            <option value="6">Laurique +6</option>
+                <tr>        
+                    <td>
+                        Peuple : 
+                    </td>
+                    <td>
+                        <select name="attr_peuple">
+                            <option value="Imperial">Imperial</option>
+                            <option value="Citadin">Citadin</option>
+                            <option value="Cavalier">Cavalier</option>
+                            <option value="Norrois">Norrois</option>
+                            <option value="Chevaucheur">Chevaucheur</option>
+                            <option value="Sidhe">Sidhe</option>
+                            <option value="Longue-barbe">Longue-barbe</option>
+                            <option value="Nez-de-cuir">Nez-de-cuir</option>
                         </select>
                     </td>
                     <td>
-                        Bouclier
+                        Motivation : 
                     </td>
                     <td>
-                        <input type="checkbox" name="attr_bouclier" value="1"/>
+                        <select name="attr_motivation">
+                            <option value="Archeologue">Archeologue</option>
+                            <option value="Batisseur">Batisseur</option>
+                            <option value="Chasseur de trésor">Chasseur de trésor</option>
+                            <option value="Chroniqueur">Chroniqueur</option>
+                            <option value="Conquérant">Conquérant</option>
+                            <option value="Maraudeur">Maraudeur</option>
+                            <option value="Mystique">Mystique</option>
+                            <option value="Tueur de monstres">Tueur de monstres</option>
+                        </select>
+            
+                    </td>
+                    <td>
+                        Initiation : 
+                    </td>
+                    <td>
+                        <select name="attr_initiation">
+                            <option value="Héritier">Héritier</option>
+                            <option value="Adopté">Adopté</option>
+                            <option value="Pélerin">Pélerin</option>
+                        </select>
+            
+                    </td>
+                </tr>        
+                <tr>        
+                    <td>
+                        Jets de dés : 
+                    </td>
+                    <td colspan="5">
+                    <input type="hidden" name="attr_type_des" value="1d8!" readonly/>
+                    <input type="hidden" name="attr_des_exaltation" value="1d8!" readonly/>
+                    
+                    <button type="roll" value="&{template:oltree} {{nom=@{pj_name}}} {{jetM_lib=@{type_des}}} {{jetM=[[@{type_des}]]}} {{jetP_lib=@{type_des}}} {{jetP=[[@{type_des}]]}} {{jetE_lib=@{des_exaltation}}} {{jetE=[[@{des_exaltation}]]}}" name="roll_tous"> Jet pour tous</button>
+                    <button type="roll" value="/w gm &{template:oltree} {{nom=@{pj_name}}} {{jetM_lib=@{type_des}}} {{jetM=[[@{type_des}]]}} {{jetP_lib=@{type_des}}} {{jetP=[[@{type_des}]]}} {{jetE_lib=@{des_exaltation}}} {{jetE=[[@{des_exaltation}]]}}" name="roll_tous"> Jet pour le MJ</button>        
+                    <button type="roll" value="&{template:oltree_patrouille} {{nom=@{pj_name}}} {{jet_nom=Jet de patrouille}} {{jet_lib=2d8!-?{Modificateur|@{metier_rodeur}}}} {{jet=[[2d8!-?{Modificateur|@{metier_rodeur}}]]}}" name="roll_patrouille"> Jet de Patrouille</button>
                     </td>
                 </tr>
-            </table>
-        </td>
-    </tr>
-    <tr>
-        <th colspan="6">
-            LANGUE   
-        </th>
-    </tr>
-    <tr>
-        <td colspan="6">
-            <div class="sheet-repetition">
-                <fieldset class="repeating_langue">            
-                    <select name="attr_langue">
-                    <option value=""/></option>
-                    <option value="boiselier"/>Boiselier</option>
-                    <option value="cavalier"/>Cavalier</option>
-                    <option value="citadin"/>Citadin</option>
-                    <option value="draconique"/>Draconique</option>
-                    <option value="elfique"/>Elfique</option>
-                    <option value="impérial"/>Impérial</option>
-                    <option value="noirceux"/>Noirceux</option>
-                    <option value="norrois"/>Norrois</option>
-                    <option value="pierreux"/>Pierreux</option>
-                    <option value="venteux"/>Venteux</option>
-                    </select> 
-                    <select name="attr_langue_type">
-                    <option value="parle" selected/>Parlé</option>
-                    <option value="lu"/>Lu</option>
-                    </select> 
-                </fieldset>  
-            </div>
-        </td>
-    </tr>
-    <tr>
-        <th colspan="6">
-            DANS LE SAC
-        </th>
-    </tr>
-    <tr>
-        <td colspan="6">
-            <div class="sheet-repetition">
-                <fieldset class="repeating_sac">            
-                    <input class="sheet-lib-repetition" type="text" name="attr_dans_sac" />
-                </fieldset>  
-            </div>
-        </td>
-    </tr>    
-    <tr>
-        <th colspan="6">
-            RESSOURCES IMMOBILISEES
-        </th>
-    </tr>
-    <tr>
-        <td colspan="6">
-            <div class="sheet-repetition">
-                <fieldset class="repeating_ressource">            
-                    <input class="sheet-lib-repetition" type="text" name="attr_ressource" />
-                </fieldset>  
-            </div>
-        </td>
-    </tr>    
-    <tr>
-        <th colspan="6">
-            GRIMOIRE
-        </thd>
-    </tr>
-    <tr>
-        <td colspan="6">
-            <div class="sheet-repetition">
-                <fieldset class="repeating_grimoire">            
-                    <input class="sheet-lib-repetition" type="text" name="attr_grimoire" />
-                </fieldset>  
-            </div>
-        </td>
-    </tr>    
-    <tr>
-        <th colspan="6">
-            COMPAGNONS ANIMAUX
-        </thd>
-    </tr>
-    <tr>
-        <td colspan="6">
-            <div class="sheet-repetition">
-                <fieldset class="repeating_compagnon">            
-                    <input class="sheet-lib-repetition" type="text" name="attr_commpagnon" />
-                </fieldset>  
-            </div>
-        </td>
-    </tr>       
-    <tr>
-        <td colspan="6" valign="top">
-            <table>
-                <tr>
-                    <td>
-                        <table>    
-                            <tr>
-                                <th>
-                                    <span title="+2 aux jets de perception" >PORTEURS</span>
-                                </th>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="sheet-repetition">
-                                        <fieldset class="repeating_porteur">            
-                                            <input class="sheet-lib-repetition" type="text" name="attr_porteur" />
-                                        </fieldset>  
-                                    </div>
-                                </td>
-                            </tr>        
-                        </table>
-                    </td>
-                    <td>
-                        <table>    
-                            <tr>
-                                <th>
-                                    <span title="2 DV par rang. CA 13" >MERCENAIRES</span>
-                                </th>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="sheet-repetition_mercenaire">
-                                        <fieldset class="repeating_relation">            
-                                            <input class="sheet-lib-repetition" type="text" name="attr_mercenaire" />
-                                        </fieldset>  
-                                    </div>
-                                </td>
-                            </tr>                               
-                        </table>
-                    </td>
-                    <td>
+                <tr>        
+                    <td colspan="6">
                         <table>
                             <tr>
-                                <th>
-                                    <span title="+4 dans un domaine particulier" >SPECIALISTES</span>    
-                                </th>
+                                <th colspan="2">VOCATIONS</th>
+                                <th colspan="2">ETATS</th>
+                                <th colspan="4">CARNET DE PATROUILLE</th>
                             </tr>
                             <tr>
                                 <td>
-                                    <div class="sheet-repetition">
-                                        <fieldset class="repeating_specialiste">            
-                                            <input class="sheet-lib-repetition" type="text" name="attr_specialiste"/>
-                                        </fieldset>  
-                                    </div>
+                                    Soldat/Vigueur
                                 </td>
-                            </tr>            
+                                <td>
+                                    <input type="number" name="attr_soldat" value="0"/>
+                                </td>
+                                <td>
+                                    Contraint
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="attr_contraint" value="1" title="Pas de dé d'exaltation" />
+                                </td>
+                                <td>
+                                    Dés de vie :
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_des_vie" value="1"/>                                            
+                                </td>
+                                <td>
+                                    PV :
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_pv" value="0"/> / <input type="number" name="attr_pv_max" value="0" title="1D8 par DV + Soldat" />
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td>
+                                    Voyageur/Réflexe
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_voyageur" value="0" />
+                                </td>
+                                <td>
+                                    Affaibli
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="attr_affaibli" value="1" title="Les dés ne sont pas explosifs" />
+                                </td>
+                                <td>
+                                    Mana :
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_mana" value="0"/> / <input type="number" name="attr_mana_max" value="0" title="2 DV + Erudit" readonly />                                             
+                                </td>
+                                <td>
+                                    CA :
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_ca" value="0"/> / Base : <input type="number" name="attr_ca_base" value="10" title="10 + Armure + Bouclier + Bonus guerrier" readonly/>
+                                </td>                    
+                            </tr>
+                            <tr>
+                                <td>
+                                    Erudit/Volonté
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_erudit"  value="0" />
+                                </td>
+                                <td>
+                                    En danger
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="attr_en_danger" value="1" title="-2 à la CA. -2 aux jets de reflexes" />
+                                </td>
+                                <td>
+                                    Vigilance :
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_vigilance" value="0" title="10 + voyageur + bonus assassin" readonly/>                        
+                                </td>
+                                <td>
+                                    Déni :
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_deni" value="0"/>
+                                </td>                    
+                            </tr>
                         </table>
                     </td>
                 </tr>
+                <tr>
+                    <td colspan="6">
+                        <table>
+                            <tr>
+                                <th colspan="8">
+                                    METIERS
+                                </th>
+                            </tr>    
+                            <tr>
+                                <td>
+                                    Alchimiste
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_metier_alchimiste" value="0" title="Fabriquer des potions entre deux séances"/>
+                                </td>
+                                <td>
+                                    Archer
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_metier_archer" value="0" title="Ajouter le rand aux dégats à distance. Portée + 5m/rang."/>
+                                </td>
+                                <td>
+                                    Assassin
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_metier_assassin" value="0" title="Attaque sournoise: 1d8 dégâts en plus par rang et par scène"/>
+                                </td>
+                                <td>
+                                    Berzekr
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_metier_berzekz" value="0" title="Ajouter le rang à l'attaque. CA=11. 1 Mana/Tour. Totem Sanglier, Ours ou Loup"/>
+                                </td>                    
+                            </tr>
+                            <tr>
+                                <td>
+                                    Barde
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_metier_barde" value="0" title="Ajouter le rang aux jets de connaissance. 1 fois par scène donner un bonus à un allié"/>
+                                </td>
+                                <td>
+                                    Druide
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_metier_druide" value="0" title="Choisir une liturgie chtonienne par 2 rangs"/>
+                                </td>
+                                <td>
+                                    Guérisseur
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_metier_guerisseur" value="0" title="Soigner 4*érudit*rang PV par jour. Dépenser 3 manas pour ajouter un rang"/>
+                                </td>
+                                <td>
+                                    Guerrier
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_metier_guerrier" value="0" title="Ajouter le rang aux dégâts en corps à corps. Ajouter +1 à la CA par 2 rangs. Une fois par scène donner un bonus à un allié"/>
+                                </td>                    
+                            </tr>
+                            <tr>
+                                <td>
+                                    Magicien
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_metier_magicien" value="0" title="Choisir 2 sorts par rang au début de l'aventure"/>
+                                </td>
+                                <td>
+                                    Maitre des bêtes
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_metier_maitre_bete" value="0" title="Choisir 1 DV de compagnons par rang"/>
+                                </td>
+                                <td>
+                                    Marchand
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_metier_marchand" value="0" title="Ajouter le rang pour négocier et convaincre. Une fois par séance demander des pourparlers"/>
+                                </td>
+                                <td>
+                                    Noble
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_metier_noble" value="0" title="Ajouter le rang pour traiter avec les autorité. Attirer des suivants."/>
+                                </td>                    
+                            </tr>
+                            <tr>
+                                <td>
+                                    Patrouilleur
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_metier_patrouilleur" value="0" title="Repartir le rang entre la CA et l'attaque. Ajouter le rang à un jet de sauvegarde 1 fois par jour."/>
+                                </td>
+                                <td>
+                                    Prêtre
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_metier_pretre" value="0" title="Choisir un mystère par rang dans son panthéon"/>
+                                </td>
+                                <td>
+                                    Rodeur
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_metier_rodeur" value="0" title="Ajouter le rang pour les jets en extérieur. Modifier le jet des cartes de patrouille"/>
+                                </td>
+                                <td>
+                                    Voleur
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_metier_voleur" value="0"title="Ajouter le rang aux jets de subterfuge, de vol, de discretion, d'ahtlétisme, du survie urbaine. Relancer un jet une fois par scène."/>
+                                </td>                    
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <table>
+                            <tr>
+                                <th colspan="8">
+                                    HARNOIS
+                                </th>
+                            </tr>    
+                            <tr>
+                                <td>
+                                    Lance
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="attr_arme_lance" value="1" title="+1 à la CA contre les adversaire sans bouclier. + dégâts contre grandes créatures"/>
+                                </td>
+                                <td>
+                                    Dague
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="attr_arme_dague" value="1" title="-1 à la CA contre adversaires avec armes plus longues ou bouclier"/>
+                                </td>
+                                <td>
+                                    Epée
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="attr_arme_epee" value="1" title="Bouclier possible"/>
+                                </td>
+                                <td>
+                                    Epée longue
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="attr_arme_epeelongue" value="1" title="+2 aux dégâts. Pas de bouciler"/>
+                                </td>                    
+                            </tr>
+                            <tr>
+                                <td>
+                                    Arc court
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="attr_arme_arccourt" value="1" title="Portée utile : 50m. -1/5m jusqu'à 150m"/>
+                                </td>
+                                <td>
+                                    Arc long
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="attr_arme_arclong" value="1" title="Portée utile : 100m. -1/10m jusqu'à 250m"/>
+                                </td>
+                                <td>
+                                    Fronde
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="attr_arme_fronde" value="1" title="Portée utile : 30m. -1/5m jusqu'à 100m"/>
+                                </td>
+                                <td>
+                                    javeline
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="attr_arme_javeline" value="1" title="Portée utile : 20m. -1/5m jusqu'à 70m. bonus de dégâts du guerrier"/>
+                                </td>                    
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" name="attr_arme_libautre1" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="attr_arme_autre1" value="1"/>
+                                </td>
+                                <td>
+                                    <input type="text" name="attr_arme_libautre2" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="attr_arme_autre2" value="1"/>
+                                </td>
+                                <td>
+                                    <input type="text" name="attr_arme_libautre3" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="attr_arme_autre3" value="1"/>
+                                </td>
+                                <td>
+                                    <input type="text" name="attr_arme_libautre4" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="attr_arme_autre4" value="1"/>
+                                </td>                    
+                            </tr>
+                            <tr>
+                                <td>
+                                    Armure
+                                </td>
+                                <td colspan="3">
+                                    <select name="attr_armure">
+                                        <option value="0"></option>
+                                        <option value="1">Vêtements lourds +1</option>
+                                        <option value="2">Cuirasse +2</option>
+                                        <option value="3">Broigne +3</option>
+                                        <option value="4">Cotel +4</option>
+                                        <option value="6">Laurique +6</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    Bouclier
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="attr_bouclier" value="1"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="6">
+                        LANGUE   
+                    </th>
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <div class="sheet-repetition">
+                            <fieldset class="repeating_langue">            
+                                <select name="attr_langue">
+                                <option value=""/></option>
+                                <option value="boiselier"/>Boiselier</option>
+                                <option value="cavalier"/>Cavalier</option>
+                                <option value="citadin"/>Citadin</option>
+                                <option value="draconique"/>Draconique</option>
+                                <option value="elfique"/>Elfique</option>
+                                <option value="impérial"/>Impérial</option>
+                                <option value="noirceux"/>Noirceux</option>
+                                <option value="norrois"/>Norrois</option>
+                                <option value="pierreux"/>Pierreux</option>
+                                <option value="venteux"/>Venteux</option>
+                                </select> 
+                                <select name="attr_langue_type">
+                                <option value="parle" selected/>Parlé</option>
+                                <option value="lu"/>Lu</option>
+                                </select> 
+                            </fieldset>  
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="6">
+                        DANS LE SAC
+                    </th>
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <div class="sheet-repetition">
+                            <fieldset class="repeating_sac">            
+                                <input class="sheet-lib-repetition" type="text" name="attr_dans_sac" />
+                            </fieldset>  
+                        </div>
+                    </td>
+                </tr>    
+                <tr>
+                    <th colspan="6">
+                        RESSOURCES IMMOBILISEES
+                    </th>
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <div class="sheet-repetition">
+                            <fieldset class="repeating_ressource">            
+                                <input class="sheet-lib-repetition" type="text" name="attr_ressource" />
+                            </fieldset>  
+                        </div>
+                    </td>
+                </tr>    
+                <tr>
+                    <th colspan="6">
+                        GRIMOIRE
+                    </thd>
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <div class="sheet-repetition">
+                            <fieldset class="repeating_grimoire">            
+                                <input class="sheet-lib-repetition" type="text" name="attr_grimoire" />
+                            </fieldset>  
+                        </div>
+                    </td>
+                </tr>    
+                <tr>
+                    <th colspan="6">
+                        COMPAGNONS ANIMAUX
+                    </thd>
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <div class="sheet-repetition">
+                            <fieldset class="repeating_compagnon">            
+                                <input class="sheet-lib-repetition" type="text" name="attr_commpagnon" />
+                            </fieldset>  
+                        </div>
+                    </td>
+                </tr>       
+                <tr>
+                    <td colspan="6" valign="top">
+                        <table>
+                            <tr>
+                                <td>
+                                    <table>    
+                                        <tr>
+                                            <th>
+                                                <span title="+2 aux jets de perception" >PORTEURS</span>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="sheet-repetition">
+                                                    <fieldset class="repeating_porteur">            
+                                                        <input class="sheet-lib-repetition" type="text" name="attr_porteur" />
+                                                    </fieldset>  
+                                                </div>
+                                            </td>
+                                        </tr>        
+                                    </table>
+                                </td>
+                                <td>
+                                    <table>    
+                                        <tr>
+                                            <th>
+                                                <span title="2 DV par rang. CA 13" >MERCENAIRES</span>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="sheet-repetition_mercenaire">
+                                                    <fieldset class="repeating_relation">            
+                                                        <input class="sheet-lib-repetition" type="text" name="attr_mercenaire" />
+                                                    </fieldset>  
+                                                </div>
+                                            </td>
+                                        </tr>                               
+                                    </table>
+                                </td>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <th>
+                                                <span title="+4 dans un domaine particulier" >SPECIALISTES</span>    
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="sheet-repetition">
+                                                    <fieldset class="repeating_specialiste">            
+                                                        <input class="sheet-lib-repetition" type="text" name="attr_specialiste"/>
+                                                    </fieldset>  
+                                                </div>
+                                            </td>
+                                        </tr>            
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>        
+                </tr>
+                <tr>
+                    <th colspan="6">
+                        OBSERVATIONS & NOTES
+                    </th>
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <textarea name="attr_obs_notes"></textarea>
+                    </td>
+                </tr>    
+                
             </table>
-        </td>        
-    </tr>
-    <tr>
-        <th colspan="6">
-            OBSERVATIONS & NOTES
-        </th>
-    </tr>
-    <tr>
-        <td colspan="6">
-            <textarea name="attr_obs_notes"></textarea>
-        </td>
-    </tr>    
-    
-</table>
-</div>
-</div>
+        </div>
+    </div>
 <div class="sheet-section sheet-section-pnj">
     <div class="sheet-table sheet-header-row">&nbsp;</div>
         <div>
