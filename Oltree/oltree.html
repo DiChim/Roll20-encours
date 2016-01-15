@@ -347,25 +347,25 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="text" name="attr_arme_libautre1" />
+                                    <input type="text" placeholder="autre arme..."  name="attr_arme_libautre1" />
                                 </td>
                                 <td>
                                     <input type="checkbox" name="attr_arme_autre1" value="1"/>
                                 </td>
                                 <td>
-                                    <input type="text" name="attr_arme_libautre2" />
+                                    <input type="text" placeholder="autre arme..." name="attr_arme_libautre2" />
                                 </td>
                                 <td>
                                     <input type="checkbox" name="attr_arme_autre2" value="1"/>
                                 </td>
                                 <td>
-                                    <input type="text" name="attr_arme_libautre3" />
+                                    <input type="text" placeholder="autre arme..." name="attr_arme_libautre3" />
                                 </td>
                                 <td>
                                     <input type="checkbox" name="attr_arme_autre3" value="1"/>
                                 </td>
                                 <td>
-                                    <input type="text" name="attr_arme_libautre4" />
+                                    <input type="text" placeholder="autre arme..." name="attr_arme_libautre4" />
                                 </td>
                                 <td>
                                     <input type="checkbox" name="attr_arme_autre4" value="1"/>
@@ -445,7 +445,7 @@
                                             <td>
                                                 <div class="sheet-repetition">
                                                     <fieldset class="repeating_sac">            
-                                                        <input class="sheet-lib-repetition" type="text" name="attr_dans_sac" />
+                                                        <input class="sheet-lib-repetition" placeholder="objet, équipement, etc ..." type="text" name="attr_dans_sac" />
                                                     </fieldset>  
                                                 </div>
                                             </td>
@@ -463,7 +463,7 @@
                                             <td>
                                                 <div class="sheet-repetition">
                                                     <fieldset class="repeating_ressource">            
-                                                        <input class="sheet-lib-repetition" type="text" name="attr_ressource" />
+                                                        <input class="sheet-lib-repetition" placeholder="ressource immobilisée ..." type="text" name="attr_ressource" />
                                                     </fieldset>  
                                                 </div>
                                             </td>
@@ -483,7 +483,7 @@
                     <td colspan="6">
                         <div class="sheet-repetition">
                             <fieldset class="repeating_grimoire">            
-                                <input class="sheet-lib-repetition" type="text" name="attr_grimoire" />
+                                <input class="sheet-lib-repetition" placeholder="sort, liturgie ..." type="text" name="attr_grimoire" />
                             </fieldset>  
                         </div>
                     </td>
@@ -497,7 +497,7 @@
                     <td colspan="6">
                         <div class="sheet-repetition">
                             <fieldset class="repeating_compagnon">            
-                                <input class="sheet-lib-repetition" type="text" name="attr_commpagnon" />
+                                <input class="sheet-lib-repetition" placeholder="compagnon + caractéristiques" type="text" name="attr_commpagnon" />
                             </fieldset>  
                         </div>
                     </td>
@@ -517,7 +517,7 @@
                                             <td>
                                                 <div class="sheet-repetition">
                                                     <fieldset class="repeating_porteur">            
-                                                        <input class="sheet-lib-repetition" type="text" name="attr_porteur" />
+                                                        <input class="sheet-lib-repetition" placeholder="Nom porteur" type="text" name="attr_porteur" />
                                                     </fieldset>  
                                                 </div>
                                             </td>
@@ -535,7 +535,7 @@
                                             <td>
                                                 <div class="sheet-repetition_mercenaire">
                                                     <fieldset class="repeating_relation">            
-                                                        <input class="sheet-lib-repetition" type="text" name="attr_mercenaire" />
+                                                        <input class="sheet-lib-repetition" placeholder="Nom mercenaire" type="text" name="attr_mercenaire" />
                                                     </fieldset>  
                                                 </div>
                                             </td>
@@ -553,7 +553,7 @@
                                             <td>
                                                 <div class="sheet-repetition">
                                                     <fieldset class="repeating_specialiste">            
-                                                        <input class="sheet-lib-repetition" type="text" name="attr_specialiste"/>
+                                                        <input class="sheet-lib-repetition" placeholder="Nom + spécialité" type="text" name="attr_specialiste"/>
                                                     </fieldset>  
                                                 </div>
                                             </td>
@@ -582,6 +582,23 @@
     <div class="sheet-table sheet-header-row">&nbsp;</div>
         <div>
             Le div des pnj
+            
+            <table>
+                <tr>
+                    <td>
+                        Nom : 
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Nom" name="attr_pjn_name" />
+                    </td>
+                    <td>
+                        Race / Type : 
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Race / Type" name="attr_pnj_race" />
+                    </td>
+                </tr>
+            </table>  
         </div>
     </div>
 </div>
