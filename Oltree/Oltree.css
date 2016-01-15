@@ -36,7 +36,7 @@ textarea {
 }
 
 .sheet-repetition input[type="text"] {
-   width: 80%;
+   width: 95%;
 }
 
 .sheet-repetition textarea {
@@ -44,7 +44,7 @@ textarea {
 }
 
 .sheet-repetition select {
-   width: 10%;
+   width: 48%;
 }
 
 input[type="text"]:read-only, input[type="number"]:read-only {

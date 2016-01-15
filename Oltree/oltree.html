@@ -395,64 +395,85 @@
                         </table>
                     </td>
                 </tr>
-                <tr>
-                    <th colspan="6">
-                        LANGUE   
-                    </th>
-                </tr>
-                <tr>
-                    <td colspan="6">
-                        <div class="sheet-repetition">
-                            <fieldset class="repeating_langue">            
-                                <select name="attr_langue">
-                                <option value=""/></option>
-                                <option value="boiselier"/>Boiselier</option>
-                                <option value="cavalier"/>Cavalier</option>
-                                <option value="citadin"/>Citadin</option>
-                                <option value="draconique"/>Draconique</option>
-                                <option value="elfique"/>Elfique</option>
-                                <option value="impérial"/>Impérial</option>
-                                <option value="noirceux"/>Noirceux</option>
-                                <option value="norrois"/>Norrois</option>
-                                <option value="pierreux"/>Pierreux</option>
-                                <option value="venteux"/>Venteux</option>
-                                </select> 
-                                <select name="attr_langue_type">
-                                <option value="parle" selected/>Parlé</option>
-                                <option value="lu"/>Lu</option>
-                                </select> 
-                            </fieldset>  
-                        </div>
+                
+                <tr>                    
+                    <td colspan="6" valign="top">
+                        <table>
+                            <tr>
+                                <td>
+                                    <table>    
+                                        <tr>
+                                            <th>
+                                                LANGUE   
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="sheet-repetition">
+                                                    <fieldset class="repeating_langue">            
+                                                        <select name="attr_langue">
+                                                        <option value=""/></option>
+                                                        <option value="boiselier"/>Boiselier</option>
+                                                        <option value="cavalier"/>Cavalier</option>
+                                                        <option value="citadin"/>Citadin</option>
+                                                        <option value="draconique"/>Draconique</option>
+                                                        <option value="elfique"/>Elfique</option>
+                                                        <option value="impérial"/>Impérial</option>
+                                                        <option value="noirceux"/>Noirceux</option>
+                                                        <option value="norrois"/>Norrois</option>
+                                                        <option value="pierreux"/>Pierreux</option>
+                                                        <option value="venteux"/>Venteux</option>
+                                                        </select> 
+                                                        <select name="attr_langue_type">
+                                                        <option value="parle" selected/>Parlé</option>
+                                                        <option value="lu"/>Lu</option>
+                                                        </select> 
+                                                    </fieldset>  
+                                                </div>
+                                            </td>
+                                        </tr>                            
+                                    </table>
+                                </td>
+                                <td>
+                                    <table>    
+                                        <tr>
+                                            <th>
+                                                DANS LE SAC
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="sheet-repetition">
+                                                    <fieldset class="repeating_sac">            
+                                                        <input class="sheet-lib-repetition" type="text" name="attr_dans_sac" />
+                                                    </fieldset>  
+                                                </div>
+                                            </td>
+                                        </tr>                                
+                                    </table>
+                                </td>
+                                <td>
+                                    <table>    
+                                        <tr>
+                                            <th>
+                                                RESSOURCES IMMOBILISEES
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="sheet-repetition">
+                                                    <fieldset class="repeating_ressource">            
+                                                        <input class="sheet-lib-repetition" type="text" name="attr_ressource" />
+                                                    </fieldset>  
+                                                </div>
+                                            </td>
+                                        </tr>                
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>                                    
                     </td>
-                </tr>
-                <tr>
-                    <th colspan="6">
-                        DANS LE SAC
-                    </th>
-                </tr>
-                <tr>
-                    <td colspan="6">
-                        <div class="sheet-repetition">
-                            <fieldset class="repeating_sac">            
-                                <input class="sheet-lib-repetition" type="text" name="attr_dans_sac" />
-                            </fieldset>  
-                        </div>
-                    </td>
-                </tr>    
-                <tr>
-                    <th colspan="6">
-                        RESSOURCES IMMOBILISEES
-                    </th>
-                </tr>
-                <tr>
-                    <td colspan="6">
-                        <div class="sheet-repetition">
-                            <fieldset class="repeating_ressource">            
-                                <input class="sheet-lib-repetition" type="text" name="attr_ressource" />
-                            </fieldset>  
-                        </div>
-                    </td>
-                </tr>    
+                </tr>                
                 <tr>
                     <th colspan="6">
                         GRIMOIRE
