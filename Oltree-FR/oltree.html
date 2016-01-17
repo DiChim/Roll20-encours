@@ -4,7 +4,7 @@
 <input type="radio" name="attr_tab" class="sheet-tab sheet-tab1" value="1" title="Patrouilleur" checked="checked" style="margin-left:1px;"/>
 <span class="sheet-tab sheet-tab1">Patrouilleur</span>
 <input type="radio" name="attr_tab" class="sheet-tab sheet-tab2" value="2" title="PNJ"/>
-<span class="sheet-tab sheet-tab2">PNJ</span>
+<span class="sheet-tab sheet-tab2">PNJ/MJ</span>
 <div class="sheet-section sheet-section-core">
     <div class="sheet-table sheet-header-row">&nbsp;</div>
         <div>
@@ -14,7 +14,7 @@
                         Nom : 
                     </td>
                     <td>
-                        <input type="text" placeholder="Nom" name="attr_pj_name" />
+                        <input type="text" placeholder="Nom" name="attr_character_name" />
                     </td>
                     <td>
                         Joueur : 
@@ -68,27 +68,24 @@
                     </td>
                 </tr>        
                 <tr>        
-                    <td>
-                        Jets de dés : 
-                    </td>
-                    <td colspan="5">
-                    <input type="hidden" name="attr_type_des" value="1d8!" readonly/>
-                    <input type="hidden" name="attr_des_exaltation" value="1d8!" readonly/>
-                    
-                    <button type="roll" value="&{template:oltree} {{nom=@{pj_name}}} {{jetM_lib=@{type_des}}} {{jetM=[[@{type_des}]]}} {{jetP_lib=@{type_des}}} {{jetP=[[@{type_des}]]}} {{jetE_lib=@{des_exaltation}}} {{jetE=[[@{des_exaltation}]]}}" name="roll_tous"> Jet pour tous</button>
-                    <button type="roll" value="/w gm &{template:oltree} {{nom=@{pj_name}}} {{jetM_lib=@{type_des}}} {{jetM=[[@{type_des}]]}} {{jetP_lib=@{type_des}}} {{jetP=[[@{type_des}]]}} {{jetE_lib=@{des_exaltation}}} {{jetE=[[@{des_exaltation}]]}}" name="roll_tous"> Jet pour le MJ</button>        
-                    <button type="roll" value="&{template:oltree_patrouille} {{nom=@{pj_name}}} {{jet_nom=Jet de patrouille}} {{jet_lib=2d8!-?{Modificateur|@{metier_rodeur}}}} {{jet=[[2d8!-?{Modificateur|@{metier_rodeur}}]]}}" name="roll_patrouille"> Jet de Patrouille</button>
+                    <td colspan="6">
+                        <input type="hidden" name="attr_type_des" value="1d8!" readonly/>
+                        <input type="hidden" name="attr_des_exaltation" value="1d8!" readonly/>
+                        <button type="roll" value="&{template:oltree_patrouille} {{nom=@{character_name}}} {{jet_nom=Jet de patrouille}} {{jet_lib=2d8!-?{Modificateur|@{metier_rodeur}}}} {{jet=[[2d8!-?{Modificateur|@{metier_rodeur}}]]}}" name="roll_patrouille"> Jet de Patrouille</button>
                     </td>
                 </tr>
                 <tr>        
                     <td colspan="6">
                         <table>
                             <tr>
-                                <th colspan="2">VOCATIONS</th>
+                                <th colspan="3">VOCATIONS</th>
                                 <th colspan="2">ETATS</th>
                                 <th colspan="4">CARNET DE PATROUILLE</th>
                             </tr>
                             <tr>
+                                <td>
+                                    <button type="roll" value="&{template:oltree} {{nom=@{character_name}}} {{vocation_name=Soldat}} {{bonustotal=[[@{soldat}+?{Rang métier|0}]]}} {{jetM=[[@{type_des}]]}} {{jetP=[[@{type_des}]]}} {{jetE=[[@{des_exaltation}]]}}" name="roll_tous"></button>
+                                </td>
                                 <td>
                                     Soldat/Vigueur
                                 </td>
@@ -117,6 +114,9 @@
                             </tr>
                             <tr>
                                 <td>
+                                    <button type="roll" value="&{template:oltree} {{nom=@{character_name}}} {{vocation_name=Voyageur}} {{bonustotal=[[@{voyageur}+?{Rang métier|0}]]}} {{jetM=[[@{type_des}]]}} {{jetP=[[@{type_des}]]}} {{jetE=[[@{des_exaltation}]]}}" name="roll_tous"></button>
+                                </td>                            
+                                <td>
                                     Voyageur/Réflexe
                                 </td>
                                 <td>
@@ -142,6 +142,9 @@
                                 </td>                    
                             </tr>
                             <tr>
+                                <td>
+                                    <button type="roll" value="&{template:oltree} {{nom=@{character_name}}} {{vocation_name=Erudit}} {{bonustotal=[[@{erudit}+?{Rang métier|0}]]}} {{jetM=[[@{type_des}]]}} {{jetP=[[@{type_des}]]}} {{jetE=[[@{des_exaltation}]]}}" name="roll_tous"></button>
+                                </td>                            
                                 <td>
                                     Erudit/Volonté
                                 </td>
@@ -581,24 +584,84 @@
 <div class="sheet-section sheet-section-pnj">
     <div class="sheet-table sheet-header-row">&nbsp;</div>
         <div>
-            Le div des pnj
-            
             <table>
                 <tr>
                     <td>
                         Nom : 
                     </td>
                     <td>
-                        <input type="text" placeholder="Nom" name="attr_pjn_name" />
+                        <input type="text" placeholder="Nom" name="attr_character_name" />
                     </td>
                     <td>
-                        Race / Type : 
+                        Créature : 
                     </td>
                     <td>
-                        <input type="text" placeholder="Race / Type" name="attr_pnj_race" />
+                        <input type="text" placeholder="Créature" name="attr_pnj_creature" />
                     </td>
                 </tr>
+
+
+                <tr>        
+                    <td colspan="4">
+                        <table>
+                            <tr>
+                                <th colspan="2">ETATS</th>
+                                <th colspan="4">INFORMATIONS</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Contraint
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="attr_pnj_contraint" value="1" title="Pas de dé d'exaltation" />
+                                </td>
+                                <td>
+                                    Dés de vie :
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_pnj_dv" value="1"/> 
+                                    Bonus : 
+                                    <input type="number" name="attr_pnj_bonus_dv" value="0"/> 
+                                </td>
+                                <td>
+                                    PV :
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_pnj_pv" value="0"/> / <input type="number" name="attr_pnj_pv_max" value="0" title="1D8 par DV + Bonus" />
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td>
+                                    Affaibli
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="attr_pnj_affaibli" value="1" title="Les dés ne sont pas explosifs" />
+                                </td>
+                                <td>
+                                    CA :
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_pnj_ca" value="0"/> / Base : <input type="number" name="attr_pnj_ca_base" value="10"/>
+                                </td>                    
+                            </tr>
+                            <tr>
+                                <td>
+                                    En danger
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="attr_pnj_en_danger" value="1" title="-2 à la CA. -2 aux jets de reflexes" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
             </table>  
+            
+<button type="roll" value="/w gm &{template:oltree} {{nom=@{character_name}}} {{vocation_name=Soldat}} {{bonustotal=[[@{soldat}+?{Rang métier|0}]]}} {{jetM=[[@{type_des}]]}} {{jetP=[[@{type_des}]]}} {{jetE=[[@{des_exaltation}]]}}" name="roll_tous"> Jet Soldat</button>
+<button type="roll" value="/w gm &{template:oltree} {{nom=@{character_name}}} {{vocation_name=Voyageur}} {{bonustotal=[[@{voyageur}+?{Rang métier|0}]]}} {{jetM=[[@{type_des}]]}} {{jetP=[[@{type_des}]]}} {{jetE=[[@{des_exaltation}]]}}" name="roll_tous"> Jet Voyageur</button>
+<button type="roll" value="/w gm &{template:oltree} {{nom=@{character_name}}} {{vocation_name=Erudit}} {{bonustotal=[[@{erudit}+?{Rang métier|0}]]}} {{jetM=[[@{type_des}]]}} {{jetP=[[@{type_des}]]}} {{jetE=[[@{des_exaltation}]]}}" name="roll_tous"> Jet d'Erudit</button>
         </div>
     </div>
 </div>
@@ -666,6 +729,24 @@ on("change:en_danger", function() {
     majCaBase();
 });
 
+function majPnjCa(){
+    getAttrs(["pnj_en_danger","pnj_ca_base"], function(values) {
+        if (isNaN(values.pnj_en_danger)||(values.pnj_en_danger != 1)){
+            lendanger = 0;        
+        } else {
+            lendanger = -2;
+        }
+        setAttrs({
+          pnj_ca: parseInt(values.pnj_ca_base) + lendanger,
+      });
+   });    
+}
+on("change:pnj_en_danger", function() {
+    majPnjCa();
+});
+
+
+
 //Les des selon l'état
 function majTypeDes(){
     getAttrs(["affaibli"], function(values) {
@@ -712,22 +793,27 @@ on("change:contraint", function() {
       <th colspan="3"> {{nom}} </th>
     </tr>
     <tr>
-      <td><b>Dés de Maitrise :</b></td>
-      <td>{{jetM_lib}}</td>
+      <th colspan="3">Jet de {{vocation_name}}</th>
+    </tr>
+    <tr>
+      <td><b>Dés de Maitrise</b></td>
       <td>{{jetM}}</td>
     </tr>
     <tr>
-      <td><b>Dés de Prouesse :</b></td>
-      <td>{{jetP_lib}}</td>
+      <td><b>Dés de Prouesse</b></td>
       <td>{{jetP}}</td>
     </tr>
     {{#^rollTotal() jetE 0}}
     <tr>
-      <td><b>Dés d'Exaltation :</b></td>
-      <td>{{jetE_lib}}</td>
+      <td><b>Dés d'Exaltation</b></td>
       <td>{{jetE}}</td>
     </tr>
     {{/^rollTotal() jetE 0}}
+    <tr>
+      <td><b>Bonus/Maitrise</b></td>
+      <td>{{bonustotal}}</td>
+    </tr> 
+
   </table>
 </rolltemplate>
 
@@ -735,13 +821,13 @@ on("change:contraint", function() {
 <rolltemplate class="sheet-rolltemplate-oltree_patrouille">
   <table>
     <tr>
+      <th colspan="2"> {{nom}} </th>
+    </tr>
+    <tr>
       <th colspan="2"> {{jet_nom}} </th>
     </tr>
     <tr>
-      <td colspan="2"><b>{{nom}}</b> lance <b>{{jet_lib}}</b></td>
-    </tr>
-    <tr>
-        <td align="right"><b>Résultat : </b></td>
+        <td><b>Résultat</b></td>
         <td> 
             {{jet}} 
         </td>
