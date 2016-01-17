@@ -1,10 +1,22 @@
+<!-- Les hiddens -->
+<input type="hidden" name="attr_type_des" value="1d8!" readonly/>
+<input type="hidden" name="attr_des_exaltation" value="1d8!" readonly/>
+
+<input type="hidden" name="attr_jet_patrouille" value="&{template:oltree_patrouille} {{nom=@{character_name}}} {{jet_nom=Jet de patrouille}} {{jet_lib=2d8!-?{Modificateur|@{metier_rodeur}}}} {{jet=[[2d8!-?{Modificateur|@{metier_rodeur}}]]}}">
+<input type="hidden" name="attr_jet_soldat" value="&{template:oltree} {{nom=@{character_name}}} {{vocation_name=Soldat}} {{vocation=@{soldat}}} {{bonus=?{Rang métier + bonus/malus|0}}} {{jetM=[[@{type_des}]]}} {{jetP=[[@{type_des}]]}} {{jetE=[[@{des_exaltation}]]}">
+<input type="hidden" name="attr_jet_voyageur" value="&{template:oltree} {{nom=@{character_name}}} {{vocation_name=Voyageur}}  {{vocation=@{voyageur}}} {{bonus=?{Rang métier + bonus/malus|0}}} {{jetM=[[@{type_des}]]}} {{jetP=[[@{type_des}]]}} {{jetE=[[@{des_exaltation}]]}}">
+<input type="hidden" name="attr_jet_erudit" value="&{template:oltree} {{nom=@{character_name}}} {{vocation_name=Erudit}} {{vocation=@{erudit}}} {{bonus=?{Rang métier + bonus/malus|0}}} {{jetM=[[@{type_des}]]}} {{jetP=[[@{type_des}]]}} {{jetE=[[@{des_exaltation}]]}}">
+
+
+<!-- Fin Les hiddens -->
+
 <div align="center">
     <img width="200px" src="http://sf.music.free.fr/oltree.jpg" />
 </div>
 <input type="radio" name="attr_tab" class="sheet-tab sheet-tab1" value="1" title="Patrouilleur" checked="checked" style="margin-left:1px;"/>
 <span class="sheet-tab sheet-tab1">Patrouilleur</span>
 <input type="radio" name="attr_tab" class="sheet-tab sheet-tab2" value="2" title="PNJ"/>
-<span class="sheet-tab sheet-tab2">PNJ/MJ</span>
+<span class="sheet-tab sheet-tab2">PNJ</span>
 <div class="sheet-section sheet-section-core">
     <div class="sheet-table sheet-header-row">&nbsp;</div>
         <div>
@@ -69,9 +81,7 @@
                 </tr>        
                 <tr>        
                     <td colspan="6">
-                        <input type="hidden" name="attr_type_des" value="1d8!" readonly/>
-                        <input type="hidden" name="attr_des_exaltation" value="1d8!" readonly/>
-                        <button type="roll" value="&{template:oltree_patrouille} {{nom=@{character_name}}} {{jet_nom=Jet de patrouille}} {{jet_lib=2d8!-?{Modificateur|@{metier_rodeur}}}} {{jet=[[2d8!-?{Modificateur|@{metier_rodeur}}]]}}" name="roll_patrouille"> Jet de Patrouille</button>
+                        <button type="roll" value="@{jet_patrouille}" name="roll_patrouille"> Jet de Patrouille</button>
                     </td>
                 </tr>
                 <tr>        
@@ -83,8 +93,8 @@
                                 <th colspan="4">CARNET DE PATROUILLE</th>
                             </tr>
                             <tr>
-                                <td>
-                                    <button type="roll" value="&{template:oltree} {{nom=@{character_name}}} {{vocation_name=Soldat}} {{bonustotal=[[@{soldat}+?{Rang métier|0}]]}} {{jetM=[[@{type_des}]]}} {{jetP=[[@{type_des}]]}} {{jetE=[[@{des_exaltation}]]}}" name="roll_tous"></button>
+                                <td nowrap>
+                                    <button type="roll" value="@{jet_soldat}" name="roll_soldat"></button><button type="roll" class="sheet-pour-mj" value="/w gm @{jet_soldat}" name="roll_soldat_mj"></button>
                                 </td>
                                 <td>
                                     Soldat/Vigueur
@@ -113,8 +123,8 @@
                                 
                             </tr>
                             <tr>
-                                <td>
-                                    <button type="roll" value="&{template:oltree} {{nom=@{character_name}}} {{vocation_name=Voyageur}} {{bonustotal=[[@{voyageur}+?{Rang métier|0}]]}} {{jetM=[[@{type_des}]]}} {{jetP=[[@{type_des}]]}} {{jetE=[[@{des_exaltation}]]}}" name="roll_tous"></button>
+                                <td nowrap>
+                                    <button type="roll" value="@{jet_voyageur}" name="roll_voyageur"></button><button type="roll" class="sheet-pour-mj" value="/w gm @{jet_voyageur}" name="roll_voyageur_mj"></button>
                                 </td>                            
                                 <td>
                                     Voyageur/Réflexe
@@ -142,8 +152,8 @@
                                 </td>                    
                             </tr>
                             <tr>
-                                <td>
-                                    <button type="roll" value="&{template:oltree} {{nom=@{character_name}}} {{vocation_name=Erudit}} {{bonustotal=[[@{erudit}+?{Rang métier|0}]]}} {{jetM=[[@{type_des}]]}} {{jetP=[[@{type_des}]]}} {{jetE=[[@{des_exaltation}]]}}" name="roll_tous"></button>
+                                <td nowrap>
+                                    <button type="roll" value="@{jet_erudit}" name="roll_erudit"></button><button type="roll" class="sheet-pour-mj" value="/w gm @{jet_erudit}" name="roll_erudit_mj"></button>
                                 </td>                            
                                 <td>
                                     Erudit/Volonté
@@ -584,6 +594,7 @@
 <div class="sheet-section sheet-section-pnj">
     <div class="sheet-table sheet-header-row">&nbsp;</div>
         <div>
+            <h3>Informations PNJ</h3>
             <table>
                 <tr>
                     <td>
@@ -656,12 +667,7 @@
                         </table>
                     </td>
                 </tr>
-
             </table>  
-            
-<button type="roll" value="/w gm &{template:oltree} {{nom=@{character_name}}} {{vocation_name=Soldat}} {{bonustotal=[[@{soldat}+?{Rang métier|0}]]}} {{jetM=[[@{type_des}]]}} {{jetP=[[@{type_des}]]}} {{jetE=[[@{des_exaltation}]]}}" name="roll_tous"> Jet Soldat</button>
-<button type="roll" value="/w gm &{template:oltree} {{nom=@{character_name}}} {{vocation_name=Voyageur}} {{bonustotal=[[@{voyageur}+?{Rang métier|0}]]}} {{jetM=[[@{type_des}]]}} {{jetP=[[@{type_des}]]}} {{jetE=[[@{des_exaltation}]]}}" name="roll_tous"> Jet Voyageur</button>
-<button type="roll" value="/w gm &{template:oltree} {{nom=@{character_name}}} {{vocation_name=Erudit}} {{bonustotal=[[@{erudit}+?{Rang métier|0}]]}} {{jetM=[[@{type_des}]]}} {{jetP=[[@{type_des}]]}} {{jetE=[[@{des_exaltation}]]}}" name="roll_tous"> Jet d'Erudit</button>
         </div>
     </div>
 </div>
@@ -810,8 +816,16 @@ on("change:contraint", function() {
     </tr>
     {{/^rollTotal() jetE 0}}
     <tr>
-      <td><b>Bonus/Maitrise</b></td>
-      <td>{{bonustotal}}</td>
+      <td colspan="2"><hr></td>
+    </tr> 
+
+    <tr>
+      <td>{{vocation_name}}</td>
+      <td>{{vocation}}</td>
+    </tr> 
+    <tr>
+      <td>Métier & Bonus</td>
+      <td>{{bonus}}</td>
     </tr> 
 
   </table>

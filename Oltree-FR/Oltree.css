@@ -51,6 +51,7 @@ input[type="text"]:read-only, input[type="number"]:read-only {
   background-color: #d9d9d9;
 }
 
+
 .sheet-rolltemplate-oltree table, .sheet-rolltemplate-oltree_patrouille table {
     width: 100%;
     background-color: #FFFFE5;
@@ -168,4 +169,8 @@ input.sheet-tab2:checked + span.sheet-tab2{
 	background: #ccc;
 	color: #000;
     font-weight: bold;
+}
+
+button[type="roll"].sheet-pour-mj{
+    color: #f00;
 }
