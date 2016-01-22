@@ -148,7 +148,9 @@
                                     CA :
                                 </td>
                                 <td>
-                                    <input type="number" name="attr_ca" value="0"/> / Base : <input type="number" name="attr_ca_base" value="10" title="10 + Armure + Bouclier + Bonus guerrier" readonly/>
+                                    <input type="number" name="attr_ca" value="10" readonly/> 
+                                    = <input type="number" name="attr_ca_base" value="10" title="CA de base 10 + Armure + Bouclier + Bonus guerrier" readonly/> 
+                                    + <input type="number" name="attr_ca_bonus" value="0" title="Bonus/Malus à la CA"/>
                                 </td>                    
                             </tr>
                             <tr>
@@ -702,8 +704,8 @@ on("change:des_vie", function() {
 });
 
 //CA Base
-function majCaBase(){
-    getAttrs(["bouclier", "armure","metier_guerrier","en_danger"], function(values) {
+function majCa(){
+    getAttrs(["bouclier", "armure","metier_guerrier","en_danger","ca_bonus"], function(values) {
         if (isNaN(values.bouclier)){
             lebouclier = 0;        
         } else {
@@ -714,22 +716,27 @@ function majCaBase(){
         } else {
             lendanger = -2;
         }
+        la_ca_base = 10 + parseInt(lebouclier) + parseInt(values.armure) + Math.floor(parseInt(values.metier_guerrier) / 2) + lendanger;
         setAttrs({
-          ca_base: 10 + parseInt(lebouclier) + parseInt(values.armure) + Math.floor(parseInt(values.metier_guerrier) / 2) + lendanger,
+          ca_base: la_ca_base,
+          ca: la_ca_base + parseInt(values.ca_bonus),
       });
    });    
 }
 on("change:bouclier", function() {
-    majCaBase();
+    majCa();
 });
 on("change:armure", function() {
-    majCaBase();
+    majCa();
 });
 on("change:metier_guerrier", function() {
-    majCaBase();
+    majCa();
 });
 on("change:en_danger", function() {
-    majCaBase();
+    majCa();
+});
+on("change:ca_bonus", function() {
+    majCa();
 });
 
 function majPnjCa(){
