@@ -594,6 +594,11 @@
             </table>
         </div>
     </div>
+<!-- hidden pnj -->    
+<input type="hidden" name="attr_pnj_type_des" value="1d8!" readonly/>
+<input type="hidden" name="attr_pnj_des_exaltation" value="0" readonly/>
+<input type="hidden" name="attr_pnj_jet" value="&{template:pnj_oltree} {{nom=@{character_name}}}  {{bonusdv=[[@{pnj_dv} + @{pnj_dv_bonus}]]}} {{bonus=?{Bonus/malus|0}}} {{bonustotal=[[@{pnj_dv} + @{pnj_dv_bonus} + ?{Bonus/malus|0}]]}} {{jetM=[[@{pnj_type_des}]]}} {{jetP=[[@{pnj_type_des}]]}} {{jetE=[[@{pnj_des_exaltation}]]}}">
+    
 <div class="sheet-section sheet-section-pnj">
     <div class="sheet-table sheet-header-row">&nbsp;</div>
         <div>
@@ -611,6 +616,14 @@
                     </td>
                     <td>
                         <input type="text" placeholder="Créature" name="attr_pnj_creature" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <button type="roll" value="@{pnj_jet}" name="roll_pnj"> Jet PNJ</button>
+                        <button type="roll" class="sheet-pour-mj" value="/w gm @{pnj_jet}" name="roll_pnj"> Jet PNJ vers le MJ</button>
+
+    
                     </td>
                 </tr>
                 <tr>        
@@ -633,7 +646,7 @@
                                 <td>
                                     <input type="number" name="attr_pnj_dv" value="1"/> 
                                     Bonus : 
-                                    <input type="number" name="attr_pnj_bonus_dv" value="0"/> 
+                                    <input type="number" name="attr_pnj_dv_bonus" value="0"/> 
                                 </td>                                
                             </tr>
                             <tr>
@@ -665,6 +678,20 @@
                                 </td>
                                 <td>
                                     <input type="number" name="attr_pnj_pv" value="0"/> / <input type="number" name="attr_pnj_pv_max" value="0" title="1D8 par DV + Bonus" />
+                                </td>                                
+                            </tr>
+                            <tr>
+                                <td>
+                                    Ligué/Dé d'exaltation
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="attr_pnj_ligue" value="1" title="Le PNJ est ligué ou est un montre avec un dé d'exaltation" />
+                                </td>
+                                <td>
+                                    Moral :
+                                </td>
+                                <td>
+                                    <input type="number" name="attr_pnj_moral" value="0"/> / <input type="number" name="attr_pnj_moral_max" value="0" />
                                 </td>                                
                             </tr>
                         </table>
@@ -805,6 +832,51 @@ on("change:contraint", function() {
     majDesExaltation();
 });
 
+
+function majPnjTypeDes(){
+    getAttrs(["pnj_affaibli"], function(values) {
+        if (isNaN(values.pnj_affaibli)||(values.pnj_affaibli != 1)){
+            ledes = "1d8!";        
+        } else {
+            ledes = "1d8";
+        }        
+        setAttrs({
+          pnj_type_des: ledes
+      });
+   });    
+}
+
+function majPnjDesExaltation(){
+    getAttrs(["pnj_contraint","pnj_affaibli","pnj_ligue"], function(values) {
+        if (isNaN(values.pnj_ligue)||(values.pnj_ligue != 1)){
+            ledes = 0;
+        } else {
+            if (isNaN(values.pnj_contraint)||(values.pnj_contraint != 1)){
+                if (isNaN(values.pnj_affaibli)||(values.pnj_affaibli != 1)){
+                    ledes = "1d8!";        
+                } else {
+                    ledes = "1d8";
+                }        
+            } else {
+                ledes = "0";
+            }        
+        }
+        setAttrs({
+          pnj_des_exaltation: ledes
+    	});
+   });    
+}
+on("change:pnj_affaibli", function() {
+    majPnjTypeDes();
+    majPnjDesExaltation();
+});
+on("change:pnj_contraint", function() {
+    majPnjDesExaltation();
+});
+on("change:pnj_ligue", function() {
+    majPnjDesExaltation();
+});
+
 </script>
 <!-- Template Oltree -->
 <rolltemplate class="sheet-rolltemplate-oltree">
@@ -844,6 +916,49 @@ on("change:contraint", function() {
 
   </table>
 </rolltemplate>
+<!-- Template PNJ Oltree -->
+<rolltemplate class="sheet-rolltemplate-pnj_oltree">
+  <table>
+    <tr>
+      <th colspan="3"> {{nom}} </th>
+    </tr>
+    <tr>
+      <th colspan="2"> PNJ </th>
+    </tr>    
+    <tr>
+      <td><b>Dés de Maitrise</b></td>
+      <td>{{jetM}}</td>
+    </tr>
+    <tr>
+      <td><b>Dés de Prouesse</b></td>
+      <td>{{jetP}}</td>
+    </tr>
+    {{#^rollTotal() jetE 0}}
+    <tr>
+      <td><b>Dés d'Exaltation</b></td>
+      <td>{{jetE}}</td>
+    </tr>
+    {{/^rollTotal() jetE 0}}
+    <tr>
+      <td colspan="2"><hr></td>
+    </tr> 
+
+    <tr>
+      <td>Bonus dés de vie</td>
+      <td>{{bonusdv}}</td>
+    </tr> 
+    <tr>
+      <td>Bonus divers</td>
+      <td>{{bonus}}</td>
+    </tr> 
+    <tr>
+      <td><b>Bonus Total</b></td>
+      <td>{{bonustotal}}</td>
+    </tr> 
+
+  </table>
+</rolltemplate>
+
 
 <!-- Template Patrouille -->
 <rolltemplate class="sheet-rolltemplate-oltree_patrouille">
