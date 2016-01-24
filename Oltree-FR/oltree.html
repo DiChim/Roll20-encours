@@ -151,6 +151,7 @@
                                     <input type="number" name="attr_ca" value="10" readonly/> 
                                     = <input type="number" name="attr_ca_base" value="10" title="CA de base 10 + Armure + Bouclier + Bonus guerrier" readonly/> 
                                     + <input type="number" name="attr_ca_bonus" value="0" title="Bonus/Malus à la CA"/>
+                                    - 2 (si en danger)
                                 </td>                    
                             </tr>
                             <tr>
@@ -646,7 +647,10 @@
                                     CA :
                                 </td>
                                 <td>
-                                    <input type="number" name="attr_pnj_ca" value="0"/> / Base : <input type="number" name="attr_pnj_ca_base" value="10"/>
+                                    <input type="number" name="attr_pnj_ca" value="10" readonly/> 
+                                    = <input type="number" name="attr_pnj_ca_base" value="10" title="CA de base" readonly/> 
+                                    + <input type="number" name="attr_pnj_ca_bonus" value="0" title="Bonus/Malus à la CA"/>
+                                    - 2 (si en danger)
                                 </td>                    
                             </tr>
                             <tr>
@@ -740,18 +744,24 @@ on("change:ca_bonus", function() {
 });
 
 function majPnjCa(){
-    getAttrs(["pnj_en_danger","pnj_ca_base"], function(values) {
+    getAttrs(["pnj_en_danger","pnj_ca_base","pnj_ca_bonus"], function(values) {
         if (isNaN(values.pnj_en_danger)||(values.pnj_en_danger != 1)){
             lendanger = 0;        
         } else {
             lendanger = -2;
         }
         setAttrs({
-          pnj_ca: parseInt(values.pnj_ca_base) + lendanger,
+          pnj_ca: parseInt(values.pnj_ca_base) + lendanger + parseInt(values.pnj_ca_bonus),
       });
    });    
 }
 on("change:pnj_en_danger", function() {
+    majPnjCa();
+});
+on("change:pnj_ca_bonus", function() {
+    majPnjCa();
+});
+on("change:pnj_ca_base", function() {
     majPnjCa();
 });
 
