@@ -2,11 +2,36 @@
   font-family: cursive;
 }
 
+.charsheet table {
+    width: 100%;
+}
+.charsheet td {
+    padding: 5px 2px 5px 2px;  
+    border: 0 solid #000;
+    vertical-align: text-top;
+}
+
+.charsheet th {
+    padding: 5px;  
+    border: 0 solid #000;
+    background-color: #CCC;
+}
+
 input[type="text"], input[type="number"], select {
- font-family: cursive; 
+  background-color: transparent;
+  border: 0 solid #000;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  font-family: cursive; 
 }
 
 
 input[type="text"]:read-only, input[type="number"]:read-only {
   background-color: #d9d9d9;
+}
+
+textarea{
+  height: 40px;
+  width : 95%;
+  font-family: cursive; 
 }

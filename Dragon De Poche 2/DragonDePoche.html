@@ -130,7 +130,7 @@
       <td colspan="2">
         <div class="sheet-repetition">
             <fieldset class="repeating_competence">            
-                <input class="sheet-lib-repetition" placeholder="Compétence ..." type="text" name="attr_competence" />
+                <input class="sheet-lib-repetition" placeholder="Compétence ..." type="text" name="attr_competence" title="+4 aux jets concernés"/>
             </fieldset>  
         </div>
       </td>
@@ -138,7 +138,7 @@
         <div class="sheet-repetition">
             <fieldset class="repeating_capacite">            
                 <input class="sheet-lib-repetition" placeholder="Capacité ..." type="text" name="attr_capacite" />
-                <input type="number" name="attr_capacite_nb" value="1"/></br>
+                <input type="number" name="attr_capacite_nb" value="1"/><br/>
                 <textarea name="attr_capacite_notes"></textarea>
             </fieldset>  
         </div>
@@ -148,5 +148,65 @@
         <th colspan="4">
             MON INVENTAIRE
         </th>    
+    </tr>
+    <tr>
+      <th colspan="2">
+        MON SAC ET MON ARMURE
+      </th>
+      <th colspan="2">
+        MES ARMES 
+      </th>
+    </tr>
+    <tr>
+        <td>
+           Bouclier
+        </td>
+        <td>
+            <input type="number" name="attr_bouclier" value="0" title="Bonus de défense du bouclier. Si 0 le personnage ne porte pas de bouclier" />
+        </td>
+        <td>
+           Arme lourde
+        </td>
+        <td>
+            <input type="checkbox" name="attr_armelourde" value="1" title="+3 aux dégâts. Le bonus du bouclier n'est pas pris en compte, car le bouclier ne peut pas être porté"/>
+        </td>
+    </tr>    
+    <tr rowspan="2">
+      <td colspan="2">
+        Sac
+        <select name="attr_sac">
+            <option value="voyageur">Sac de voyageur + Armure de cuir (défense +1)</option>
+            <option value="aventurier">Sac d'aventurier + Cotte de maille (défense +2)</option>
+            <option value="soldat">Sac de soldat + Broigne renforcée (défense +3)</option>
+        </select>
+        <input type="number" name="attr_sac_utilisation" value="0" title="Nombre de fois restantes où l'on peut faire appel au contenu du sac" /> / 
+        <input type="number" name="attr_sac_utilisationmax" value="1" title="Nombre de fois par aventure où l'on peut faire appel au contenu du sac" />
+      </td>
+      <td colspan="2" rowspan="2">
+        <div class="sheet-repetition">
+            <fieldset class="repeating_arme">            
+                <input class="sheet-lib-repetition" placeholder="Arme ..." type="text" name="attr_arme" />
+            </fieldset>  
+        </div>
+      </td>
+    </tr>
+    <tr rowspan="2">
+      <td colspan="2">
+        <div class="sheet-repetition">
+            <fieldset class="repeating_equipement">            
+                <input class="sheet-lib-repetition" placeholder="Équipement ..." type="text" name="attr_equipement" />
+            </fieldset>  
+        </div>
+      </td>
+    </tr>    
+    <tr>
+        <th colspan="4">
+            OBSERVATIONS & NOTES
+        </th>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <textarea name="attr_obs_notes"></textarea>
+        </td>
     </tr>
 </table>
