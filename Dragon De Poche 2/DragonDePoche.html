@@ -2,7 +2,6 @@
   DRAGON DE POCHE²
   <button type="roll" class="sheet-btLien" title="Afficher l'adresse du site dans le chat" value="http://legrumph.org/Terrier/?Chibi/Dragon-de-poche%C2%B2"></button>
 </h2>
-
 <table>
     <tr>
         <td>
@@ -66,13 +65,17 @@
            <span class="sheet-attribut">CONSTITUTION</span>
         </td>
         <td>
-            <input type="number" name="attr_constitution" value="0" title="Vigueur et résistance" />
+		  <span class="sheet-crochet">[</span>
+          <input type="number" name="attr_constitution" value="0" title="Vigueur et résistance" />
+          <span class="sheet-crochet">]</span>
         </td>
         <td>
            <span class="sheet-attribut2">POINTS DE VIE</span>
         </td>
         <td>
+          <span class="sheet-crochet2">[</span>
             <input type="number" name="attr_pv" value="0" title="PV actuels" /> / <input type="number" name="attr_pvmax" value="0" title="5 PV + 5 par rang de constitution - 5 par blessure" readonly />
+            <span class="sheet-crochet2">]</span>
         </td>
     </tr>
     <tr>
