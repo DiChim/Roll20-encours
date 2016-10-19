@@ -1,0 +1,12 @@
+.charsheet {
+  font-family: cursive;
+}
+
+input[type="text"], input[type="number"], select {
+ font-family: cursive; 
+}
+
+
+input[type="text"]:read-only, input[type="number"]:read-only {
+  background-color: #d9d9d9;
+}

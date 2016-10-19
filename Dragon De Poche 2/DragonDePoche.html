@@ -1,15 +1,15 @@
 <table>
     <tr>
         <td>
-           MON NOM :
+           MON NOM
         </td>
-        <td>
+        <td colspan="3">
             <input type="text" placeholder="Nom" name="attr_character_name" />
         </td>
     </tr>
     <tr>
         <td>
-            MON PEUPLE :
+            MON PEUPLE
         </td>
         <td>
             <select name="attr_peuple">
@@ -19,10 +19,16 @@
                 <option value="Sidhe">Sidhe</option>
             </select>
         </td>
+        <td>
+           <span class="sheet-attribut2">XP</span>
+        </td>
+        <td>
+            <input type="number" name="attr_xp" value="0" title="Points d'XP" />
+        </td>        
     </tr>
     <tr>
         <td>
-            MA CLASSE :
+            MA CLASSE
         </td>
         <td>
             <select name="attr_classe">
@@ -33,5 +39,114 @@
                 <option value="Veneur">Veneur</option>
             </select>
         </td>
+        <td>
+           <span class="sheet-attribut2">BLESSURES</span>
+        </td>
+        <td>
+            <input type="number" name="attr_blessure" value="0" title="Nombre de blessure" />
+        </td>        
+    </tr>
+    <tr>
+        <td>
+           <span class="sheet-attribut">FORCE</span>
+        </td>
+        <td>
+            <input type="number" name="attr_force" value="0" title="Attaques et dégats au coprs à corps. Actions physique en puissance" />
+        </td>        
+    </tr>
+    <tr>
+        <td>
+           <span class="sheet-attribut">CONSTITUTION</span>
+        </td>
+        <td>
+            <input type="number" name="attr_constitution" value="0" title="Vigueur et résistance" />
+        </td>
+        <td>
+           <span class="sheet-attribut2">POINTS DE VIE</span>
+        </td>
+        <td>
+            <input type="number" name="attr_pv" value="0" title="PV actuels" /> / <input type="number" name="attr_pvmax" value="0" title="5 PV + 5 par rang de constitution - 5 par blessure" readonly />
+        </td>
+    </tr>
+    <tr>
+        <td>
+           <span class="sheet-attribut">DEXTÉRITÉ</span>
+        </td>
+        <td>
+            <input type="number" name="attr_dexterite" value="0" title="Attaques et dégats à distance. Actions physique en souplesse et en précision" />
+        </td>        
+    </tr>
+    <tr>
+        <td>
+           <span class="sheet-attribut">INTELLIGENCE</span>
+        </td>
+        <td>
+            <input type="number" name="attr_intelligence" value="0" title="Érudition, astuce et mémoire" />
+        </td>
+        <td>
+           <span class="sheet-attribut2">POINTS DE MAGIE</span>
+        </td>
+        <td>
+            <input type="number" name="attr_pm" value="0" title="Points de magie actuels" /> / <input type="number" name="attr_pmmax" value="0" title="1 point de magie par rang d'intelligence" readonly />
+        </td>
+    </tr>
+    <tr>
+        <td>
+           <span class="sheet-attribut">SAGESSE</span>
+        </td>
+        <td>
+            <input type="number" name="attr_sagesse" value="0" title="Perception, intuition, vigilance" />
+        </td>
+        <td>
+           <span class="sheet-attribut2">DÉFENSE</span>
+        </td>
+        <td>
+            <input type="number" name="attr_defense" value="0" title="7 + Sagesse + Protection + Bouclier"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+           <span class="sheet-attribut">CHARISME</span>
+        </td>
+        <td>
+            <input type="number" name="attr_charisme" value="0" title="Actions sociales et présence" />
+        </td>
+        <td>
+           <span class="sheet-attribut2">POINTS DE CHANCE</span>
+        </td>
+        <td>
+            <input type="number" name="attr_pc" value="0" title="Points de chance actuels" /> / <input type="number" name="attr_pcmax" value="0" title="1 point de chance par rang de charisme" readonly />
+        </td>
+    </tr>
+    <tr>
+      <th colspan="2">
+        COMPÉTENCES
+      </th>
+      <th colspan="2">
+        CAPACITÉS
+      </th>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div class="sheet-repetition">
+            <fieldset class="repeating_competence">            
+                <input class="sheet-lib-repetition" placeholder="Compétence ..." type="text" name="attr_competence" />
+            </fieldset>  
+        </div>
+      </td>
+      <td colspan="2">
+        <div class="sheet-repetition">
+            <fieldset class="repeating_capacite">            
+                <input class="sheet-lib-repetition" placeholder="Capacité ..." type="text" name="attr_capacite" />
+                <input type="number" name="attr_capacite_nb" value="1"/></br>
+                <textarea name="attr_capacite_notes"></textarea>
+            </fieldset>  
+        </div>
+      </td>
+    </tr>
+    <tr>
+        <th colspan="4">
+            MON INVENTAIRE
+        </th>    
     </tr>
 </table>
