@@ -14,10 +14,16 @@
 .charsheet th {
     padding: 5px;  
     border: 0 solid #000;
-    background-color: #CCC;
+    background-color: #6d2b35;
+	color: #FFF
 }
 
-input[type="text"], input[type="number"], select {
+.sheet-crochet{
+  font-weight: bold;
+  font-size: 240%;
+}
+
+input[type="text"], select {
   background-color: transparent;
   border: 0 solid #000;
   border-bottom-width: 1px;
@@ -25,6 +31,11 @@ input[type="text"], input[type="number"], select {
   font-family: cursive; 
 }
 
+input[type="number"] {
+  background-color: transparent;
+  border: 0 solid #000;
+  font-family: cursive; 
+}
 
 input[type="text"]:read-only, input[type="number"]:read-only {
   background-color: #d9d9d9;
