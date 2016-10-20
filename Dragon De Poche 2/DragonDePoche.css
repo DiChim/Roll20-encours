@@ -6,22 +6,46 @@
     width: 100%;
 }
 .charsheet td {
-    padding: 5px 2px 5px 2px;  
-    border: 0 solid #000;
-    vertical-align: text-top;
+  padding: 5px 2px 5px 2px;  
+  border: 0 solid #000;
+  vertical-align: text-top;
 }
 
 .charsheet th {
-    padding: 5px;  
-    border: 0 solid #000;
-    background-color: #6d2b35;
-	color: #FFF
+  padding: 5px;  
+  border: 0 solid #000;
+  background-color: #6d2b35;
+  color: #FFF
+}
+
+.charsheet h2 {
+  padding: 5px;  
+  border: 0 solid #000;
+  background-color: #6d2b35;
+  color: #FFF;
+  text-align: center;
 }
 
 .sheet-crochet{
   font-weight: bold;
   font-size: 240%;
 }
+
+.sheet-crochet2{
+  font-weight: bold;
+  font-size: 240%;
+  color: #CCC;
+}
+
+.sheet-attribut{
+  font-weight: bold;
+}
+
+.sheet-attribut2{
+  font-weight: bold;
+  color: #CCC;
+}
+
 
 input[type="text"], select {
   background-color: transparent;
