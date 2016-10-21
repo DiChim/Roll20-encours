@@ -65,8 +65,28 @@ input[type="text"]:read-only, input[type="number"]:read-only {
   background-color: #d9d9d9;
 }
 
+button[type="roll"].sheet-pour-mj{
+    color: #f00;
+}
 textarea{
   height: 40px;
   width : 95%;
   font-family: cursive; 
+}
+
+.sheet-rolltemplate-dragonpoche2 table {
+    width: 100%;
+    background-color: #FFF;
+    border: 1px solid;
+    color: black;
+    font-size: 1em;
+    font-family: cursive; 
+}
+.sheet-rolltemplate-dragonpoche2 th {
+    background-color: #6d2b35;
+    color: #ffffff;
+    padding: 2px;
+    border-bottom: 1px solid black;
+    line-height: 1.2em;
+    font-size: 1.1em;
 }

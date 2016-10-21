@@ -1,3 +1,7 @@
+<!--  Les hiddens -->
+<!-- <input type="hidden" name="attr_jet_force" value="&{template:dragonpoche2} {{nom=@{character_name}}} {{carac_name=Force}} {{carac=@{Force}}} {{bonus=?{Comptétence (+4) + bonus / malus|0}}} {{jet1_2=[[2d6]]}} {{jet3=[[1d6!]]}}"> -->
+<input type="hidden" name="attr_jet_force" value="&{template:dragonpoche2} {{nom=@{character_name}}} {{carac_name=Force}} {{carac=@{Force}}} {{jet=[[2d6 [Dés normaux] +(@{Force}) [Force] +(?{Comptétence & bonus/malus|0})[Bonus/Malus] +1d6! [Dé de dégâts] ]]}}">
+<!-- Affichage -->
 <h2>
   DRAGON DE POCHE²
   <button type="roll" class="sheet-btLien" title="Afficher l'adresse du site dans le chat" value="http://legrumph.org/Terrier/?Chibi/Dragon-de-poche%C2%B2"></button>
@@ -52,7 +56,8 @@
     </tr>
     <tr>
         <td>
-           <span class="sheet-attribut">FORCE</span>
+        <button type="roll" value="@{jet_force}" name="roll_force" title="Jet pour tous"></button><button type="roll" class="sheet-pour-mj" value="/w gm @{jet_force}" name="roll_force_mj" title="Jet pour le MJ"></button>
+        <span class="sheet-attribut">FORCE</span>
         </td>
         <td>
             <span class="sheet-crochet">[</span>
@@ -62,7 +67,8 @@
     </tr>
     <tr>
         <td>
-           <span class="sheet-attribut">CONSTITUTION</span>
+         <button type="roll" value="@{jet_constitution}" name="roll_constitution" title="Jet pour tous"></button><button type="roll" class="sheet-pour-mj" value="/w gm @{jet_constitution}" name="roll_constitution_mj" title="Jet pour le MJ"></button>
+         <span class="sheet-attribut">CONSTITUTION</span>
         </td>
         <td>
           <span class="sheet-crochet">[</span>
@@ -80,7 +86,8 @@
     </tr>
     <tr>
         <td>
-           <span class="sheet-attribut">DEXTÉRITÉ</span>
+          <button type="roll" value="@{jet_dexterite}" name="roll_dexterite" title="Jet pour tous"></button><button type="roll" class="sheet-pour-mj" value="/w gm @{jet_dexterite}" name="roll_dexterite_mj" title="Jet pour le MJ"></button>
+          <span class="sheet-attribut">DEXTÉRITÉ</span>
         </td>
         <td>
           <span class="sheet-crochet">[</span>
@@ -90,6 +97,7 @@
     </tr>
     <tr>
         <td>
+          <button type="roll" value="@{jet_intelligence}" name="roll_intelligence" title="Jet pour tous"></button><button type="roll" class="sheet-pour-mj" value="/w gm @{jet_intelligence}" name="roll_intelligence_mj" title="Jet pour le MJ"></button>
           <span class="sheet-attribut">INTELLIGENCE</span>
         </td>
         <td>
@@ -108,7 +116,8 @@
     </tr>
     <tr>
         <td>
-           <span class="sheet-attribut">SAGESSE</span>
+          <button type="roll" value="@{jet_sagesse}" name="roll_sagesse" title="Jet pour tous"></button><button type="roll" class="sheet-pour-mj" value="/w gm @{jet_sagesse}" name="roll_sagesse_mj" title="Jet pour le MJ"></button>
+          <span class="sheet-attribut">SAGESSE</span>
         </td>
         <td>
           <span class="sheet-crochet">[</span>
@@ -126,7 +135,8 @@
     </tr>
     <tr>
         <td>
-           <span class="sheet-attribut">CHARISME</span>
+          <button type="roll" value="@{jet_charisme}" name="roll_charisme" title="Jet pour tous"></button><button type="roll" class="sheet-pour-mj" value="/w gm @{jet_charisme}" name="roll_charisme_mj" title="Jet pour le MJ"></button>
+          <span class="sheet-attribut">CHARISME</span>
         </td>
         <td>
           <span class="sheet-crochet">[</span>
@@ -234,3 +244,18 @@
         </td>
     </tr>
 </table>
+<!-- Templates -->
+<rolltemplate class="sheet-rolltemplate-dragonpoche2">
+  <table>
+    <tr>
+      <th colspan="3"> {{nom}} </th>
+    </tr>
+    <tr>
+      <th colspan="3">Jet de {{carac_name}} [{{carac}}]</th>
+    </tr>
+    <tr>
+      <td><b>Résultat</b></td>
+      <td>{{jet}}</td>
+    </tr>
+  </table>
+</rolltemplate>
