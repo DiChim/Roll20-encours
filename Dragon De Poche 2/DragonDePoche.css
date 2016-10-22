@@ -18,10 +18,10 @@
   color: #FFF
 }
 
-.sheet-big th {
+th.sheet-big {
   padding: 10px;  
   border: 0 solid #000;
-  background-color: red;
+  background-color: 6d2b35;
   color: #FFF;
   font-size: 150%;
 }
@@ -80,11 +80,22 @@ input[type="number"].sheet-carac {
 button[type="roll"].sheet-pour-mj{
     color: #f00;
 }
+
 textarea{
+  width : 95%;
+  font-family: cursive; 
+}
+
+.sheet-repetition textarea{
   height: 40px;
   width : 95%;
   font-family: cursive; 
 }
+
+.sheet-repetition input[type="text"] {
+   width: 80%;
+}
+
 
 .sheet-rolltemplate-dragonpoche2 table {
     width: 100%;
@@ -106,7 +117,7 @@ textarea{
 /* Les onglets */
 div[class^="sheet-section"] {
     visibility: hidden;
-	opacity: 0;
+    opacity: 0;
 	max-height: 0;
 	overflow: hidden;
 }
