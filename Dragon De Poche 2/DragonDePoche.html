@@ -210,6 +210,7 @@
     </tr>    
     <tr rowspan="2">
       <td colspan="2">
+		<!--  
         Sac
         <select name="attr_sac">
             <option value="voyageur">Sac de voyageur + Armure de cuir (défense +1)</option>
@@ -218,6 +219,24 @@
         </select>
         <input type="number" name="attr_sac_utilisation" value="0" title="Nombre de fois restantes où l'on peut faire appel au contenu du sac" /> / 
         <input type="number" name="attr_sac_utilisationmax" value="1" title="Nombre de fois par aventure où l'on peut faire appel au contenu du sac" />
+        
+        -->
+        <input type="radio" name="attr_sac" class="sheet-tab sheet-tab1" value="voyageur" title="Sac de voyageur" checked="checked" style="margin-left:1px;"/>
+		<span class="sheet-tab sheet-tab1">Voyageur</span>
+		<input type="radio" name="attr_sac" class="sheet-tab sheet-tab2" value="aventurier" title="Sac d'aventurier"/>
+		<span class="sheet-tab sheet-tab2">Aventurier</span>
+		<input type="radio" name="attr_sac" class="sheet-tab sheet-tab3" value="soldat" title="Sac de soldat"/>
+		<span class="sheet-tab sheet-tab3">Soldat</span>
+		<div class="sheet-section sheet-section-sac-voyageur">
+			Voyageur
+		</div>
+		<div class="sheet-section sheet-section-sac-aventurier">
+			Aventurier
+		</div>
+		<div class="sheet-section sheet-section-sac-soldat">
+			Soldat
+		</div>
+
       </td>
       <td colspan="2" rowspan="2">
         <div class="sheet-repetition">
