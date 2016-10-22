@@ -64,7 +64,7 @@
         </td>
         <td>
             <span class="sheet-crochet">[</span>
-            <input type="number" name="attr_force" value="0" title="Attaques et dégats au coprs à corps. Actions physique en puissance" />
+            <input class="sheet-carac" type="number" name="attr_force" value="0" title="Attaques et dégats au coprs à corps. Actions physique en puissance" />
             <span class="sheet-crochet">]</span>
         </td>        
     </tr>
@@ -75,7 +75,7 @@
         </td>
         <td>
           <span class="sheet-crochet">[</span>
-          <input type="number" name="attr_constitution" value="0" title="Vigueur et résistance" />
+          <input class="sheet-carac" type="number" name="attr_constitution" value="0" title="Vigueur et résistance" />
           <span class="sheet-crochet">]</span>
         </td>
         <td>
@@ -83,7 +83,7 @@
         </td>
         <td>
           <span class="sheet-crochet2">[</span>
-            <input type="number" name="attr_pv" value="0" title="PV actuels" /> / <input type="number" name="attr_pvmax" value="0" title="5 PV + 5 par rang de constitution - 5 par blessure"/>
+            <input class="sheet-carac" type="number" name="attr_pv" value="0" title="PV actuels" /> / <input class="sheet-carac" type="number" name="attr_pvmax" value="0" title="5 PV + 5 par rang de constitution - 5 par blessure"/>
             <span class="sheet-crochet2">]</span>
         </td>
     </tr>
@@ -94,7 +94,7 @@
         </td>
         <td>
           <span class="sheet-crochet">[</span>
-          <input type="number" name="attr_dexterite" value="0" title="Attaques et dégats à distance. Actions physique en souplesse et en précision" />
+          <input class="sheet-carac" type="number" name="attr_dexterite" value="0" title="Attaques et dégats à distance. Actions physique en souplesse et en précision" />
           <span class="sheet-crochet">]</span>
         </td>        
     </tr>
@@ -105,7 +105,7 @@
         </td>
         <td>
           <span class="sheet-crochet">[</span>
-          <input type="number" name="attr_intelligence" value="0" title="Érudition, astuce et mémoire" />
+          <input class="sheet-carac" type="number" name="attr_intelligence" value="0" title="Érudition, astuce et mémoire" />
           <span class="sheet-crochet">]</span>
         </td>
         <td>
@@ -113,7 +113,7 @@
         </td>
         <td>
           <span class="sheet-crochet2">[</span>
-          <input type="number" name="attr_pm" value="0" title="Points de magie actuels" /> / <input type="number" name="attr_pmmax" value="0" title="1 point de magie par rang d'intelligence"/>
+          <input class="sheet-carac" type="number" name="attr_pm" value="0" title="Points de magie actuels" /> / <input class="sheet-carac" type="number" name="attr_pmmax" value="0" title="1 point de magie par rang d'intelligence"/>
           <span class="sheet-crochet2">]</span>
         </td>
     </tr>
@@ -124,7 +124,7 @@
         </td>
         <td>
           <span class="sheet-crochet">[</span>
-          <input type="number" name="attr_sagesse" value="0" title="Perception, intuition, vigilance" />
+          <input class="sheet-carac" type="number" name="attr_sagesse" value="0" title="Perception, intuition, vigilance" />
           <span class="sheet-crochet">]</span>
         </td>
         <td>
@@ -132,7 +132,7 @@
         </td>
         <td>
           <span class="sheet-crochet2">[</span>
-          <input type="number" name="attr_defense" value="0" title="7 + Sagesse + Protection + Bouclier"/>
+          <input class="sheet-carac" type="number" name="attr_defense" value="0" title="7 + Sagesse + Protection + Bouclier"/>
           <span class="sheet-crochet2">]</span>
         </td>
     </tr>
@@ -143,7 +143,7 @@
         </td>
         <td>
           <span class="sheet-crochet">[</span>
-          <input type="number" name="attr_charisme" value="0" title="Actions sociales et présence" />
+          <input class="sheet-carac" type="number" name="attr_charisme" value="0" title="Actions sociales et présence" />
           <span class="sheet-crochet">]</span>
         </td>
         <td>
@@ -151,7 +151,7 @@
         </td>
         <td>
           <span class="sheet-crochet2">[</span>
-          <input type="number" name="attr_pc" value="0" title="Points de chance actuels" /> / <input type="number" name="attr_pcmax" value="0" title="1 point de chance par rang de charisme"/>
+          <input class="sheet-carac" type="number" name="attr_pc" value="0" title="Points de chance actuels" /> / <input class="sheet-carac" type="number" name="attr_pcmax" value="0" title="1 point de chance par rang de charisme"/>
           <span class="sheet-crochet2">]</span>
         </td>
     </tr>
@@ -182,7 +182,7 @@
       </td>
     </tr>
     <tr>
-        <th colspan="4">
+        <th class="sheet-big" colspan="4">
             MON INVENTAIRE
         </th>    
     </tr>
@@ -195,13 +195,13 @@
       </th>
     </tr>
     <tr>
-        <td>
+        <td align="right">
            Bouclier
         </td>
         <td>
             <input type="number" name="attr_bouclier" value="0" title="Bonus de défense du bouclier. Si 0 le personnage ne porte pas de bouclier" />
         </td>
-        <td>
+        <td align="right">
            Arme lourde
         </td>
         <td>
@@ -210,31 +210,43 @@
     </tr>    
     <tr rowspan="2">
       <td colspan="2">
-		<!--  
-        Sac
-        <select name="attr_sac">
-            <option value="voyageur">Sac de voyageur + Armure de cuir (défense +1)</option>
-            <option value="aventurier">Sac d'aventurier + Cotte de maille (défense +2)</option>
-            <option value="soldat">Sac de soldat + Broigne renforcée (défense +3)</option>
-        </select>
-        <input type="number" name="attr_sac_utilisation" value="0" title="Nombre de fois restantes où l'on peut faire appel au contenu du sac" /> / 
-        <input type="number" name="attr_sac_utilisationmax" value="1" title="Nombre de fois par aventure où l'on peut faire appel au contenu du sac" />
-        
-        -->
+
         <input type="radio" name="attr_sac" class="sheet-tab sheet-tab1" value="voyageur" title="Sac de voyageur" checked="checked" style="margin-left:1px;"/>
-		<span class="sheet-tab sheet-tab1">Voyageur</span>
+		<span class="sheet-tab sheet-tab1">Sac de voyageur</span>
 		<input type="radio" name="attr_sac" class="sheet-tab sheet-tab2" value="aventurier" title="Sac d'aventurier"/>
-		<span class="sheet-tab sheet-tab2">Aventurier</span>
+		<span class="sheet-tab sheet-tab2">Sac d'aventurier</span>
 		<input type="radio" name="attr_sac" class="sheet-tab sheet-tab3" value="soldat" title="Sac de soldat"/>
-		<span class="sheet-tab sheet-tab3">Soldat</span>
+		<span class="sheet-tab sheet-tab3">Sac de soldat</span>
 		<div class="sheet-section sheet-section-sac-voyageur">
-			Voyageur
+			<div class="sheet-table sheet-header-row">&nbsp;</div>
+			<div class="sheet-sac">
+			  + Armure de cuir (défense +1)<br/>
+			  0 <input type="radio" value="0" name="attr_sac_voyageur_nb">
+			  1 <input type="radio" value="1" name="attr_sac_voyageur_nb">
+			  2 <input type="radio" value="2" name="attr_sac_voyageur_nb">
+			  3 <input type="radio" value="3" name="attr_sac_voyageur_nb">
+			  4 <input type="radio" value="4" name="attr_sac_voyageur_nb">
+			  5 <input type="radio" value="5" name="attr_sac_voyageur_nb" checked >
+			</div>
 		</div>
 		<div class="sheet-section sheet-section-sac-aventurier">
-			Aventurier
+			<div class="sheet-table sheet-header-row">&nbsp;</div>
+			<div class="sheet-sac">
+			  + Cotte de mailles (défense +2)<br/>
+			  0 <input type="radio" value="0" name="attr_sac_aventurier_nb">
+			  1 <input type="radio" value="1" name="attr_sac_aventurier_nb">
+			  2 <input type="radio" value="2" name="attr_sac_aventurier_nb">
+			  3 <input type="radio" value="3" name="attr_sac_aventurier_nb" checked >
+			</div>
 		</div>
 		<div class="sheet-section sheet-section-sac-soldat">
-			Soldat
+			<div class="sheet-table sheet-header-row">&nbsp;</div>
+			<div class="sheet-sac">
+			  + Broigne renforcée (défense +3)<br/>
+			  0 <input type="radio" value="0" name="attr_sac_soldat_nb">
+			  1 <input type="radio" value="1" name="attr_sac_soldat_nb" checked >
+			</div>
+			
 		</div>
 
       </td>

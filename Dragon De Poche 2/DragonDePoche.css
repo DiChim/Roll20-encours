@@ -18,6 +18,14 @@
   color: #FFF
 }
 
+.sheet-big th {
+  padding: 10px;  
+  border: 0 solid #000;
+  background-color: red;
+  color: #FFF;
+  font-size: 150%;
+}
+
 .charsheet h2 {
   padding: 5px;  
   border: 0 solid #000;
@@ -57,12 +65,16 @@ input[type="text"], select {
 
 input[type="number"] {
   background-color: transparent;
-  border: 0 solid #000;
+  /*border: 0 solid #000;*/
   font-family: cursive; 
 }
 
 input[type="text"]:read-only, input[type="number"]:read-only {
   background-color: #d9d9d9;
+}
+
+input[type="number"].sheet-carac {
+  border: 0 solid #000;
 }
 
 button[type="roll"].sheet-pour-mj{
@@ -121,7 +133,7 @@ span.sheet-tab {
 	text-align: center;
 	display: inline-block;
 	font-size: 13px;
-	background: #000;
+	background: #CCC;
 	color: #FFF;
 	font-weight: bold;
 	width: 100px;
@@ -138,7 +150,7 @@ input.sheet-tab::before {
 	display: inline-block;
 	width: 100%;
 	height: 100%;
-	background: #CCC;
+	background: #6d2b35;
 	color: #FFF;
 	font-weight: bold;
 }
@@ -149,28 +161,32 @@ input.sheet-tab:checked::before {
 }
 
 .sheet-header-row {
-    width: 100%;
-	background-color: #CCC;
+  width: 100%;
+	background-color: #6d2b35;
 	color: #FFF;
 	padding-left: 10px;
 	min-height: 1em;
 	margin-bottom: 0.5em;
 }
+.sheet-sac{
+  padding: 10px;
+}
 
 input.sheet-tab1:checked ~ div.sheet-section-sac-voyageur,
 input.sheet-tab2:checked ~ div.sheet-section-sac-aventurier,
 input.sheet-tab3:checked ~ div.sheet-section-sac-soldat{
-    max-height: 999999px;
+  max-height: 999999px;
 	visibility: visible;
 	opacity: 1;
 	transition: opacity 0.5s linear 0s;
 	overflow: hidden;
+  border: 1px solid #6d2b35;
 }
 
 input.sheet-tab1:checked + span.sheet-tab1,
 input.sheet-tab2:checked + span.sheet-tab2,
 input.sheet-tab3:checked + span.sheet-tab3{
-	background: #ccc;
-	color: #000;
-    font-weight: bold;
+	background: #6d2b35;
+	/*color: #000;*/
+  font-weight: bold;
 }
