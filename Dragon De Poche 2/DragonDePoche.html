@@ -5,8 +5,15 @@
 <input type="hidden" name="attr_jet_intelligence" value="&{template:dragonpoche2} {{nom=@{character_name}}} {{carac_name=Intelligence}} {{carac=@{intelligence}}} {{jet=[[3d6 [Les dés] +(@{intelligence}) [Intelligence] +(?{Comptétence & bonus/malus|0})[Bonus/Malus]]]}}">
 <input type="hidden" name="attr_jet_sagesse" value="&{template:dragonpoche2} {{nom=@{character_name}}} {{carac_name=Sagesse}} {{carac=@{sagesse}}} {{jet=[[3d6 [Les dés] +(@{sagesse}) [Sagesse] +(?{Comptétence & bonus/malus|0})[Bonus/Malus]]]}}">
 <input type="hidden" name="attr_jet_charisme" value="&{template:dragonpoche2} {{nom=@{character_name}}} {{carac_name=Charisme}} {{carac=@{charisme}}} {{jet=[[3d6 [Les dés] +(@{charisme}) [Charisme] +(?{Comptétence & bonus/malus|0})[Bonus/Malus]]]}}">
-<input type="hidden" name="attr_jet_corps" value="&{template:dragonpoche2_attaque} {{nom=@{character_name}}} {{jet_name=Attaque au corps à corps}} {{carac_name=Force}} {{carac=@{force}}} {{jet1_2=[[2d6]]}} {{jet3=[[1d6!]]}} {{bonus=?{Comptétence & bonus/malus|0}}}">
-<input type="hidden" name="attr_jet_distance" value="&{template:dragonpoche2_attaque} {{nom=@{character_name}}} {{jet_name=Attaque à distance}} {{carac_name=Force}} {{carac=@{force}}} {{jet1_2=[[2d6]]}} {{jet3=[[1d6!]]}} {{bonus=?{Comptétence & bonus/malus|0}}}">
+<input type="hidden" name="attr_jet_corps" value="&{template:dragonpoche2_attaque} {{nom=@{character_name}}} {{jet_name=Attaque au corps à corps}} {{carac_name=Force}} {{carac=@{force}}} {{jet1_2=[[2d6]]}} {{jet3=[[1d6!]]}} {{bonus=?{Bonus/malus|0}}}">
+<input type="hidden" name="attr_jet_distance" value="&{template:dragonpoche2_attaque} {{nom=@{character_name}}} {{jet_name=Attaque à distance}} {{carac_name=Dextérité}} {{carac=@{dexterite}}} {{jet1_2=[[2d6]]}} {{jet3=[[1d6!]]}} {{bonus=?{Bonus/malus|0}}}">
+
+<input type="hidden" name="attr_jet_pnj" value="&{template:dragonpoche2} {{nom=@{character_name}}} {{carac_name=Puissance}} {{carac=@{pnj_puissance}}} {{jet=[[3d6 [Les dés] +(@{pnj_puissance}) [Puissance] +(?{Bonus/malus|0})[Bonus/Malus] ]]}}">
+<input type="hidden" name="attr_jet_pnj_moral" value="&{template:dragonpoche2} {{nom=@{character_name}}} {{carac_name=Moral}} {{carac=@{pnj_moral}}} {{jet=[[2d6]]}}">
+<input type="hidden" name="attr_jet_pnj_initiative" value="&{template:dragonpoche2} {{nom=@{character_name}}} {{carac_name=Initiative}} {{carac=@{pnj_puissance}}} {{jet=[[@{pnj_initiative}d6 + @{pnj_puissance}]]}}">
+
+<input type="hidden" name="attr_jet_corps_pnj" value="&{template:dragonpoche2_attaque} {{nom=@{character_name}}} {{jet_name=Attaque au corps à corps}} {{carac_name=Puissance}} {{carac=@{pnj_puissance}}} {{jet1_2=[[2d6]]}} {{jet3=[[1d6!]]}} {{bonus=?{Bonus/malus|0}}}">
+<input type="hidden" name="attr_jet_distance_pnj" value="&{template:dragonpoche2_attaque} {{nom=@{character_name}}} {{jet_name=Attaque à distance}} {{carac_name=Puissance}} {{carac=@{pnj_puissance}}} {{jet1_2=[[2d6]]}} {{jet3=[[1d6!]]}} {{bonus=?{Bonus/malus|0}}}">
 
 <!-- Affichage -->
 <h2>
@@ -71,7 +78,7 @@
              <span class="sheet-attribut2">BLESSURES</span>
           </td>
           <td>
-              <input type="number" name="attr_blessure" value="0" title="Nombre de blessure" />
+              <input type="number" name="attr_blessure" value="0" title="Nombre de blessures" />
           </td>        
       </tr>
       <tr>
@@ -81,7 +88,7 @@
           </td>
           <td>
               <span class="sheet-crochet">[</span>
-              <input class="sheet-carac" type="number" name="attr_force" value="0" title="Attaques et dégats au coprs à corps. Actions physique en puissance" />
+              <input class="sheet-carac" type="number" name="attr_force" value="0" title="Attaques et dégâts au coprs à corps. Actions physique en puissance" />
               <span class="sheet-crochet">]</span>
           </td>        
       </tr>
@@ -111,7 +118,7 @@
           </td>
           <td>
             <span class="sheet-crochet">[</span>
-            <input class="sheet-carac" type="number" name="attr_dexterite" value="0" title="Attaques et dégats à distance. Actions physique en souplesse et en précision" />
+            <input class="sheet-carac" type="number" name="attr_dexterite" value="0" title="Attaques et dégâts à distance. Actions physique en souplesse et en précision" />
             <span class="sheet-crochet">]</span>
           </td>        
       </tr>
@@ -302,9 +309,99 @@
 </div>
 <div class="sheet-section sheet-section-pnj">
   <div class="sheet-table sheet-header-row">&nbsp;</div>
-  
-  PNJ 
-</div>    
+    <table>
+      <tr>
+        <td>
+          NOM
+        </td>
+        <td>
+          <input type="text" placeholder="Nom" name="attr_character_name" />
+        </td>
+        <td>
+          <button type="roll" value="@{jet_corps_pnj}" name="roll_corps_pnj" title="Jet d'attaque au corps à corps"> CaC</button>
+          <button type="roll" value="@{jet_distance_pnj}" name="roll_distance_pnj" title="Jet d'attaque à distance"> Distance</button>
+        </td>
+        <td>
+          <button type="roll" class="sheet-btLien" title="Afficher l'adresse du site dans le chat" value="http://legrumph.org/Terrier/?Chibi/Dragon-de-poche%C2%B2"></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          PROFIL
+        </td>
+        <td colspan="3">
+          <input type="text" placeholder="Profil" name="attr_character_pnj_profil" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="sheet-attribut">PUISSANCE</span>
+        </td>
+        <td>
+          <span class="sheet-crochet">[</span>
+          <input class="sheet-carac" type="number" name="attr_pnj_puissance" value="0" title="Bonus à tous les jets y compris dégâts" />
+          <span class="sheet-crochet">]</span>
+          <button type="roll" value="@{jet_pnj}" name="roll_pnj" title="Jet pour tous"></button><button type="roll" class="sheet-pour-mj" value="/w gm @{jet_pnj}" name="roll_pnj_mj" title="Jet pour le MJ"></button>
+        </td>
+        <td>
+           <span class="sheet-attribut2">POINTS DE VIE</span>
+        </td>
+        <td>
+          <span class="sheet-crochet2">[</span>
+          <input class="sheet-carac" type="number" name="attr_pnj_pv" value="0" title="Points de vie actuels" /> / <input class="sheet-carac" type="number" name="attr_pnj_pvmax" value="0" title="Poins de vie maximum"/>
+          <span class="sheet-crochet2">]</span>
+        </td>
+      </tr>
+      <tr>
+        <td>          
+          <span class="sheet-attribut">DÉFENSE</span>
+        </td>
+        <td>
+          <span class="sheet-crochet">[</span>
+          <input class="sheet-carac" type="number" name="attr_pnj_defense" value="0"/>
+          <span class="sheet-crochet">]</span>
+        </td>
+        <td>
+           <span class="sheet-attribut2">MORAL</span>
+        </td>
+        <td>
+          <span class="sheet-crochet2">[</span>
+          <input class="sheet-carac" type="number" name="attr_pnj_moral" value="0"/>
+          <span class="sheet-crochet2">]</span>
+          <button type="roll" value="@{jet_pnj_moral}" name="roll_pnj_moral" title="Jet pour tous"></button><button type="roll" class="sheet-pour-mj" value="/w gm @{jet_pnj_moral}" name="roll_pnj_moral_mj" title="Jet pour le MJ"></button>
+        </td>
+      </tr>      
+      <tr>
+        <td>          
+          <span class="sheet-attribut">INITIATIVE</span>
+        </td>
+        <td>
+          <span class="sheet-crochet">[</span>
+          <input class="sheet-carac" type="number" name="attr_pnj_initiative" value="0"/>
+          <span class="sheet-crochet">]</span> d6
+          <button type="roll" value="@{jet_pnj_initiative}" name="roll_pnj_initiative" title="Jet pour tous"></button><button type="roll" class="sheet-pour-mj" value="/w gm @{jet_pnj_initiative}" name="roll_pnj_initiative_mj" title="Jet pour le MJ"></button>
+        </td>
+        <td>
+           <span class="sheet-attribut2">POINTS DE TRÉSOR</span>
+        </td>
+        <td>
+          <span class="sheet-crochet2">[</span>
+          <input class="sheet-carac" type="number" name="attr_pnj_tresor" value="0" title="+1 par capacité"/>
+          <span class="sheet-crochet2">]</span>
+        </td>
+      </tr> 
+      <tr>
+          <th colspan="4">
+            OBSERVATIONS & NOTES
+          </th>
+      </tr>
+      <tr>
+          <td colspan="4">
+              <textarea name="attr_pnj_obs_notes"></textarea>
+          </td>
+      </tr>      
+    </table>
+  </div>    
     
     
  <!-- Templates -->
@@ -335,7 +432,7 @@
       <td>{{jet1_2}}</td>
     </tr>
     <tr>
-      <td><b>Dés de dégats</b></td>
+      <td><b>Dés de dégâts</b></td>
       <td>{{jet3}}</td>
     </tr>
     <tr>
