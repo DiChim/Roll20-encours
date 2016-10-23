@@ -96,8 +96,8 @@ textarea{
    width: 80%;
 }
 
-
-.sheet-rolltemplate-dragonpoche2 table {
+/* template */
+.sheet-rolltemplate-dragonpoche2 table, .sheet-rolltemplate-dragonpoche2_attaque table {
     width: 100%;
     background-color: #FFF;
     border: 1px solid;
@@ -105,13 +105,17 @@ textarea{
     font-size: 1em;
     font-family: cursive; 
 }
-.sheet-rolltemplate-dragonpoche2 th {
+.sheet-rolltemplate-dragonpoche2 th, .sheet-rolltemplate-dragonpoche2_attaque th {
     background-color: #6d2b35;
     color: #ffffff;
     padding: 2px;
     border-bottom: 1px solid black;
     line-height: 1.2em;
     font-size: 1.1em;
+}
+
+.sheet-rolltemplate-dragonpoche2 td, .sheet-rolltemplate-dragonpoche2_attaque td {
+    padding: 5px;
 }
 
 /* Les onglets */
@@ -146,8 +150,8 @@ span.sheet-tab {
 	display: inline-block;
 	font-size: 13px;
 	background: #CCC;
-	color: #FFF;
-	font-weight: bold;
+	color: #000;
+	/*font-weight: bold;*/
 	width: 130px;
 	height: 20px;
 	cursor: pointer;
@@ -163,8 +167,8 @@ input.sheet-tab::before {
 	width: 100%;
 	height: 100%;
 	background: #6d2b35;
-	color: #FFF;
-	font-weight: bold;
+	color: #000;
+	/*font-weight: bold;*/
 }
 
 input.sheet-tab:checked::before {
@@ -200,7 +204,7 @@ input.sheet-tab1:checked + span.sheet-tab1,
 input.sheet-tab2:checked + span.sheet-tab2,
 input.sheet-tab3:checked + span.sheet-tab3{
 	background: #6d2b35;
-	/*color: #000;*/
+	color: #FFF;
   font-weight: bold;
 }
 
@@ -218,6 +222,6 @@ input.sheet-tabpnj:checked ~ div.sheet-section-pnj{
 input.sheet-tabpj:checked + span.sheet-tabpj,
 input.sheet-tabpnj:checked + span.sheet-tabpnj{
 	background: #6d2b35;
-	/*color: #000;*/
+	color: #FFF;
   font-weight: bold;
 }
