@@ -1,8 +1,10 @@
 <!--  Les hiddens -->
-<!-- <input type="hidden" name="attr_jet_force" value="&{template:dragonpoche2} {{nom=@{character_name}}} {{carac_name=Force}} {{carac=@{Force}}} {{bonus=?{Comptétence (+4) + bonus / malus|0}}} {{jet1_2=[[2d6]]}} {{jet3=[[1d6!]]}}"> -->
-<input type="hidden" name="attr_jet_force" value="&{template:dragonpoche2} {{nom=@{character_name}}} {{carac_name=Force}} {{carac=@{Force}}} {{jet=[[2d6 [Dés normaux] +(@{Force}) [Force] +(?{Comptétence & bonus/malus|0})[Bonus/Malus] +1d6! [Dé de dégâts] ]]}}">
-<input type="hidden" name="attr_jet_constitution" value="&{template:dragonpoche2} {{nom=@{character_name}}} {{carac_name=Constitution}} {{carac=@{constitution}}} {{jet=[[2d6 [Dés normaux] +(@{constitution}) [Constitution] +(?{Comptétence & bonus/malus|0})[Bonus/Malus] +1d6! [Dé de dégâts] ]]}}">
-<input type="hidden" name="attr_jet_dexterite" value="&{template:dragonpoche2} {{nom=@{character_name}}} {{carac_name=Dextérité}} {{carac=@{dexterite}}} {{jet=[[2d6 [Dés normaux] +(@{dexterite}) [Dextérité] +(?{Comptétence & bonus/malus|0})[Bonus/Malus] +1d6! [Dé de dégâts] ]]}}">
+<input type="hidden" name="attr_jet_force" value="&{template:dragonpoche2} {{nom=@{character_name}}} {{carac_name=Force}} {{carac=@{Force}}} {{jet=[[3d6 [Les dés] +(@{Force}) [Force] +(?{Comptétence & bonus/malus|0})[Bonus/Malus] ]]}}">
+<input type="hidden" name="attr_jet_constitution" value="&{template:dragonpoche2} {{nom=@{character_name}}} {{carac_name=Constitution}} {{carac=@{constitution}}} {{jet=[[3d6 [Les dés] +(@{constitution}) [Constitution] +(?{Comptétence & bonus/malus|0})[Bonus/Malus] ]]}}">
+<input type="hidden" name="attr_jet_dexterite" value="&{template:dragonpoche2} {{nom=@{character_name}}} {{carac_name=Dextérité}} {{carac=@{dexterite}}} {{jet=[[3d6 [Les dés] +(@{dexterite}) [Dextérité] +(?{Comptétence & bonus/malus|0})[Bonus/Malus]]]}}">
+<input type="hidden" name="attr_jet_intelligence" value="&{template:dragonpoche2} {{nom=@{character_name}}} {{carac_name=Intelligence}} {{carac=@{intelligence}}} {{jet=[[3d6 [Les dés] +(@{intelligence}) [Intelligence] +(?{Comptétence & bonus/malus|0})[Bonus/Malus]]]}}">
+<input type="hidden" name="attr_jet_sagesse" value="&{template:dragonpoche2} {{nom=@{character_name}}} {{carac_name=Sagesse}} {{carac=@{sagesse}}} {{jet=[[3d6 [Les dés] +(@{sagesse}) [Sagesse] +(?{Comptétence & bonus/malus|0})[Bonus/Malus]]]}}">
+<input type="hidden" name="attr_jet_charisme" value="&{template:dragonpoche2} {{nom=@{character_name}}} {{carac_name=Charisme}} {{carac=@{charisme}}} {{jet=[[3d6 [Les dés] +(@{charisme}) [Charisme] +(?{Comptétence & bonus/malus|0})[Bonus/Malus]]]}}">
 
 <!-- Affichage -->
 <h2>
@@ -13,11 +15,15 @@
         <td>
            MON NOM
         </td>
-        <td colspan="3">
+        <td>
             <input type="text" placeholder="Nom" name="attr_character_name" />
         </td>
         <td>
-		  <button type="roll" class="sheet-btLien" title="Afficher l'adresse du site dans le chat" value="http://legrumph.org/Terrier/?Chibi/Dragon-de-poche%C2%B2"></button>
+          <button type="roll" value="@{jet_corps}" name="roll_corps" title="Jet d'attaque au corps à corps"> CaC</button>
+          <button type="roll" value="@{jet_distance}" name="roll_distance" title="Jet d'attaque à distance"> Distance</button>
+        </td>
+        <td>
+          <button type="roll" class="sheet-btLien" title="Afficher l'adresse du site dans le chat" value="http://legrumph.org/Terrier/?Chibi/Dragon-de-poche%C2%B2"></button>
         </td>
     </tr>
     <tr>

@@ -115,10 +115,11 @@ textarea{
 }
 
 /* Les onglets */
+
 div[class^="sheet-section"] {
     visibility: hidden;
     opacity: 0;
-	max-height: 0;
+    max-height: 0;
 	overflow: hidden;
 }
 
@@ -147,7 +148,7 @@ span.sheet-tab {
 	background: #CCC;
 	color: #FFF;
 	font-weight: bold;
-	width: 100px;
+	width: 130px;
 	height: 20px;
 	cursor: pointer;
 	position: relative;
@@ -179,6 +180,7 @@ input.sheet-tab:checked::before {
 	min-height: 1em;
 	margin-bottom: 0.5em;
 }
+
 .sheet-sac{
   padding: 10px;
 }
