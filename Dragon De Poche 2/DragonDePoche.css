@@ -203,3 +203,21 @@ input.sheet-tab3:checked + span.sheet-tab3{
 	/*color: #000;*/
   font-weight: bold;
 }
+
+
+input.sheet-tabpj:checked ~ div.sheet-section-pj,
+input.sheet-tabpnj:checked ~ div.sheet-section-pnj{
+  max-height: 999999px;
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 0.5s linear 0s;
+	overflow: hidden;
+  border: 1px solid #6d2b35;
+}
+
+input.sheet-tabpj:checked + span.sheet-tabpj,
+input.sheet-tabpnj:checked + span.sheet-tabpnj{
+	background: #6d2b35;
+	/*color: #000;*/
+  font-weight: bold;
+}
