@@ -13,6 +13,23 @@
     background-color: #CCC;
 }
 
+.sheet-circle{
+  /*background:#bfd70e;*/
+  border-radius:50%;
+  width:140px;
+  height:140px;
+  border:2px solid #000; 
+  text-align: center;
+  display: flex; /* contexte sur le parent */
+  flex-direction: column; /* direction d'affichage verticale */
+  justify-content: center; /* alignement vertical */
+}
+
+.sheet-attribut{
+  font-size: 105%;
+  font-weight: bold;  
+}
+
 /* Les onglets */
 div[class^="sheet-section"] {
     visibility: hidden;
@@ -88,4 +105,12 @@ input.sheet-tab2:checked ~ div.sheet-section-npc{
 	transition: opacity 0.5s linear 0s;
 	overflow: hidden;
 }
+
+input.sheet-tab1:checked + span.sheet-tab1,
+input.sheet-tab2:checked + span.sheet-tab2{
+	background: #ccc;
+	color: #000;
+    font-weight: bold;
+}
+
 /* Fin onglets */
