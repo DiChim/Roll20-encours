@@ -12,3 +12,80 @@
     border: 0 solid #000;
     background-color: #CCC;
 }
+
+/* Les onglets */
+div[class^="sheet-section"] {
+    visibility: hidden;
+	opacity: 0;
+	max-height: 0;
+	overflow: hidden;
+}
+
+.sheet-tab {
+    border-radius: 7px 7px 0 0;
+}
+
+input.sheet-tab {
+	width: 70px;
+	height: 20px;
+	cursor: pointer;
+	position: relative;
+	opacity: 0;
+	z-index: 9999;
+}
+
+input.sheet-tab:first-child {
+	margin-left:0px;
+}
+
+
+span.sheet-tab {
+	text-align: center;
+	display: inline-block;
+	font-size: 13px;
+	background: #000;
+	color: #FFF;
+	font-weight: bold;
+	width: 100px;
+	height: 20px;
+	cursor: pointer;
+	position: relative;
+	margin-left: -75px;
+}
+
+
+input.sheet-tab::before {
+	content: attr(title);
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	background: #CCC;
+	color: #FFF;
+	font-weight: bold;
+}
+
+input.sheet-tab:checked::before {
+	background: #000;
+	color: #FFF;
+}
+
+.sheet-header-row {
+    width: 100%;
+	background-color: #CCC;
+	color: #FFF;
+	padding-left: 10px;
+	min-height: 1em;
+	margin-bottom: 0.5em;
+}
+
+
+input.sheet-tab1:checked ~ div.sheet-section-core,
+input.sheet-tab2:checked ~ div.sheet-section-npc{
+    max-height: 999999px;
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 0.5s linear 0s;
+	overflow: hidden;
+}
+/* Fin onglets */
