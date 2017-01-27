@@ -1,0 +1,14 @@
+.charsheet table {
+    width: 100%;
+}
+.charsheet td {
+    padding: 5px 2px 5px 2px;  
+    border: 0 solid #000;
+    vertical-align: text-top;
+}
+
+.charsheet th {
+    padding: 5px;  
+    border: 0 solid #000;
+    background-color: #CCC;
+}
