@@ -1,22 +1,27 @@
+.charsheet {
+  font-family: 'Times New Roman', Times, serif;
+}
+
 .charsheet table {
     width: 100%;
 }
 .charsheet td {
-    padding: 5px 2px 5px 2px;  
-    border: 0 solid #000;
-    vertical-align: text-top;
+  padding: 0px 2px 0px 2px;  
+  border: 1px solid #000;
+  vertical-align: text-top;
 }
 
 .charsheet th {
-    padding: 5px;  
-    border: 0 solid #000;
-    background-color: #CCC;
+  padding: 5px;  
+  border: 0 solid #000;
+  background-color: #6d2b35;
+  color: #FFF
 }
-
 .sheet-image{
   float: left;
 }
 
+/* Les cercles */
 .sheet-contenant-cercle{
   clear: both;
   position:relative;
@@ -193,21 +198,49 @@
   flex-direction: column; /* direction d'affichage verticale */
   justify-content: center; /* alignement vertical */
 }
+/* Fin des cercles */
 
+input[type="text"] {
+  background-color: transparent;
+  border: 0 solid #000;
+  border-bottom-width: 1px;
+  border-left-width: 1px;  
+  height:15px;
+}
+
+input[type="number"] {
+  background-color: transparent;
+  /*border: 0 solid #000;*/
+
+}
+
+input[type="text"]:read-only, input[type="number"]:read-only {
+  background-color: #d9d9d9;
+}
+
+select {
+  background-color: transparent;
+  border: 0 solid #000;
+  border-bottom-width: 1px;
+  border-left-width: 1px;  
+  height:20px;
+  font-size: 12px;
+}
 .sheet-titre{
   font-size: 150%;
   font-weight: bold;  
 }
 
-.sheet-titre2{
-  font-size: 150%;
-  font-weight: bold;  
-  color: #ccc;
-}
 
 .sheet-attribut{
   font-size: 105%;
   font-weight: bold;  
+}
+
+.sheet-attribut2{
+  font-size: 105%;
+  font-weight: bold;  
+  color: #ccc;
 }
 
 .sheet-mini{

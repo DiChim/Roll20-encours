@@ -15,7 +15,7 @@
       </tr>
       <tr>
         <td>
-          <span class="sheet-titre">
+          <span class="sheet-attribut">
             <span data-i18n="nature-u">Nature</span>
           </span>          
         </td>
@@ -25,7 +25,7 @@
       </tr>
       <tr>
         <td>
-          <span class="sheet-titre2">
+          <span class="sheet-attribut2">
             <span data-i18n="adventage-u">Adventage</span>
           </span>          
         </td>
@@ -35,7 +35,7 @@
       </tr>
       <tr>
         <td>
-          <span class="sheet-titre2">
+          <span class="sheet-attribut2">
             <span data-i18n="disadventage-u">Disadventage</span>
           </span>          
         </td>
@@ -46,7 +46,7 @@
 
       <tr>
         <td>
-          <span class="sheet-titre">
+          <span class="sheet-attribut">
             <span data-i18n="nature-u">Nature</span>
           </span>          
         </td>
@@ -56,7 +56,7 @@
       </tr>
       <tr>
         <td>
-          <span class="sheet-titre2">
+          <span class="sheet-attribut2">
             <span data-i18n="adventage-u">Adventage</span>
           </span>          
         </td>
@@ -66,12 +66,27 @@
       </tr>
       <tr>
         <td>
-          <span class="sheet-titre2">
+          <span class="sheet-attribut2">
             <span data-i18n="disadventage-u">Disadventage</span>
           </span>          
         </td>
         <td>
           <input type="text" name="attr_nature2_disadventage" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="sheet-attribut">
+            <span data-i18n="description-u">Description</span>
+          </span>          
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <textarea name="attr_description"></textarea>
         </td>
       </tr>
 
@@ -155,9 +170,7 @@
       <div class="sheet-cirle-in">
         <input type="number" name="attr_physical_damage" value="0"/>
         <br/>
-        <span data-i18n="physical-u" class="sheet-attribut">Physical</span>
-        <br/>
-        <span data-i18n="damage-u" class="sheet-attribut">Damage</span>
+        <span data-i18n="physical-damage-u" class="sheet-attribut">Physical Damage</span>
       </div>
     </div>    
     
@@ -165,9 +178,7 @@
       <div class="sheet-cirle-in">
         <input type="number" name="attr_mental_damage" value="0"/>
         <br/>
-        <span data-i18n="mental-u" class="sheet-attribut">Mental</span>
-        <br/>
-        <span data-i18n="damage-u" class="sheet-attribut">Damage</span>
+        <span data-i18n="mental-damage-u" class="sheet-attribut">Mental Damage</span>
       </div>
     </div>    
 
@@ -175,9 +186,7 @@
       <div class="sheet-cirle-in">
         <input type="number" name="attr_social_damage" value="0"/>
         <br/>
-        <span data-i18n="social-u" class="sheet-attribut">Social</span>
-        <br/>
-        <span data-i18n="damage-u" class="sheet-attribut">Damage</span>
+        <span data-i18n="social-damage-u" class="sheet-attribut">Social Damage</span>
       </div>
     </div>    
 
@@ -237,5 +246,48 @@
         </div>
     </div>    
     
-</div><!-- contenant -->    
+  </div><!-- contenant -->   
+  <div class="sheet-skills">
+    <span class="sheet-titre">
+      <span data-i18n="skills-titre-u">Skills</span>
+    </span>
+    <div class="sheet-repetition">
+      <fieldset class="repeating_skills">            
+          <select name="attr_skill">
+          <option value=""/></option><!-- VF Order-->
+          <option value="administrator" data-i18n="administrator" >Administrator</option><!-- administrateur-->
+          <option value="bum" data-i18n="bum" >Bum</option><!-- Arpenteur -->
+          <option value="artist" data-i18n="artist" >Artist</option><!-- Artiste -->
+          <option value="athlete" data-i18n="athlete" >Athlete</option><!-- Athlete -->
+          <option value="brawler" data-i18n="brawler" >Brawler</option><!-- Bagarreur -->
+          <option value="safecraker" data-i18n="safecracker" >Safecracker</option><!-- Casseur -->
+          <option value="driver" data-i18n="driver" >Driver</option><!-- Chauffeur -->
+          <option value="actor" data-i18n="actor" >Actor</option><!-- Comédien -->
+          <option value="merchant" data-i18n="merchant" >Merchant</option><!-- Commerçant -->
+          <option value="demonist" data-i18n="demonist" >Demonist</option><!-- Démoniste -->
+          <option value="diplomat" data-i18n="diplomat" >Diplomat</option><!-- Diplomate -->
+          <option value="investigator" data-i18n="investigator" >Investigator</option><!-- Enquêteur -->
+          <option value="entertainer" data-i18n="entertainer" >Entertainer</option><!-- Entertainer -->
+          <option value="gambler" data-i18n="gambler" >Gambler</option><!-- Joueur -->
+          <option value="mechanic" data-i18n="mechanic" >Mechanic</option><!-- Méchano -->
+          <option value="pilot" data-i18n="pilot" >Pilot</option><!-- Pilote -->
+          <option value="psychologist" data-i18n="psychologist" >Psychologist</option><!-- Psychologue -->
+          <option value="scientist" data-i18n="scientist" >Scientist</option><!-- Scientifique -->
+          <option value="seducer" data-i18n="seducer" >Seducer</option><!-- Séducteur -->
+          <option value="technician" data-i18n="technician" >Technician</option><!-- Technicien -->
+          <option value="marksman" data-i18n="marksman" >Marksman</option><!-- Tireur -->
+          <option value="doc" data-i18n="doc" >Doc</option><!-- Toubib -->
+          <option value="bouncer" data-i18n="bouncer" >Bouncer</option><!-- Videur -->
+          <option value="thief" data-i18n="thief" >Thief</option><!-- Voleur -->
+          </select> 
+          <select name="attr_skill_level">
+          <option value="" /></option>
+          <option value="pro" data-i18n="level-professional" >Pro</option>
+          <option value="exp" data-i18n="level-expert" >Exp</option>
+          <option value="vir" data-i18n="level-vituoso" >Vir</option>
+          </select> 
+      </fieldset>  
+    </div>
+
+  </div><!--Sskills --> 
 </div>

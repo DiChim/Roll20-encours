@@ -1,0 +1,23 @@
+{
+	"character-u":"Personnage",
+  "character_name":"Nom",
+  "attributes-titre-u": "Attributs",
+	"score-u": "Socre",
+	"muscle-u": "Punch",
+	"pool-u": "Cave",
+	"mojo-u": "Mojo",
+	"toughness-u": "Solidité",
+	"guts-u": "Tripes",
+	"dexterity-u": "Doigté",
+	"physical-u": "Physiques",
+	"damage-u": "Dommages",
+	"mental-u": "Mental",
+	"social-u": "Social",
+	"brains-u": "Brains",
+	"mug-u": "Mug",
+	"chutzpah-u": "Chutzpah",
+	"cool-u": "Cool",
+  "nature-u": "Nature",
+  "adventage-u": "Adventage",
+  "disadventage-u": "Disadventage"
+}
