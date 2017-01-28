@@ -1,6 +1,19 @@
 {
-  "tough-guy-u": "Tough Guy",
-  "npc-u": "NPC",
-  "muscle-u":"Muscle",
-  "mojo-u":"Mojo"
+	"tough-guy-u": "Tough Guy",
+	"npc-u": "NPC",
+	"score-u": "Score",
+	"muscle-u": "Muscle",
+	"pool-u": "Pool",
+	"mojo-u": "Mojo",
+	"toughness-u": "Toughness",
+	"guts-u": "Guts",
+	"dexterity-u": "Dexterity",
+	"physical-u": "Physical",
+	"damage-u": "Damage",
+	"mental-u": "Mental",
+	"social-u": "Social",
+	"brains-u": "Brains",
+	"mug-u": "Mug",
+	"chutzpah-u": "Chutzpah",
+	"cool-u": "Cool"
 }
