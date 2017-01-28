@@ -1,6 +1,7 @@
 {
-	"tough-guy-u": "Tough Guy",
-	"npc-u": "NPC",
+	"character-u":"Character",
+  "character_name":"Name",
+  "attributes-titre-u": "Attributes",
 	"score-u": "Score",
 	"muscle-u": "Muscle",
 	"pool-u": "Pool",
@@ -15,5 +16,8 @@
 	"brains-u": "Brains",
 	"mug-u": "Mug",
 	"chutzpah-u": "Chutzpah",
-	"cool-u": "Cool"
+	"cool-u": "Cool",
+  "nature-u": "Nature",
+  "adventage-u": "Adventage",
+  "disadventage-u": "Disadventage"
 }
