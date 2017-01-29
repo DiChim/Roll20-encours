@@ -21,6 +21,28 @@
   float: left;
 }
 
+img {
+  vertical-align:top;
+}
+/* roulette */
+/* Les cercles */
+.sheet-roulette{
+  clear: both;
+  position:relative;
+  top:0px;
+  left:0px;
+  height: 150px;
+  border: 1px solid green;
+}
+
+.sheet-roulette1{
+  position:absolute;
+  top:10px;
+  left:50px;
+  border: 1px solid blue;
+}
+
+/* fin roulette */
 /* Les cercles */
 .sheet-contenant-cercle{
   clear: both;
