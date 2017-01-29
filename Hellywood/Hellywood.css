@@ -43,11 +43,58 @@ img {
   width:100px;
 }
 
+/* ===== Sélection Check ===== */
+input[type="checkbox"].sheet-selcheck{
+    width: 20px;
+    height: 20px;
+    max-width: 20px;
+    opacity: 0;
+    z-index: 2;
+    margin: 0;
+}
+input[type="checkbox"].sheet-selcheck + span{
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-left: -20px;
+    width: 20px;
+    max-width: 20px;
+    height: 20px;
+    z-index: 1;
+    font-family: pictos;
+    color: #DDB29B; /* #EFBAC1; */
+    font-size: 20px;
+    line-height: 20px;
+}
+input[type="checkbox"].sheet-selcheck:hover + span{
+    color: #DE6928; /* #ADDDAD; */
+}
+input[type="checkbox"].sheet-selcheck:checked + span{
+    font-weight: bold;
+    color: red;/*#700200; *//* #557F55; */
+}
+
+
+
 .sheet-roulette1{
   position:absolute;
-  top:10px;
-  left:50px;
+  top:25px;
+  left:35px;
   border: 1px solid blue;
+}
+
+input[type="checkbox"].sheet-roulette-chk{
+    width: 20px;
+    height: 20px;
+    max-width: 20px;
+    opacity: 50%;
+    margin: 0;
+    background-color: transparent;
+    font-family: pictos;
+    color: #DDB29B; /* #EFBAC1; */
+    font-size: 20px;
+    line-height: 20px;    
 }
 
 .sheet-roulette2{
@@ -58,8 +105,8 @@ img {
 }
 .sheet-roulette3{
   position:absolute;
-  top:30px;
-  left:30px;
+  top:50px;
+  left:50px;
   border: 1px solid blue;
 }
 .sheet-roulette4{
@@ -80,6 +127,14 @@ img {
   left:80px;
   border: 1px solid blue;
 }
+
+.sheet-roulette7{
+  position:absolute;
+  top:100px;
+  left:80px;
+  border: 1px solid blue;
+}
+
 /* fin roulette */
 /* Les cercles */
 .sheet-contenant-cercle{
