@@ -90,16 +90,38 @@
   <span class="sheet-titre">
     <span data-i18n="jokers-titre-u">Jokers</span>
   </span><br/>
-
+<table>
+<tr>
+<td>
 <div class="sheet-roulette">
-<img width="120px" src="http://sf.music.free.fr/Hellywood_roulette.png" />
-<br/>
+ <span data-i18n="russian-roulette-u" class="sheet-attribut">Russian Roulette</span>
+ <img class="sheet-roulette-img" src="http://sf.music.free.fr/Hellywood_roulette.png" />
+<div class="sheet-roulette1">
+1<input type="checkbox" name="attr_roulette_1" value="1">
+</div>
+<div class="sheet-roulette2">
+2<input type="checkbox" name="attr_roulette_2" value="1">
+</div>
+<div class="sheet-roulette3">
+3<input type="checkbox" name="attr_roulette_3" value="1">
+</div>
+<div class="sheet-roulette4">
+4<input type="checkbox" name="attr_roulette_4" value="1">
+</div>
+<div class="sheet-roulette5">
+5<input type="checkbox" name="attr_roulette_5" value="1">
+</div>
+<div class="sheet-roulette6">
+6<input type="checkbox" name="attr_roulette_6" value="1">
+</div>
+</div>
+</td>
+<td>
  <span data-i18n="fbp-u" class="sheet-attribut">F.B.P.</span>
  <input type="number" data-i18n-title="fbp-title" title="F*ck*n' b*st*rd points" name="attr_fpb" value="0"/>
-<div class="sheet-roulette1">
-<input type="checkbox" name="attr_roulette_1" value="1">
-</div>
-</div>
+</td>
+</tr>
+</table>
 </td>
 </tr>
 <tr>
@@ -262,71 +284,218 @@
   </div><!-- contenant -->  
 
 </td>
-<td>
+<td rowspan="2">
   
   <div class="sheet-skills">
     <span class="sheet-titre">
       <span data-i18n="skills-titre-u">Skills</span>
     </span>
-    <div class="sheet-repetition">
-      <fieldset class="repeating_skills">            
-          <select name="attr_skill">
-          <option value=""/></option><!-- VF Order-->
-          <option value="administrator" data-i18n="administrator" >Administrator</option><!-- administrateur-->
-          <option value="bum" data-i18n="bum" >Bum</option><!-- Arpenteur -->
-          <option value="artist" data-i18n="artist" >Artist</option><!-- Artiste -->
-          <option value="athlete" data-i18n="athlete" >Athlete</option><!-- Athlete -->
-          <option value="brawler" data-i18n="brawler" >Brawler</option><!-- Bagarreur -->
-          <option value="safecraker" data-i18n="safecracker" >Safecracker</option><!-- Casseur -->
-          <option value="driver" data-i18n="driver" >Driver</option><!-- Chauffeur -->
-          <option value="actor" data-i18n="actor" >Actor</option><!-- Comédien -->
-          <option value="merchant" data-i18n="merchant" >Merchant</option><!-- Commerçant -->
-          <option value="demonist" data-i18n="demonist" >Demonist</option><!-- Démoniste -->
-          <option value="diplomat" data-i18n="diplomat" >Diplomat</option><!-- Diplomate -->
-          <option value="investigator" data-i18n="investigator" >Investigator</option><!-- Enquêteur -->
-          <option value="entertainer" data-i18n="entertainer" >Entertainer</option><!-- Entertainer -->
-          <option value="gambler" data-i18n="gambler" >Gambler</option><!-- Joueur -->
-          <option value="mechanic" data-i18n="mechanic" >Mechanic</option><!-- Méchano -->
-          <option value="pilot" data-i18n="pilot" >Pilot</option><!-- Pilote -->
-          <option value="psychologist" data-i18n="psychologist" >Psychologist</option><!-- Psychologue -->
-          <option value="scientist" data-i18n="scientist" >Scientist</option><!-- Scientifique -->
-          <option value="seducer" data-i18n="seducer" >Seducer</option><!-- Séducteur -->
-          <option value="technician" data-i18n="technician" >Technician</option><!-- Technicien -->
-          <option value="marksman" data-i18n="marksman" >Marksman</option><!-- Tireur -->
-          <option value="doc" data-i18n="doc" >Doc</option><!-- Toubib -->
-          <option value="bouncer" data-i18n="bouncer" >Bouncer</option><!-- Videur -->
-          <option value="thief" data-i18n="thief" >Thief</option><!-- Voleur -->
-          </select> 
-          <select name="attr_skill_level">
+    <table>
+      
+   <!-- FR Order-->
+          <tr><td><span class="sheet-attribut"  data-i18n="administrator" >Administrator</span></td><td><!-- administrateur-->
+          <select class="sheet-skill-level"  name="attr_administrator">
           <option value="" /></option>
           <option value="pro" data-i18n="level-professional" >Pro</option>
           <option value="exp" data-i18n="level-expert" >Exp</option>
           <option value="vir" data-i18n="level-vituoso" >Vir</option>
           </select> 
-      </fieldset>  
-    </div>
+          </td></tr>          
+          <tr><td><span class="sheet-attribut"  data-i18n="bum" >Bum</span></td><td><!-- Arpenteur -->
+          <select class="sheet-skill-level"  name="attr_bum">
+          <option value="" /></option>
+          <option value="pro" data-i18n="level-professional" >Pro</option>
+          <option value="exp" data-i18n="level-expert" >Exp</option>
+          <option value="vir" data-i18n="level-vituoso" >Vir</option>
+          </select> 
+          </td></tr>          
+          <tr><td><span class="sheet-attribut"  data-i18n="artist" >Artist</span></td><td><!-- Artiste -->
+          <select class="sheet-skill-level"  name="attr_artist">
+          <option value="" /></option>
+          <option value="pro" data-i18n="level-professional" >Pro</option>
+          <option value="exp" data-i18n="level-expert" >Exp</option>
+          <option value="vir" data-i18n="level-vituoso" >Vir</option>
+          </select> 
+          </td></tr>          
+          <tr><td><span class="sheet-attribut"  data-i18n="athlete" >Athlete</span></td><td><!-- Athlete -->
+          <select class="sheet-skill-level"  name="attr_athlete">
+          <option value="" /></option>
+          <option value="pro" data-i18n="level-professional" >Pro</option>
+          <option value="exp" data-i18n="level-expert" >Exp</option>
+          <option value="vir" data-i18n="level-vituoso" >Vir</option>
+          </select> 
+          </td></tr>
+          <tr><td><span class="sheet-attribut"  data-i18n="brawler" >Brawler</span></td><td><!-- Bagarreur -->
+          <select class="sheet-skill-level"  name="attr_brawler">
+          <option value="" /></option>
+          <option value="pro" data-i18n="level-professional" >Pro</option>
+          <option value="exp" data-i18n="level-expert" >Exp</option>
+          <option value="vir" data-i18n="level-vituoso" >Vir</option>
+          </select> 
+          </td></tr>
+          <tr><td><span class="sheet-attribut"  data-i18n="safecracker" >Safecracker</span></td><td><!-- Casseur -->
+          <select class="sheet-skill-level"  name="attr_safecraker">
+          <option value="" /></option>
+          <option value="pro" data-i18n="level-professional" >Pro</option>
+          <option value="exp" data-i18n="level-expert" >Exp</option>
+          <option value="vir" data-i18n="level-vituoso" >Vir</option>
+          </select> 
+          </td></tr>
+          <tr><td><span class="sheet-attribut"  data-i18n="driver" >Driver</span></td><td><!-- Chauffeur -->
+          <select class="sheet-skill-level"  name="attr_driver">
+          <option value="" /></option>
+          <option value="pro" data-i18n="level-professional" >Pro</option>
+          <option value="exp" data-i18n="level-expert" >Exp</option>
+          <option value="vir" data-i18n="level-vituoso" >Vir</option>
+          </select> 
+          </td></tr>
+          <tr><td><span class="sheet-attribut"  data-i18n="actor" >Actor</span></td><td><!-- Comédien -->
+          <select class="sheet-skill-level"  name="attr_actor">
+          <option value="" /></option>
+          <option value="pro" data-i18n="level-professional" >Pro</option>
+          <option value="exp" data-i18n="level-expert" >Exp</option>
+          <option value="vir" data-i18n="level-vituoso" >Vir</option>
+          </select> 
+          </td></tr>
+          <tr><td><span class="sheet-attribut"  data-i18n="merchant" >Merchant</span></td><td><!-- Commerçant -->
+          <select class="sheet-skill-level"  name="attr_merchant">
+          <option value="" /></option>
+          <option value="pro" data-i18n="level-professional" >Pro</option>
+          <option value="exp" data-i18n="level-expert" >Exp</option>
+          <option value="vir" data-i18n="level-vituoso" >Vir</option>
+          </select> 
+          </td></tr>
+          <tr><td><span class="sheet-attribut"  data-i18n="demonist" >Demonist</span></td><td><!-- Démoniste -->
+          <select class="sheet-skill-level"  name="attr_demonist">
+          <option value="" /></option>
+          <option value="pro" data-i18n="level-professional" >Pro</option>
+          <option value="exp" data-i18n="level-expert" >Exp</option>
+          <option value="vir" data-i18n="level-vituoso" >Vir</option>
+          </select> 
+          </td></tr>
+          <tr><td><span class="sheet-attribut"  data-i18n="diplomat" >Diplomat</span></td><td><!-- Diplomate -->
+          <select class="sheet-skill-level"  name="attr_diplomat">
+          <option value="" /></option>
+          <option value="pro" data-i18n="level-professional" >Pro</option>
+          <option value="exp" data-i18n="level-expert" >Exp</option>
+          <option value="vir" data-i18n="level-vituoso" >Vir</option>
+          </select> 
+          </td></tr>
+          <tr><td><span class="sheet-attribut"  data-i18n="investigator" >Investigator</span></td><td><!-- Enquêteur -->
+          <select class="sheet-skill-level"  name="attr_investigator">
+          <option value="" /></option>
+          <option value="pro" data-i18n="level-professional" >Pro</option>
+          <option value="exp" data-i18n="level-expert" >Exp</option>
+          <option value="vir" data-i18n="level-vituoso" >Vir</option>
+          </select> 
+          </td></tr>
+          <tr><td><span class="sheet-attribut"  data-i18n="entertainer" >Entertainer</span></td><td><!-- Entertainer -->
+          <select class="sheet-skill-level"  name="attr_entertainer">
+          <option value="" /></option>
+          <option value="pro" data-i18n="level-professional" >Pro</option>
+          <option value="exp" data-i18n="level-expert" >Exp</option>
+          <option value="vir" data-i18n="level-vituoso" >Vir</option>
+          </select> 
+          </td></tr>
+          <tr><td><span class="sheet-attribut"  data-i18n="gambler" >Gambler</span></td><td><!-- Joueur -->
+          <select class="sheet-skill-level"  name="attr_gambler">
+          <option value="" /></option>
+          <option value="pro" data-i18n="level-professional" >Pro</option>
+          <option value="exp" data-i18n="level-expert" >Exp</option>
+          <option value="vir" data-i18n="level-vituoso" >Vir</option>
+          </select> 
+          </td></tr>
+          <tr><td><span class="sheet-attribut"  data-i18n="mechanic" >Mechanic</span></td><td><!-- Méchano -->
+          <select class="sheet-skill-level"  name="attr_mechanic">
+          <option value="" /></option>
+          <option value="pro" data-i18n="level-professional" >Pro</option>
+          <option value="exp" data-i18n="level-expert" >Exp</option>
+          <option value="vir" data-i18n="level-vituoso" >Vir</option>
+          </select> 
+          </td></tr>
+          <tr><td><span class="sheet-attribut"  data-i18n="pilot" >Pilot</span></td><td><!-- Pilote -->
+          <select class="sheet-skill-level"  name="attr_pilot">
+          <option value="" /></option>
+          <option value="pro" data-i18n="level-professional" >Pro</option>
+          <option value="exp" data-i18n="level-expert" >Exp</option>
+          <option value="vir" data-i18n="level-vituoso" >Vir</option>
+          </select> 
+          </td></tr>
+          <tr><td><span class="sheet-attribut"  data-i18n="psychologist" >Psychologist</span></td><td><!-- Psychologue -->
+          <select class="sheet-skill-level"  name="attr_psychologist">
+          <option value="" /></option>
+          <option value="pro" data-i18n="level-professional" >Pro</option>
+          <option value="exp" data-i18n="level-expert" >Exp</option>
+          <option value="vir" data-i18n="level-vituoso" >Vir</option>
+          </select> 
+          </td></tr>
+          <tr><td><span class="sheet-attribut"  data-i18n="scientist" >Scientist</span></td><td><!-- Scientifique -->
+          <select class="sheet-skill-level"  name="attr_scientist">
+          <option value="" /></option>
+          <option value="pro" data-i18n="level-professional" >Pro</option>
+          <option value="exp" data-i18n="level-expert" >Exp</option>
+          <option value="vir" data-i18n="level-vituoso" >Vir</option>
+          </select> 
+          </td></tr>
+          <tr><td><span class="sheet-attribut"  data-i18n="seducer" >Seducer</span></td><td><!-- Séducteur -->
+          <select class="sheet-skill-level"  name="attr_seducer">
+          <option value="" /></option>
+          <option value="pro" data-i18n="level-professional" >Pro</option>
+          <option value="exp" data-i18n="level-expert" >Exp</option>
+          <option value="vir" data-i18n="level-vituoso" >Vir</option>
+          </select> 
+          </td></tr>
+          <tr><td><span class="sheet-attribut"  data-i18n="technician" >Technician</span></td><td><!-- Technicien -->
+          <select class="sheet-skill-level"  name="attr_seducer">
+          <option value="" /></option>
+          <option value="pro" data-i18n="level-professional" >Pro</option>
+          <option value="exp" data-i18n="level-expert" >Exp</option>
+          <option value="vir" data-i18n="level-vituoso" >Vir</option>
+          </select> 
+          </td></tr>
+          <tr><td><span class="sheet-attribut"  data-i18n="marksman" >Marksman</span></td><td><!-- Tireur -->
+          <select class="sheet-skill-level"  name="attr_marlsman">
+          <option value="" /></option>
+          <option value="pro" data-i18n="level-professional" >Pro</option>
+          <option value="exp" data-i18n="level-expert" >Exp</option>
+          <option value="vir" data-i18n="level-vituoso" >Vir</option>
+          </select> 
+          </td></tr>
+          <tr><td><span class="sheet-attribut"  data-i18n="doc" >Doc</span></td><td><!-- Toubib -->
+          <select class="sheet-skill-level"  name="attr_doc">
+          <option value="" /></option>
+          <option value="pro" data-i18n="level-professional" >Pro</option>
+          <option value="exp" data-i18n="level-expert" >Exp</option>
+          <option value="vir" data-i18n="level-vituoso" >Vir</option>
+          </select> 
+          </td></tr>
+          <tr><td><span class="sheet-attribut"  data-i18n="bouncer" >Bouncer</span></td><td><!-- Videur -->
+          <select class="sheet-skill-level"  name="attr_bouncer">
+          <option value="" /></option>
+          <option value="pro" data-i18n="level-professional" >Pro</option>
+          <option value="exp" data-i18n="level-expert" >Exp</option>
+          <option value="vir" data-i18n="level-vituoso" >Vir</option>
+          </select> 
+          </td></tr>
+          <tr><td><span class="sheet-attribut"  data-i18n="thief" >Thief</span></td><td><!-- Voleur -->
+          <select class="sheet-skill-level"  name="attr_thief">
+          <option value="" /></option>
+          <option value="pro" data-i18n="level-professional" >Pro</option>
+          <option value="exp" data-i18n="level-expert" >Exp</option>
+          <option value="vir" data-i18n="level-vituoso" >Vir</option>
+          </select> 
+          </td></tr>
 
   </div><!--Sskills --> 
 </td>
 </tr>
 
-<tr>
-<td>
-LA suite
-</td>
-</tr>
-      <tr>
-        <td>
-          <span class="sheet-attribut">
-            <span data-i18n="description-u">Description</span>
-          </span>          
-        </td>
-        <td>
-          
-        </td>
-      </tr>
       <tr>
         <td colspan="2">
+          <span class="sheet-attribut">
+            <span data-i18n="description-u">Description</span>
+          </span>
+          <br/>          
           <textarea name="attr_description"></textarea>
         </td>
       </tr>

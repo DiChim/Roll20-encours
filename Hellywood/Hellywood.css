@@ -7,7 +7,7 @@
 }
 .charsheet td {
   padding: 0px 2px 0px 2px;  
-  border: 1px solid #000;
+  border: 0px solid #000;
   vertical-align: text-top;
 }
 
@@ -25,14 +25,22 @@ img {
   vertical-align:top;
 }
 /* roulette */
-/* Les cercles */
 .sheet-roulette{
   clear: both;
   position:relative;
   top:0px;
   left:0px;
-  height: 150px;
+  height: 135px;
+  width:135px
   border: 1px solid green;
+}
+
+.sheet-roulette-img{
+  position:absolute;
+  top:15px;
+  left:2px;
+  border: 0px;
+  width:100px;
 }
 
 .sheet-roulette1{
@@ -42,6 +50,36 @@ img {
   border: 1px solid blue;
 }
 
+.sheet-roulette2{
+  position:absolute;
+  top:10px;
+  left:80px;
+  border: 1px solid blue;
+}
+.sheet-roulette3{
+  position:absolute;
+  top:30px;
+  left:30px;
+  border: 1px solid blue;
+}
+.sheet-roulette4{
+  position:absolute;
+  top:30px;
+  left:100px;
+  border: 1px solid blue;
+}
+.sheet-roulette5{
+  position:absolute;
+  top:50px;
+  left:50px;
+  border: 1px solid blue;
+}
+.sheet-roulette6{
+  position:absolute;
+  top:50px;
+  left:80px;
+  border: 1px solid blue;
+}
 /* fin roulette */
 /* Les cercles */
 .sheet-contenant-cercle{
@@ -51,7 +89,7 @@ img {
   left:0px;
   height: 525px;
   width:565px;
-  border: 1px solid green;
+  border: 0px solid green;
 }
 
 .sheet-circle-muscle{
@@ -316,12 +354,14 @@ select {
   font-size: 12px;
 }
 
-select[name="attr_skill"]{
-  width: 150px;
+textarea{
+  width:95%;
 }
 
-select[name="attr_skill_level"]{
+.sheet-skill-level{
   width: 50px;
+  height:20px;
+  font-size: 11px;
 }
 
 
