@@ -45,9 +45,9 @@ img {
 
 /* ===== Sélection Check ===== */
 input[type="checkbox"].sheet-roulette-chk{
-    width: 30px;
-    height: 30px;
-    max-width: 30px;
+    width: 20px;
+    height: 20px;
+    max-width: 20px;
     opacity: 0;
     z-index: 2;
     margin: 0;
@@ -57,28 +57,28 @@ input[type="checkbox"].sheet-roulette-chk + span{
     text-align: center;
     padding: 0;
     margin: 0;
-    margin-left: -30px;
-    width: 30px;
-    max-width: 30px;
-    height: 30px;
+    margin-left: -20px;
+    width: 20px;
+    max-width: 20px;
+    height: 20px;
     z-index: 1;
     font-family: pictos;
     color: #DDB29B; /* #EFBAC1; */
-    opacity: 0.2;
-    filter: alpha(opacity=20); /* For IE8 and earlier */
-    font-size: 30px;
-    line-height: 30px;
+    opacity: 0.3;
+    filter: alpha(opacity=30); /* For IE8 and earlier */
+    font-size: 15px;
+    line-height: 20px;
 }
 input[type="checkbox"].sheet-roulette-chk:hover + span{
-    color: #DE6928; /* #ADDDAD; */
-    opacity: 1;
-    filter: alpha(opacity=100); /* For IE8 and earlier */
+    color: #000 /*#DE6928;*/ /* #ADDDAD; */
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
 }
 input[type="checkbox"].sheet-roulette-chk:checked + span{
     font-weight: bold;
     color: red;/*#700200; *//* #557F55; */
-    opacity: 0.8;
-    filter: alpha(opacity=80); /* For IE8 and earlier */
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
 }
 
 
@@ -100,13 +100,13 @@ input[type="checkbox"].sheet-roulette-chk:checked + span{
 .sheet-roulette3{
   position:absolute;
   top:45px;
-  left:60px;
+  left:62px;
   border: 0px solid blue;
 }
 .sheet-roulette4{
   position:absolute;
   top:70px;
-  left:40px;
+  left:50px;
   border: 0px solid blue;
 }
 .sheet-roulette5{
@@ -117,7 +117,7 @@ input[type="checkbox"].sheet-roulette-chk:checked + span{
 }
 .sheet-roulette6{
   position:absolute;
-  top:45px;
+  top:42px;
   left:10px;
   border: 0px solid blue;
 }
@@ -375,13 +375,12 @@ input[type="text"] {
   border: 0 solid #000;
   border-bottom-width: 1px;
   border-left-width: 1px;  
-  height:15px;
+  height:20px;
 }
 
 input[type="number"] {
   background-color: transparent;
   /*border: 0 solid #000;*/
-
 }
 
 input[type="text"]:read-only, input[type="number"]:read-only {
@@ -393,7 +392,7 @@ select {
   border: 0 solid #000;
   border-bottom-width: 1px;
   border-left-width: 1px;  
-  height:25px;
+  height:20px;
   font-size: 12px;
 }
 
