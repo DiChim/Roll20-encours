@@ -122,6 +122,13 @@ input[type="checkbox"].sheet-roulette-chk:checked + span{
   border: 0px solid blue;
 }
 
+.sheet-roulette-roll{
+  position:absolute;
+  top:80px;
+  left:95px;
+  border: 0px solid blue;
+}
+
 
 /* fin roulette */
 /* Les cercles */
@@ -427,5 +434,33 @@ textarea{
 .sheet-mini{
   font-size: 75%;
   color: #ccc;
+}
+
+input[type="text"].sheet-consequence-repetition{
+  width: 65%;
+}
+
+select.sheet-consequence-level{
+  width:50px;
+  height:22px;
+  font-size: 12px;
+}
+
+/* Templates*/
+.sheet-rolltemplate-hellywood-roulette table {
+    width: 100%;
+    background-color: #FFF;
+    border: 1px solid;
+    color: black;
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+}
+.sheet-rolltemplate-hellywood-roulette th{
+    background-color: #F00;
+    color: #ffffff;
+    padding: 2px;
+    border-bottom: 1px solid black;
+    line-height: 1.2em;
+    font-size: 1.1em;
 }
 

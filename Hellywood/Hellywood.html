@@ -1,3 +1,5 @@
+<input type="hidden" name="attr_roll_roulette" value="&{template:hellywood-roulette} {{name=@{character_name}}} {{jet=[[1d6]]}}" readonly/>
+
 <table>
 <tr>
 <td>
@@ -33,21 +35,21 @@
       <tr>
         <td>
           <span class="sheet-attribut2">
-            <span data-i18n="adventage-u">Adventage</span>
+            <span data-i18n="advantage-u">Advantage</span>
           </span>          
         </td>
         <td>
-          <input type="text" name="attr_nature1_adventage" />
+          <input type="text" name="attr_nature1_advantage" />
         </td>
       </tr>
       <tr>
         <td>
           <span class="sheet-attribut2">
-            <span data-i18n="disadventage-u">Disadventage</span>
+            <span data-i18n="disadvantage-u">Disadvantage</span>
           </span>          
         </td>
         <td>
-          <input type="text" name="attr_nature1_disadventage" />
+          <input type="text" name="attr_nature1_disadvantage" />
         </td>
       </tr>
 
@@ -64,21 +66,21 @@
       <tr>
         <td>
           <span class="sheet-attribut2">
-            <span data-i18n="adventage-u">Adventage</span>
+            <span data-i18n="advantage-u">Advantage</span>
           </span>          
         </td>
         <td>
-          <input type="text" name="attr_nature2_adventage" />
+          <input type="text" name="attr_nature2_advantage" />
         </td>
       </tr>
       <tr>
         <td>
           <span class="sheet-attribut2">
-            <span data-i18n="disadventage-u">Disadventage</span>
+            <span data-i18n="disadvantage-u">Disadvantage</span>
           </span>          
         </td>
         <td>
-          <input type="text" name="attr_nature2_disadventage" />
+          <input type="text" name="attr_nature2_disadvantage" />
         </td>
       </tr>
       </table>
@@ -94,6 +96,7 @@
 <tr>
 <td>
 <div class="sheet-roulette">
+ 
  <span data-i18n="russian-roulette-u" class="sheet-attribut">Russian Roulette</span>
  <img class="sheet-roulette-img" src="https://github.com/DiChim/Roll20-encours/raw/master/Hellywood/Hellywood_roulette.png" />
 <div class="sheet-roulette1">
@@ -114,8 +117,9 @@
 <div class="sheet-roulette6">
 <input type="checkbox" class="sheet-roulette-chk" name="attr_roulette_6" title="6" value="1"><span>3</span>
 </div>
-
-
+<div class="sheet-roulette-roll">
+<button type="roll" value="@{roll_roulette}" name="roll_roulette_btn"></button>
+</div>
 
 </div>
 </td>
@@ -503,7 +507,86 @@
         </td>
       </tr>
 
+      <tr>
+        <td>
+          <span class="sheet-titre">
+            <span data-i18n="equipment-u">Equipment</span>
+          </span>
+          <div class="sheet-repetition">
+              <fieldset class="repeating_equipment">            
+                  <input class="sheet-equipment-repetition" data-i18n-placeholder="equipement-p" placeholder="Equipment" type="text" name="attr_equipment" />
+              </fieldset>  
+          </div>
+          
+        </td>
+        <td>
+          <span class="sheet-titre">
+            <span data-i18n="past-u">Past</span>
+          </span>
+          <div class="sheet-repetition">
+              <fieldset class="repeating_past">            
+                  <input class="sheet-past-repetition" data-i18n-placeholder="past-p" placeholder="Past" type="text" name="attr_past" />
+                  &nbsp;
+                  <input class="sheet-past-level" type="number" name="attr_past_level" />
+              </fieldset>  
+          </div>
+          
+        </td>
+        <td>
+          <span class="sheet-titre">
+            <span data-i18n="consequences-u">Consequences</span>
+          </span>
+          &nbsp;&nbsp;&nbsp;
+          <span data-i18n="flashback-u">Flashback</span>
+          <input type="checkbox" name="attr_flashback" />
+          <div class="sheet-repetition">
+              <fieldset class="repeating_consequence">            
+                  <input class="sheet-consequence-repetition" data-i18n-placeholder="consequence-p" placeholder="consequence" type="text" name="attr_consequence" />
+                  &nbsp;
+                  <select class="sheet-consequence-level"  name="attr_consequence_level">
+                  <option value="10">10</option>
+                  <option value="20">20</option>
+                  </select>                   
+              </fieldset>  
+          </div>
+          
+        </td>
+        
+      </tr>
+
+      <tr>
+        <td colspan="3">
+          <span class="sheet-attribut">
+            <span data-i18n="notes-u">Observations & Notes</span>
+          </span>
+          <br/>          
+          <textarea name="attr_obs"></textarea>
+        </td>
+      </tr>
 
 
 </table>
 <!-- </div> -->
+
+
+
+
+<!-- Roll Templates -->
+<rolltemplate class="sheet-rolltemplate-hellywood-roulette">
+  <table>
+    <tr>
+      <th colspan="2"><span data-i18n="russian-roulette-u">Russian Roulette</span>
+      <br/>
+      {{name}}
+      </th>
+    </tr>
+    <tr>
+      <td>
+      <span data-i18n="roulette-text-t">Survives if the number that comes up is not ticked.</span>
+      </td>
+      <td>
+      {{jet}} 
+      </td>
+    </tr>
+  </table>
+</rolltemplate>
