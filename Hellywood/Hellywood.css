@@ -123,8 +123,12 @@ input[type="checkbox"].sheet-roulette-chk:checked + span{
 
 .sheet-roulette-roll{
   position:absolute;
-  top:80px;
-  left:90px;
+  /* sur le côté top:80px;
+  left:82px;*/
+  top:52px;
+  left:38px;
+  z-index:3;
+  
   border: 0px solid blue;
 }
 
@@ -394,7 +398,7 @@ input[type="text"] {
   border: 0 solid #000;
   border-bottom-width: 1px;
   border-left-width: 1px;  
-  height:20px;
+  height:22px;
 }
 
 input[type="number"] {
