@@ -125,7 +125,7 @@ input[type="checkbox"].sheet-roulette-chk:checked + span{
 .sheet-roulette-roll{
   position:absolute;
   top:80px;
-  left:95px;
+  left:92px;
   border: 0px solid blue;
 }
 
@@ -140,6 +140,12 @@ input[type="checkbox"].sheet-roulette-chk:checked + span{
   height: 525px;
   width:565px;
   border: 0px solid green;
+}
+
+.sheet-obs-skills{
+  position:absolute;
+  top:0px;
+  left:415px;  
 }
 
 .sheet-circle-muscle{
@@ -437,7 +443,7 @@ textarea{
 }
 
 input[type="text"].sheet-consequence-repetition{
-  width: 65%;
+  width: 95%;
 }
 
 select.sheet-consequence-level{
@@ -446,6 +452,18 @@ select.sheet-consequence-level{
   font-size: 12px;
 }
 
+input[type="text"].sheet-equipment-repetition{
+  width: 95%;
+}
+
+input[type="text"].sheet-past-repetition{
+  width: 95%;
+}
+
+.sheet-texte{
+  color: #ccc;
+  font-styel: italic;
+}
 /* Templates*/
 .sheet-rolltemplate-hellywood-roulette table {
     width: 100%;
@@ -463,4 +481,3 @@ select.sheet-consequence-level{
     line-height: 1.2em;
     font-size: 1.1em;
 }
-
