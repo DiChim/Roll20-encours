@@ -125,7 +125,7 @@ input[type="checkbox"].sheet-roulette-chk:checked + span{
 .sheet-roulette-roll{
   position:absolute;
   top:80px;
-  left:92px;
+  left:90px;
   border: 0px solid blue;
 }
 
@@ -145,7 +145,7 @@ input[type="checkbox"].sheet-roulette-chk:checked + span{
 .sheet-obs-skills{
   position:absolute;
   top:0px;
-  left:415px;  
+  left:435px;  
 }
 
 .sheet-circle-muscle{
@@ -464,8 +464,33 @@ input[type="text"].sheet-past-repetition{
   color: #ccc;
   font-styel: italic;
 }
+
+div.sheet-skills{
+  background-color: #F4F6F6;
+}
+
+
+button[type="roll"] {
+   /* height: 28px;
+    width: 28px;
+    margin: 2px;
+    padding: 4px;
+    padding-top: 5px;
+
+    font-size: 20px;
+    text-align: center;*/
+    color: #CF3134;
+    background: transparent;    
+    border: none;
+    border-radius: 0px;
+}
+button[type="roll"]:hover{
+    font-weight: bold;
+}
+
+
 /* Templates*/
-.sheet-rolltemplate-hellywood-roulette table {
+.sheet-rolltemplate-hellywood-roulette table, .sheet-rolltemplate-hellywood-skill table  {
     width: 100%;
     background-color: #FFF;
     border: 1px solid;
@@ -473,7 +498,7 @@ input[type="text"].sheet-past-repetition{
     font-size: 1em;
     font-family: 'Times New Roman', Times, serif;
 }
-.sheet-rolltemplate-hellywood-roulette th{
+.sheet-rolltemplate-hellywood-roulette th,.sheet-rolltemplate-hellywood-skill th{
     background-color: #CF3134;/*#F00;*/
     color: #ffffff;
     padding: 2px;

@@ -1,5 +1,12 @@
 <input type="hidden" name="attr_roll_roulette" value="&{template:hellywood-roulette} {{name=@{character_name}}} {{jet=[[1d6]]}}" readonly/>
 
+<input type="hidden" name="attr_administrator_dice" value="2d6" readonly/>
+<input type="hidden" name="attr_roll_administrator" value="&{template:hellywood-skill} {{name=@{character_name}}} {{skill=^{administrator}}} {{jet=[[@{administrator_dice}]]}}" readonly/>
+<input type="hidden" name="attr_bum_dice" value="2d6" readonly/>
+<input type="hidden" name="attr_roll_bum" value="&{template:hellywood-skill} {{name=@{character_name}}} {{skill=^{bum}}} {{jet=[[@{bum_dice}]]}}" readonly/>
+
+
+
 <table>
 <tr>
 <td>
@@ -337,7 +344,9 @@
     <table>
       
    <!-- FR Order-->
-          <tr><td><span class="sheet-attribut"  data-i18n="administrator" >Administrator</span></td><td><!-- administrateur-->
+          <tr><td>
+          <button type="roll" value="@{roll_administrator}" name="roll_administrator_btn"></button>
+          <span class="sheet-attribut"  data-i18n="administrator" >Administrator</span></td><td><!-- administrateur-->
           <select class="sheet-skill-level"  name="attr_administrator">
           <option value="" /></option>
           <option value="pro" data-i18n="level-professional" >Pro</option>
@@ -345,7 +354,9 @@
           <option value="vir" data-i18n="level-vituoso" >Vir</option>
           </select> 
           </td></tr>          
-          <tr><td><span class="sheet-attribut"  data-i18n="bum" >Bum</span></td><td><!-- Arpenteur -->
+          <tr><td>
+          <button type="roll" value="@{roll_bum}" name="roll_bum_btn"></button>
+          <span class="sheet-attribut"  data-i18n="bum" >Bum</span></td><td><!-- Arpenteur -->
           <select class="sheet-skill-level"  name="attr_bum">
           <option value="" /></option>
           <option value="pro" data-i18n="level-professional" >Pro</option>
@@ -598,7 +609,7 @@
 
       <tr>
         <td colspan="3">
-          <span class="sheet-attribut">
+          <span class="sheet-titre">
             <span data-i18n="notes-u">Observations & Notes</span>
           </span>
           <br/>          
@@ -632,3 +643,283 @@
     </tr>
   </table>
 </rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-hellywood-skill">
+  <table>
+    <tr>
+      <th colspan="2">
+        {{name}}
+        <br/>
+        {{skill}}
+      </th>
+    </tr>
+    <tr>
+      <td colspan="2" align="center">
+      {{jet}} 
+      </td>
+    </tr>
+    {{#rollTotal() jet 2}}
+    <tr>
+    <td>
+      <span data-i18n="failure-t">Failure</span>
+    </td>
+    </tr>
+    {{/rollTotal() jet 2}}      
+    {{#rollTotal() jet 3}}
+    <tr>
+    <td>
+      <span data-i18n="failure-t">Failure</span>
+    </td>
+    </tr>
+    {{/rollTotal() jet 3}}  
+    {{#rollTotal() jet 4}}
+    <tr>
+    <td>
+      <span data-i18n="neutral-t">Neutral</span>
+    </td>
+    </tr>
+    {{/rollTotal() jet 4}} 
+    
+    {{#rollTotal() jet 5}}
+    <tr>
+      <td>
+        <span data-i18n="base-t">Base</span>
+      </td>    
+    <td>
+      <span data-i18n="neutral-t">Neutral</span>
+    </td>
+    </tr>
+    <tr>
+      <td>
+        +
+      </td>    
+    <td>
+      <span data-i18n="neutral-t">Neutral</span>
+    </td>
+    </tr>
+    <tr>
+      <td>
+        ++
+      </td>    
+    <td>
+      <span data-i18n="neutral-t">Neutral</span>
+    </td>
+    </tr>
+    <tr>
+      <td>
+        +++
+      </td>    
+    <td>
+      <span data-i18n="success-t">Success</span>
+    </td>
+    </tr>
+   <tr>
+      <td>
+        ++++
+      </td>    
+    <td>
+      <span data-i18n="success-t">Success</span>
+    </td>
+    </tr>
+    {{/rollTotal() jet 5}} 
+    
+    {{#rollTotal() jet 6}}
+    <tr>
+      <td>
+        <span data-i18n="base-t">Base</span>
+      </td>    
+    <td>
+      <span data-i18n="neutral-t">Neutral</span>
+    </td>
+    </tr>
+    <tr>
+      <td>
+        +
+      </td>    
+    <td>
+      <span data-i18n="success-t">Success</span>
+    </td>
+    </tr>
+    <tr>
+      <td>
+        ++
+      </td>    
+    <td>
+      <span data-i18n="success-t">Success</span>
+    </td>
+    </tr>
+    <tr>
+      <td>
+        +++
+      </td>    
+    <td>
+      <span data-i18n="success-t">Success</span>
+    </td>
+    </tr>
+   <tr>
+      <td>
+        ++++
+      </td>    
+    <td>
+      <span data-i18n="success-t">Success</span>
+    </td>
+    </tr>
+    {{/rollTotal() jet 6}} 
+    
+    {{#rollTotal() jet 7}}
+    <tr>
+    <td>
+      <span data-i18n="success-t">Success</span>
+    </td>
+    </tr>
+    {{/rollTotal() jet 7}} 
+
+    {{#rollTotal() jet 8}}
+    <tr>
+      <td>
+        <span data-i18n="base-t">Base</span>
+      </td>    
+    <td>
+      <span data-i18n="neutral-t">Neutral</span>
+    </td>
+    </tr>
+    <tr>
+      <td>
+        +
+      </td>    
+    <td>
+      <span data-i18n="neutral-t">Neutral</span>
+    </td>
+    </tr>
+    <tr>
+      <td>
+        ++
+      </td>    
+    <td>
+      <span data-i18n="success-t">Success</span>
+    </td>
+    </tr>
+    <tr>
+      <td>
+        +++
+      </td>    
+    <td>
+      <span data-i18n="success-t">Success</span>
+    </td>
+    </tr>
+   <tr>
+      <td>
+        ++++
+      </td>    
+    <td>
+      <span data-i18n="success-t">Success</span>
+    </td>
+    </tr>
+    {{/rollTotal() jet 8}} 
+
+    {{#rollTotal() jet 9}}
+    <tr>
+      <td>
+        <span data-i18n="base-t">Base</span>
+      </td>    
+    <td>
+      <span data-i18n="neutral-t">Neutral</span>
+    </td>
+    </tr>
+    <tr>
+      <td>
+        +
+      </td>    
+    <td>
+      <span data-i18n="neutral-t">Neutral</span>
+    </td>
+    </tr>
+    <tr>
+      <td>
+        ++
+      </td>    
+    <td>
+      <span data-i18n="neutral-t">Neutral</span>
+    </td>
+    </tr>
+    <tr>
+      <td>
+        +++
+      </td>    
+    <td>
+      <span data-i18n="neutral-t">Neutral</span>
+    </td>
+    </tr>
+   <tr>
+      <td>
+        ++++
+      </td>    
+    <td>
+      <span data-i18n="success-t">Success</span>
+    </td>
+    </tr>
+    {{/rollTotal() jet 9}} 
+
+    
+    {{#rollTotal() jet 10}}
+    <tr>
+    <td>
+      <span data-i18n="neutral-t">Neutral</span>
+    </td>
+    </tr>
+    {{/rollTotal() jet 10}} 
+
+
+
+    {{#rollTotal() jet 11}}
+    <tr>
+    <td>
+      <span data-i18n="success-t">Success</span>
+    </td>
+    </tr>
+    {{/rollTotal() jet 11}} 
+    {{#rollTotal() jet 12}}
+    <tr>
+    <td>
+      <span data-i18n="failure-t">Failure</span>
+    </td>
+    </tr>
+    {{/rollTotal() jet 12}} 
+  </table>
+</rolltemplate>
+
+<!-- Les scripts -->
+<script type="text/worker">
+//skills
+function majDice(skill){    
+    getAttrs([skill], function(values) {
+      dice = '2d6';
+      if (skill == 'administrator'){
+        if(values.administrator == 'vir'){
+          dice = '3d6k2';
+        }
+        setAttrs({
+          administrator_dice : dice      
+        });            
+      }
+      if (skill == 'bum'){
+        if(values.bum == 'vir'){
+          dice = '3d6k2';
+        }
+        setAttrs({
+          bum_dice : dice      
+        });            
+      }
+    });
+}
+
+
+on("change:administrator", function() {
+    majDice('administrator');
+});
+on("change:bum", function() {
+    majDice('bum');
+});
+
+
+</script>
