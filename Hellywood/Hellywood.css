@@ -148,6 +148,13 @@ input[type="checkbox"].sheet-roulette-chk:checked + span{
   left:435px;  
 }
 
+.sheet-shotgun{
+  position:absolute;
+  top:60px;
+  left:15px; 
+  font-size: 30px;  
+}
+
 .sheet-circle-muscle{
   position:absolute;
   top:0px;
@@ -498,11 +505,29 @@ button[type="roll"]:hover{
     font-size: 1em;
     font-family: 'Times New Roman', Times, serif;
 }
-.sheet-rolltemplate-hellywood-roulette th,.sheet-rolltemplate-hellywood-skill th{
+.sheet-rolltemplate-hellywood-skill th{
     background-color: #CF3134;/*#F00;*/
     color: #ffffff;
     padding: 2px;
     border-bottom: 1px solid black;
     line-height: 1.2em;
     font-size: 1.1em;
+}
+.sheet-rolltemplate-hellywood-roulette th{
+    background-color: #000;
+    color: #ffffff;
+    padding: 2px;
+    border-bottom: 1px solid black;
+    line-height: 1.2em;
+    font-size: 1.1em;
+}
+
+.sheet-rolltemplate-hellywood-skill .sheet-success{
+  font-weight: bold;
+  color:  #28b463;
+}
+
+.sheet-rolltemplate-hellywood-skill .sheet-failure{
+  font-weight: bold;
+  color:  red;
 }

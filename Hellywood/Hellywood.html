@@ -1,12 +1,13 @@
+<!-- Dices -->
 <input type="hidden" name="attr_roll_roulette" value="&{template:hellywood-roulette} {{name=@{character_name}}} {{jet=[[1d6]]}}" readonly/>
+<input type="hidden" name="attr_roll_shotgun" value="&{template:hellywood-skill} {{name=@{character_name}}} {{skill=^{shotgun}}} {{jet=[[2d6]]}}" readonly/>
 
 <input type="hidden" name="attr_administrator_dice" value="2d6" readonly/>
 <input type="hidden" name="attr_roll_administrator" value="&{template:hellywood-skill} {{name=@{character_name}}} {{skill=^{administrator}}} {{jet=[[@{administrator_dice}]]}}" readonly/>
 <input type="hidden" name="attr_bum_dice" value="2d6" readonly/>
 <input type="hidden" name="attr_roll_bum" value="&{template:hellywood-skill} {{name=@{character_name}}} {{skill=^{bum}}} {{jet=[[@{bum_dice}]]}}" readonly/>
 
-
-
+<!-- sheet -->
 <table>
 <tr>
 <td>
@@ -148,6 +149,9 @@
     <span data-i18n="attributes-titre-u">Attributes</span>&<br/>
     <span data-i18n="damage-u" class="sheet-attribut">Damage</span>
   </span>
+    <div class="sheet-shotgun">
+    <button type="roll" value="@{roll_shotgun}" data-i18n-title="shotgun" title="Shotgun" name="roll_shotgun_btn"></button>
+    </div>
     <div class="sheet-circle-muscle">
       <div class="sheet-cirle-in">
         <span class="sheet-mini"><span data-i18n="score-u">Score</span></span>
@@ -661,14 +665,14 @@
     {{#rollTotal() jet 2}}
     <tr>
     <td>
-      <span data-i18n="failure-t">Failure</span>
+      <span data-i18n="failure-t" class="sheet-failure">Failure</span>
     </td>
     </tr>
     {{/rollTotal() jet 2}}      
     {{#rollTotal() jet 3}}
     <tr>
     <td>
-      <span data-i18n="failure-t">Failure</span>
+      <span data-i18n="failure-t" class="sheet-failure">Failure</span>
     </td>
     </tr>
     {{/rollTotal() jet 3}}  
@@ -710,7 +714,7 @@
         +++
       </td>    
     <td>
-      <span data-i18n="success-t">Success</span>
+      <span data-i18n="success-t" class="sheet-success">Success</span>
     </td>
     </tr>
    <tr>
@@ -718,7 +722,7 @@
         ++++
       </td>    
     <td>
-      <span data-i18n="success-t">Success</span>
+      <span data-i18n="success-t" class="sheet-success">Success</span>
     </td>
     </tr>
     {{/rollTotal() jet 5}} 
@@ -737,7 +741,7 @@
         +
       </td>    
     <td>
-      <span data-i18n="success-t">Success</span>
+      <span data-i18n="success-t" class="sheet-success">Success</span>
     </td>
     </tr>
     <tr>
@@ -745,7 +749,7 @@
         ++
       </td>    
     <td>
-      <span data-i18n="success-t">Success</span>
+      <span data-i18n="success-t" class="sheet-success">Success</span>
     </td>
     </tr>
     <tr>
@@ -753,7 +757,7 @@
         +++
       </td>    
     <td>
-      <span data-i18n="success-t">Success</span>
+      <span data-i18n="success-t" class="sheet-success">Success</span>
     </td>
     </tr>
    <tr>
@@ -761,7 +765,7 @@
         ++++
       </td>    
     <td>
-      <span data-i18n="success-t">Success</span>
+      <span data-i18n="success-t" class="sheet-success">Success</span>
     </td>
     </tr>
     {{/rollTotal() jet 6}} 
@@ -769,7 +773,7 @@
     {{#rollTotal() jet 7}}
     <tr>
     <td>
-      <span data-i18n="success-t">Success</span>
+      <span data-i18n="success-t" class="sheet-success">Success</span>
     </td>
     </tr>
     {{/rollTotal() jet 7}} 
@@ -796,7 +800,7 @@
         ++
       </td>    
     <td>
-      <span data-i18n="success-t">Success</span>
+      <span data-i18n="success-t" class="sheet-success">Success</span>
     </td>
     </tr>
     <tr>
@@ -804,7 +808,7 @@
         +++
       </td>    
     <td>
-      <span data-i18n="success-t">Success</span>
+      <span data-i18n="success-t" class="sheet-success">Success</span>
     </td>
     </tr>
    <tr>
@@ -812,7 +816,7 @@
         ++++
       </td>    
     <td>
-      <span data-i18n="success-t">Success</span>
+      <span data-i18n="success-t" class="sheet-success">Success</span>
     </td>
     </tr>
     {{/rollTotal() jet 8}} 
@@ -855,7 +859,7 @@
         ++++
       </td>    
     <td>
-      <span data-i18n="success-t">Success</span>
+      <span data-i18n="success-t" class="sheet-success">Success</span>
     </td>
     </tr>
     {{/rollTotal() jet 9}} 
@@ -874,14 +878,14 @@
     {{#rollTotal() jet 11}}
     <tr>
     <td>
-      <span data-i18n="success-t">Success</span>
+      <span data-i18n="success-t" class="sheet-success">Success</span>
     </td>
     </tr>
     {{/rollTotal() jet 11}} 
     {{#rollTotal() jet 12}}
     <tr>
     <td>
-      <span data-i18n="failure-t">Failure</span>
+      <span data-i18n="failure-t" class="sheet-failure">Failure</span>
     </td>
     </tr>
     {{/rollTotal() jet 12}} 
