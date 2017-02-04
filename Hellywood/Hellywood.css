@@ -3,7 +3,7 @@
 }
 
 .charsheet table {
-    width: 100%;
+  width: 100%;
 }
 .charsheet td {
   padding: 0px 2px 0px 2px;  
@@ -45,42 +45,41 @@ img {
 
 /* ===== Sélection Check ===== */
 input[type="checkbox"].sheet-roulette-chk{
-    width: 20px;
-    height: 20px;
-    max-width: 20px;
-    opacity: 0;
-    z-index: 2;
-    margin: 0;
+  width: 20px;
+  height: 20px;
+  max-width: 20px;
+  opacity: 0;
+  z-index: 2;
+  margin: 0;
 }
 input[type="checkbox"].sheet-roulette-chk + span{
-    display: inline-block;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    margin-left: -20px;
-    width: 20px;
-    max-width: 20px;
-    height: 20px;
-    z-index: 1;
-    font-family: pictos;
-    color: #DDB29B; /* #EFBAC1; */
-    opacity: 0.3;
-    filter: alpha(opacity=30); /* For IE8 and earlier */
-    font-size: 15px;
-    line-height: 20px;
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  margin-left: -20px;
+  width: 20px;
+  max-width: 20px;
+  height: 20px;
+  z-index: 1;
+  font-family: pictos;
+  color: #DDB29B; 
+  opacity: 0.3;
+  filter: alpha(opacity=30); /* For IE8 and earlier */
+  font-size: 15px;
+  line-height: 20px;
 }
 input[type="checkbox"].sheet-roulette-chk:hover + span{
-    color: #000 /*#DE6928;*/ /* #ADDDAD; */
-    opacity: 0.4;
-    filter: alpha(opacity=40); /* For IE8 and earlier */
+  color: #000;
+  opacity: 0.4;
+  filter: alpha(opacity=40); /* For IE8 and earlier */
 }
 input[type="checkbox"].sheet-roulette-chk:checked + span{
-    font-weight: bold;
-    color: #CF3134;/*red;*//*#700200; *//* #557F55; */
-    opacity: 0.6;
-    filter: alpha(opacity=60); /* For IE8 and earlier */
+  font-weight: bold;
+  color: #CF3134;
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
 }
-
 
 
 .sheet-roulette1{
@@ -129,8 +128,8 @@ input[type="checkbox"].sheet-roulette-chk:checked + span{
   border: 0px solid blue;
 }
 
-
 /* fin roulette */
+
 /* Les cercles */
 .sheet-contenant-cercle{
   clear: both;
@@ -326,67 +325,67 @@ input[type="checkbox"].sheet-roulette-chk:checked + span{
 
 /* === fieldset button === */
 div.repcontrol{
-    display: inline-block;
-    width: 100%;
+  display: inline-block;
+  width: 100%;
 }
 .repcontrol_move{
-    height: 11px;
-    line-height: 11px;
-    margin-top: 4px;
+  height: 11px;
+  line-height: 11px;
+  margin-top: 4px;
 }
 .repcontrol_del {
-    height: 22px;
-    line-height: 12px;
-    margin-top: 4px;
-    width: 30px;
+  height: 22px;
+  line-height: 12px;
+  margin-top: 4px;
+  width: 30px;
 }
 .repcontrol_add, .repcontrol_edit {
-    color: transparent;
-    box-shadow: none;
-    background: transparent;
-    border-color: transparent;
-    text-shadow:none;
-    width: 100px;
+  color: transparent;
+  box-shadow: none;
+  background: transparent;
+  border-color: transparent;
+  text-shadow:none;
+  width: 100px;
 }
 .repcontrol_add:focus, .repcontrol_edit:focus {
-    outline: none;
+  outline: none;
 }
 .repcontrol .repcontrol_edit:after {
-    content: 'y';
-    visibility: visible;
-    font-family: pictos;
-    border: 1px solid transparent;
-    border-radius: 2px;
-    font-size: 20px;
-    height: 20px;
-    width: 20px;
-    padding: 2px 4px 2px 4px;
-    color: rgba(177,121,63,0.7);
+  content: 'y';
+  visibility: visible;
+  font-family: pictos;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font-size: 20px;
+  height: 20px;
+  width: 20px;
+  padding: 2px 4px 2px 4px;
+  color: rgba(177,121,63,0.7);
 }
 .editmode ~ .repcontrol .repcontrol_edit:after {
-    content: '2';
+  content: '2';
 }
 .repcontrol .repcontrol_add:before {
-    content: '+';
-    visibility: visible;
-    font-family: pictos;
-    border: 1px solid transparent;
-    border-radius: 2px;
-    font-size: 20px;
-    height: 20px;
-    width: 20px;
-    padding: 2px 4px 2px 4px;
-    color: rgba(177,121,63,0.7);
+  content: '+';
+  visibility: visible;
+  font-family: pictos;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font-size: 20px;
+  height: 20px;
+  width: 20px;
+  padding: 2px 4px 2px 4px;
+  color: rgba(177,121,63,0.7);
 }
 .repcontrol .repcontrol_edit:hover:after,
 .repcontrol .repcontrol_add:hover:before
 {
-    box-shadow: 1px 1px 4px 2px rgba(147,35,21,0.8);
-    border-color: #CF3134;/*#B1793F;*/
-    color: #CF3134;/*#B1793F;*/
+  box-shadow: 1px 1px 4px 2px rgba(147,35,21,0.8);
+  border-color: #CF3134;
+  color: #CF3134;
 }
 .repcontrol_add:focus:before, .repcontrol_edit:focus:after {
-    color: #CF3134;/*#B1793F;*/
+  color: #CF3134;
 }
 /* === Fin fieldset button === */
 
@@ -400,7 +399,6 @@ input[type="text"] {
 
 input[type="number"] {
   background-color: transparent;
-  /*border: 0 solid #000;*/
 }
 
 input[type="text"]:read-only, input[type="number"]:read-only {
@@ -478,56 +476,48 @@ div.sheet-skills{
 
 
 button[type="roll"] {
-   /* height: 28px;
-    width: 28px;
-    margin: 2px;
-    padding: 4px;
-    padding-top: 5px;
-
-    font-size: 20px;
-    text-align: center;*/
-    color: #CF3134;
-    background: transparent;    
-    border: none;
-    border-radius: 0px;
+  color: #CF3134;
+  background: transparent;    
+  border: none;
+  border-radius: 0px;
 }
 button[type="roll"]:hover{
-    font-weight: bold;
+  font-weight: bold;
 }
 
 
 /* Templates*/
 .sheet-rolltemplate-hellywood-roulette table, .sheet-rolltemplate-hellywood-skill table  {
-    width: 100%;
-    background-color: #FFF;
-    border: 1px solid;
-    color: black;
-    font-size: 1em;
-    font-family: 'Times New Roman', Times, serif;
+  width: 100%;
+  background-color: #FFF;
+  border: 1px solid;
+  color: black;
+  font-size: 1em;
+  font-family: 'Times New Roman', Times, serif;
 }
 .sheet-rolltemplate-hellywood-skill th{
-    background-color: #CF3134;/*#F00;*/
-    color: #ffffff;
-    padding: 2px;
-    border-bottom: 1px solid black;
-    line-height: 1.2em;
-    font-size: 1.1em;
+  background-color: #CF3134;
+  color: #ffffff;
+  padding: 2px;
+  border-bottom: 1px solid black;
+  line-height: 1.2em;
+  font-size: 1.1em;
 }
 .sheet-rolltemplate-hellywood-roulette th{
-    background-color: #000;
-    color: #ffffff;
-    padding: 2px;
-    border-bottom: 1px solid black;
-    line-height: 1.2em;
-    font-size: 1.1em;
+  background-color: #000;
+  color: #ffffff;
+  padding: 2px;
+  border-bottom: 1px solid black;
+  line-height: 1.2em;
+  font-size: 1.1em;
 }
 
 .sheet-rolltemplate-hellywood-skill .sheet-success{
-  font-weight: bold;
-  color:  #28b463;
+font-weight: bold;
+color:  #28b463;
 }
 
 .sheet-rolltemplate-hellywood-skill .sheet-failure{
-  font-weight: bold;
-  color:  red;
+font-weight: bold;
+color:  red;
 }
