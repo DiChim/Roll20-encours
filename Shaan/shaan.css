@@ -9,7 +9,7 @@
 }
 .charsheet td {
   padding: 0px 2px 0px 2px;  
-  border: 0px solid #000;
+  border: 1px solid red;
   vertical-align: text-top;
 }
 
@@ -18,4 +18,31 @@
   border: 0 solid #000;
   background-color: #6d2b35;
   color: #FFF
+}
+
+img {
+  vertical-align:top;
+}
+
+.sheet-contenant-cercle{
+  clear: both;
+  position:relative;
+  top:0px;
+  left:0px;
+  height: 660px;
+  border: 1px solid green;
+}
+
+.sheet-art-base{
+  position:absolute;
+  top:50px;
+  left:150px;
+  text-align: center;
+}
+
+.sheet-art-{
+  position:absolute;
+  top:30px;
+  left:100px;
+  text-align: center;
 }
