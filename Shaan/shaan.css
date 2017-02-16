@@ -52,7 +52,8 @@ input[type="number"].sheet-ame{
   top:0px;
   left:0px;
   width: 740px;
-  border: 0px solid green;
+  height:670px;
+  border: 1px solid blue;
 }
 
 .sheet-cercle{
