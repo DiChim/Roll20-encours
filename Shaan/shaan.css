@@ -4,6 +4,11 @@
 
 }
 
+input[type="number"] {
+  background-color: transparent;
+}
+
+
 .charsheet table {
     width: 100%;
 }
@@ -24,25 +29,51 @@ img {
   vertical-align:top;
 }
 
+
+input[type="number"].sheet-ame-base{
+  border:none;
+  /*border-bottom: 2px solid #6793BA;*/
+  color:#6793BA;
+  font-size: 25px;
+  height:30px;
+  width:60px;
+  font-style:bold;
+}
+
+input[type="number"].sheet-ame{
+  border:none;
+  border-bottom: 2px solid #6793BA;
+  color:#6793BA;;
+}
+
 .sheet-contenant-cercle{
   clear: both;
   position:relative;
   top:0px;
   left:0px;
-  height: 660px;
-  border: 1px solid green;
+  width: 740px;
+  border: 0px solid green;
+}
+
+.sheet-cercle{
+  position:absolute;
+  top:0px;
+  left:70px;
+  width: 660px;
+  border: 2px solid green;
+}
+
+.sheet-art{
+  position:absolute;
+  top:46px;
+  left:100px;
+  text-align: center;
 }
 
 .sheet-art-base{
   position:absolute;
-  top:50px;
-  left:150px;
+  top:65px;
+  left:145px;
   text-align: center;
 }
 
-.sheet-art-{
-  position:absolute;
-  top:30px;
-  left:100px;
-  text-align: center;
-}
