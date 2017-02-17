@@ -1,11 +1,35 @@
 .charsheet {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: cursive,'Times New Roman', Times, serif;
   background: url('https://github.com/DiChim/Roll20-encours/raw/master/Shaan/shaan_bg.jpg');
-
+  font-size: 12px;
 }
+
+select {
+  background-color: transparent;
+  border: 0 solid #000;
+  border-bottom-width: 1px;
+  border-left-width: 1px;  
+  height:25px;
+  /*font-size: 12px;*/
+}
+
+textarea{
+  width:95%;
+}
+
+input[type="text"] {
+  background-color: transparent;
+  border: 0 solid #000;
+  border-bottom-width: 1px;
+  border-left-width: 1px;  
+  height:22px;
+}
+
 
 input[type="number"] {
   background-color: transparent;
+  border-bottom-width: 1px;
+  border-left-width: 1px;  
 }
 
 
@@ -14,7 +38,7 @@ input[type="number"] {
 }
 .charsheet td {
   padding: 0px 2px 0px 2px;  
-  border: 1px solid red;
+  border: 0px solid red;
   vertical-align: text-top;
 }
 
@@ -29,6 +53,9 @@ img {
   vertical-align:top;
 }
 
+img.sheet-logo{
+  height:120px;
+}
 
 input[type="number"].sheet-ame-base{
   border:none;
@@ -46,6 +73,40 @@ input[type="number"].sheet-ame{
   color:#6793BA;;
 }
 
+
+input[type="number"].sheet-corps-base{
+  border:none;
+  /*border-bottom: 2px solid #6793BA;*/
+  color:#CA6D54;
+  font-size: 25px;
+  height:30px;
+  width:60px;
+  font-style:bold;
+}
+
+input[type="number"].sheet-corps{
+  border:none;
+  border-bottom: 2px solid #CA6D54;
+  color:#CA6D54;;
+}
+
+input[type="number"].sheet-esprit-base{
+  border:none;
+  /*border-bottom: 2px solid #6793BA;*/
+  color:#BC9B6A;
+  font-size: 25px;
+  height:30px;
+  width:60px;
+  font-style:bold;
+}
+
+input[type="number"].sheet-esprit{
+  border:none;
+  border-bottom: 2px solid #BC9B6A;
+  color:#BC9B6A;;
+}
+
+
 .sheet-contenant-cercle{
   clear: both;
   position:relative;
@@ -53,7 +114,7 @@ input[type="number"].sheet-ame{
   left:0px;
   width: 740px;
   height:670px;
-  border: 1px solid blue;
+  border: 0px solid blue;
 }
 
 .sheet-cercle{
@@ -61,20 +122,50 @@ input[type="number"].sheet-ame{
   top:0px;
   left:70px;
   width: 660px;
-  border: 2px solid green;
+  border: 0px solid green;
 }
 
 .sheet-art{
   position:absolute;
-  top:46px;
+  top:42px;
   left:100px;
   text-align: center;
 }
 
 .sheet-art-base{
   position:absolute;
-  top:65px;
+  top:75px;
   left:145px;
   text-align: center;
 }
 
+
+
+.sheet-combat{
+  position:absolute;
+  top:450px;
+  left:450px;
+  text-align: center;
+}
+
+.sheet-combat-base{
+  position:absolute;
+  top:500px;
+  left:500px;
+  text-align: center;
+}
+
+
+.sheet-technique{
+  position:absolute;
+  top:450px;
+  left:100px;
+  text-align: center;
+}
+
+.sheet-technique-base{
+  position:absolute;
+  top:500px;
+  left:145px;
+  text-align: center;
+}
