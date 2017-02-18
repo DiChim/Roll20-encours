@@ -1,7 +1,7 @@
 .charsheet {
   font-family: cursive,'Times New Roman', Times, serif;
   background: url('https://github.com/DiChim/Roll20-encours/raw/master/Shaan/shaan_bg.jpg');
-  font-size: 12px;
+  font-size: 15px;
 }
 
 select {
@@ -11,6 +11,8 @@ select {
   border-left-width: 1px;  
   height:25px;
   /*font-size: 12px;*/
+  font-family: cursive,'Times New Roman', Times, serif;
+  font-size: 12px;
 }
 
 textarea{
@@ -23,6 +25,8 @@ input[type="text"] {
   border-bottom-width: 1px;
   border-left-width: 1px;  
   height:22px;
+  font-family: cursive,'Times New Roman', Times, serif;
+  font-size: 12px;
 }
 
 
@@ -30,6 +34,9 @@ input[type="number"] {
   background-color: transparent;
   border-bottom-width: 1px;
   border-left-width: 1px;  
+  font-family: cursive,'Times New Roman', Times, serif;
+  font-size: 12px; 
+  text-align:center;  
 }
 
 
@@ -70,7 +77,8 @@ input[type="number"].sheet-ame-base{
 input[type="number"].sheet-ame{
   border:none;
   border-bottom: 2px solid #6793BA;
-  color:#6793BA;;
+  color:#6793BA;
+  font-size: 15px;
 }
 
 
@@ -87,7 +95,8 @@ input[type="number"].sheet-corps-base{
 input[type="number"].sheet-corps{
   border:none;
   border-bottom: 2px solid #CA6D54;
-  color:#CA6D54;;
+  color:#CA6D54;
+  font-size: 15px;
 }
 
 input[type="number"].sheet-esprit-base{
@@ -98,14 +107,33 @@ input[type="number"].sheet-esprit-base{
   height:30px;
   width:60px;
   font-style:bold;
+  
 }
 
 input[type="number"].sheet-esprit{
   border:none;
   border-bottom: 2px solid #BC9B6A;
-  color:#BC9B6A;;
+  color:#BC9B6A;
+  font-size: 15px;
 }
 
+input[type="number"].sheet-necrose-base{
+  border:none;
+  /*border-bottom: 2px solid #6793BA;*/
+  color:#6D6F71;
+  font-size: 25px;
+  height:30px;
+  width:60px;
+  font-style:bold;
+  
+}
+
+input[type="number"].sheet-necrose{
+  border:none;
+  border-bottom: 2px solid #6D6F71;
+  color:#6D6F71;
+  font-size: 15px;
+}
 
 .sheet-contenant-cercle{
   clear: both;
@@ -128,7 +156,7 @@ input[type="number"].sheet-esprit{
 .sheet-art{
   position:absolute;
   top:42px;
-  left:100px;
+  left:92px;
   text-align: center;
 }
 
@@ -139,33 +167,127 @@ input[type="number"].sheet-esprit{
   text-align: center;
 }
 
+.sheet-shaan{
+  position:absolute;
+  top:5px;
+  left:245px;
+  text-align: center;
+}
 
+.sheet-shaan-base{
+  position:absolute;
+  top:30px;
+  left:303px;
+  text-align: center;
+}
+
+.sheet-magie{
+  position:absolute;
+  top:42px;
+  left:505px;
+  text-align: center;
+}
+
+.sheet-magie-base{
+  position:absolute;
+  top:75px;
+  left:452px;
+  text-align: center;
+}
+
+.sheet-rituel{
+  position:absolute;
+  top:205px;
+  left:635px;
+  text-align: center;
+}
+
+.sheet-rituel-base{
+  position:absolute;
+  top:235px;
+  left:575px;
+  text-align: center;
+}
+.sheet-survie{
+  position:absolute;
+  top:372px;
+  left:635px;
+  text-align: center;
+}
+
+.sheet-survie-base{
+  position:absolute;
+  top:397px;
+  left:575px;
+  text-align: center;
+}
 
 .sheet-combat{
   position:absolute;
-  top:450px;
-  left:450px;
+  top:543px;
+  left:551px;
   text-align: center;
 }
 
 .sheet-combat-base{
   position:absolute;
-  top:500px;
-  left:500px;
+  top:535px;
+  left:495px;
+  text-align: center;
+}
+
+.sheet-social{
+  position:absolute;
+  top:205px;
+  left:-37px;
+  text-align: center;
+}
+
+.sheet-social-base{
+  position:absolute;
+  top:235px;
+  left:20px;
+  text-align: center;
+}
+.sheet-savoir{
+  position:absolute;
+  top:372px;
+  left:-37px;
+  text-align: center;
+}
+
+.sheet-savoir-base{
+  position:absolute;
+  top:397px;
+  left:20px;
   text-align: center;
 }
 
 
 .sheet-technique{
   position:absolute;
-  top:450px;
-  left:100px;
+  top:543px;
+  left:42px;
   text-align: center;
 }
 
 .sheet-technique-base{
   position:absolute;
-  top:500px;
-  left:145px;
+  top:533px;
+  left:100px;
+  text-align: center;
+}
+
+.sheet-necrose-d{
+  position:absolute;
+  top:620px;
+  left:240px;
+  text-align: center;
+}
+
+.sheet-necrose-d-base{
+  position:absolute;
+  top:605px;
+  left:298px;
   text-align: center;
 }
