@@ -81,10 +81,14 @@ input[type="number"].sheet-ame{
   font-size: 15px;
 }
 
+input[type="number"].sheet-ame-b{
+  border:none;
+  color:#6793BA;
+  font-size: 20px;
+}
 
 input[type="number"].sheet-corps-base{
   border:none;
-  /*border-bottom: 2px solid #6793BA;*/
   color:#CA6D54;
   font-size: 25px;
   height:30px;
@@ -99,9 +103,14 @@ input[type="number"].sheet-corps{
   font-size: 15px;
 }
 
+input[type="number"].sheet-corps-b{
+  border:none;
+  color:#CA6D54;
+  font-size: 20px;
+}
+
 input[type="number"].sheet-esprit-base{
   border:none;
-  /*border-bottom: 2px solid #6793BA;*/
   color:#BC9B6A;
   font-size: 25px;
   height:30px;
@@ -115,6 +124,12 @@ input[type="number"].sheet-esprit{
   border-bottom: 2px solid #BC9B6A;
   color:#BC9B6A;
   font-size: 15px;
+}
+
+input[type="number"].sheet-esprit-b{
+  border:none;
+  color:#BC9B6A;
+  font-size: 20px;
 }
 
 input[type="number"].sheet-necrose-base{
@@ -151,6 +166,13 @@ input[type="number"].sheet-necrose{
   left:70px;
   width: 660px;
   border: 0px solid green;
+}
+
+.sheet-ame-d{
+  position:absolute;
+  top:270px;
+  left:252px;
+  text-align: center;
 }
 
 .sheet-art{
@@ -195,6 +217,13 @@ input[type="number"].sheet-necrose{
   text-align: center;
 }
 
+.sheet-corps-d{
+  position:absolute;
+  top:420px;
+  left:305px;
+  text-align: center;
+}
+
 .sheet-rituel{
   position:absolute;
   top:205px;
@@ -231,8 +260,15 @@ input[type="number"].sheet-necrose{
 
 .sheet-combat-base{
   position:absolute;
-  top:535px;
+  top:533px;
   left:495px;
+  text-align: center;
+}
+
+.sheet-esprit-d{
+  position:absolute;
+  top:370px;
+  left:170px;
   text-align: center;
 }
 
