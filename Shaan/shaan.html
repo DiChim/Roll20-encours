@@ -16,7 +16,7 @@
             Réserve :
           </td>
           <td>
-            <input type="number" name="attr_reserve" value="0">
+            <input class="sheet-chiffre" type="number" name="attr_reserve" value="0">
           </td>
         </tr>
         <tr>        
@@ -42,7 +42,7 @@
             Experience :
           </td>
           <td>
-            <input type="number" name="attr_experience" value="0">
+            <input class="sheet-chiffre" type="number" name="attr_experience" value="0">
           </td>          
         </tr>        
         <tr>        
@@ -68,7 +68,7 @@
             Prestige :
           </td>
           <td>
-            <input type="number" name="attr_prestige" value="0">
+            <input class="sheet-chiffre" type="number" name="attr_prestige" value="0">
           </td>          
         </tr>        
         <tr>        
@@ -174,7 +174,7 @@
     </td>
   </tr>
   <tr>
-    <td colspan="3">
+    <td colspan="2">
       <table>
         <tr>
           <th class="sheet-titre" colspan="4">
@@ -206,8 +206,8 @@
                     <option value="Social">Social</option>
                     <option value="Technique">Technique</option>
                   </select>
-                  <input type="number" name="attr_spe_esprit_bonus" value="0">
-                  <input type="number" name="attr_spe_esprit_acquis" value="0">
+                  <input type="number" name="attr_spe_esprit_bonus" title="bonus" value="0">
+                  <input type="number" name="attr_spe_esprit_acquis" title="acquis" value="0">
                 </fieldset>  
             </div>
           </td>
@@ -221,8 +221,8 @@
                     <option value="Magie">Magie</option>
                     <option value="Shaan">Shaan</option>
                   </select>
-                  <input type="number" name="attr_spe_ame_bonus" value="0">
-                  <input type="number" name="attr_spe_ame_acquis" value="0">
+                  <input type="number" name="attr_spe_ame_bonus" title="bonus" value="0">
+                  <input type="number" name="attr_spe_ame_acquis" title="acquis" value="0">
                 </fieldset>  
             </div>
           </td>
@@ -236,8 +236,8 @@
                     <option value="Rituels">Rituels</option>
                     <option value="Survie">Survie</option>
                   </select>
-                  <input type="number" name="attr_spe_corps_bonus" value="0">
-                  <input type="number" name="attr_spe_corps_acquis" value="0">
+                  <input type="number" name="attr_spe_corps_bonus" title="bonus" value="0">
+                  <input type="number" name="attr_spe_corps_acquis" title="acquis" value="0">
                 </fieldset>  
             </div>
           </td>
@@ -245,8 +245,8 @@
             <div class="sheet-repetition">
                 <fieldset class="repeating_specialisation_necrose">            
                   <input type="text" placeholder="Spécialisation" name="attr_spe_necrose" />
-                  <input type="number" name="attr_spe_necrose_bonus" value="0">
-                  <input type="number" name="attr_spe_necrose_acquis" value="0">
+                  <input type="number" name="attr_spe_necrose_bonus" title="bonus" value="0">
+                  <input type="number" name="attr_spe_necrose_acquis" title="acquis" value="0">
                 </fieldset>  
             </div>
           </td>

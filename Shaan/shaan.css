@@ -13,6 +13,7 @@ select {
   /*font-size: 12px;*/
   font-family: cursive,'Times New Roman', Times, serif;
   font-size: 12px;
+  width : 110px;
 }
 
 textarea{
@@ -27,6 +28,8 @@ input[type="text"] {
   height:22px;
   font-family: cursive,'Times New Roman', Times, serif;
   font-size: 12px;
+  width : 130px;
+
 }
 
 
@@ -45,7 +48,7 @@ input[type="number"] {
 }
 .charsheet td {
   padding: 0px 2px 0px 2px;  
-  border: 0px solid red;
+  border: 1px solid red;
   vertical-align: text-top;
 }
 
@@ -63,6 +66,11 @@ img {
 img.sheet-logo{
   height:120px;
 }
+
+input[type="number"].sheet-chiffre {
+  width : 60px;
+}
+
 
 input[type="number"].sheet-ame-base{
   border:none;
@@ -331,22 +339,40 @@ input[type="number"].sheet-necrose{
 th.sheet-esprit{
   color: #FFF;
   background-color: #BC9B6A;
+  width: 25%;
 }
 
 th.sheet-ame{
   color: #FFF;
   background-color: #6793BA;
+  width: 25%;
 }
 
 th.sheet-corps{
   color: #FFF;
   background-color: #CA6D54;
+  width: 25%;
 }
 
 th.sheet-necrose{
   color: #FFF;
   background-color: #6D6F71;
+  width: 25%;
 }
+
+.sheet-repetition select{
+  width : 90px;
+}
+
+.sheet-repetition input[type="text"] {
+  width : 190px;
+
+}
+
+.sheet-repetition input[type="number"] {
+  width: 50px;
+}
+
 
 /* === fieldset button === */
 div.repcontrol{
