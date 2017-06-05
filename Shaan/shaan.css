@@ -48,7 +48,7 @@ input[type="number"] {
 }
 .charsheet td {
   padding: 0px 2px 0px 2px;  
-  border: 1px solid red;
+  border: 0px solid red;
   vertical-align: text-top;
 }
 
