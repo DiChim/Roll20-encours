@@ -174,7 +174,7 @@
     </td>
   </tr>
   <tr>
-    <td>
+    <td colspan="2">
       <table>
         <tr>
           <td>
@@ -189,22 +189,20 @@
           <td>
             <input class="sheet-chiffre" type="number" name="attr_age" value="0">
           </td>
-        </tr>
-        <tr>
           <td>
             Taille :
           </td>
           <td>
             <input type="text" placeholder="Taille" name="attr_taille" />
           </td>
+        </tr>
+        <tr>
           <td>
             Poids :
           </td>
           <td>
             <input type="text" placeholder="Poids" name="attr_poids" />
           </td>
-        </tr>
-        <tr>
           <td>
             Métier :
           </td>
@@ -231,31 +229,68 @@
           <td>
             <input type="text" placeholder="Élément secondaire" name="attr_element_secondaire" />
           </td>
-        </tr>
-        <tr>
           <td>
             Nom Shaani :
           </td>
           <td>
             <input type="text" placeholder="Nom du Shaani" name="attr_nom_shaani" />
-          </td>
+          </td>                    
         </tr>
         <tr>
           <td>
             Motivations :
           </td>
-          <td colspan="3">
+          <td colspan="5">
             <textarea class="sheet-motivation" placeholder="Motivations" name="attr_motivation"></textarea>
           </td>
+          
         </tr>
         
       </table>
     </td>
-    
-    <td>
-    LES PROTECTIONS
+  </tr>
+  <tr>
+    <td valign="top">
+      <table>
+        <tr>
+          <th>
+            PROTECTIONS
+          <th>
+        </tr>
+        <tr>
+          <td>          
+            <div class="sheet-repetition">
+              <fieldset class="repeating_protection">            
+                <input type="text" placeholder="Protection" name="attr_protection_libelle" title="Protection" />
+                <input type="number" name="attr_protection_corps" title="Corps" value="0">
+                <input type="number" name="attr_protection_ame" title="Âme" value="0">
+                <input type="number" name="attr_protection_esprit" title="Esprit" value="0">
+              </fieldset>  
+            </div>
+          
+          </td>
+        </tr> 
+      </table>
     </td>
-    
+    <td valign="top">
+      <table>
+        <tr>
+          <th>
+            ACQUIS
+          <th>
+        </tr>
+        <tr>
+          <td>          
+            <div class="sheet-repetition">
+              <fieldset class="repeating_acquis">            
+                <textarea class="sheet-pouvoir" name="attr_acquis" placeholder="Acquis" title="Acquis"></textarea>
+              </fieldset>  
+            </div>
+          
+          </td>
+        </tr> 
+      </table>
+    </td>
   </tr>
   <tr>
     <td colspan="2">
@@ -427,5 +462,16 @@
         </tr>        
       </table>
     </td>
+   <tr>
+    <th colspan="2">
+      NOTES
+    </th>
+    </tr>    
+   <tr>
+    <td colspan="2">
+      <textarea name="attr_notes"></textarea>
+    </td>
+    </tr>    
+      
   </tr>  
 </table>
