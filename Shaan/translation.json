@@ -40,6 +40,7 @@
 	"Ombre": "Ombre",
 	"Shaaniste": "Shaaniste",
 	"Voyageur": "Voyageur",
+	"roll_base-title": "Jet de base",
 	"arts_base": "Arts de base",
 	"arts_actuel": "Arts actuels",
 	"shaan_base": "Shaan de base",
@@ -109,5 +110,8 @@
 	"rang": "rang",
 	"frequence": "Fréquence",
 	"effet": "Effet",
-	"notes-u": "NOTES"
+	"notes-u": "NOTES",
+	"des_ame-t": "Dé d'âme",
+	"des_esprit-t": "Dé d'esprit",
+	"des_corps-t": "Dé de corps"
 }

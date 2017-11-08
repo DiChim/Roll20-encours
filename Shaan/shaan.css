@@ -387,6 +387,41 @@ th.sheet-necrose{
   width: 50px;
 }
 
+/* Roll template */
+.sheet-rolltemplate-shaan-base table{
+    width: 100%;
+    background-color: #FFFFE5;
+    border: 1px solid;
+    color: black;
+    font-size: 1em;
+    font-family: cursive,'Times New Roman', Times, serif;
+}
+
+.sheet-rolltemplate-shaan-base th{
+  background-color:#538079;
+  margin: 5px;
+  padding: 3px;
+  color: #FFFFFF;
+  font-size: 102%;
+}
+
+.sheet-rolltemplate-shaan-base td{
+  margin: 5px;
+  padding: 3px;
+}
+.sheet-rolltemplate-shaan-base tr.sheet-de_ame{
+  background-color:#6793BA;
+}
+
+.sheet-rolltemplate-shaan-base tr.sheet-de_esprit{
+  background-color:#BC9B6A;;
+}
+
+.sheet-rolltemplate-shaan-base tr.sheet-de_corps{
+  background-color:#CA6D54;
+}
+
+/* Fin Roll template*/
 
 /* === fieldset button === */
 div.repcontrol{

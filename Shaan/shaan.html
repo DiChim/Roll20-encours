@@ -1,3 +1,7 @@
+<!-- Dices -->
+<input type="hidden" name="attr_roll_base" value="&{template:shaan-base} {{name=@{character_name}}} {{jetAme=[[1d10]]}} {{jetEsprit=[[1d10]]}} {{jetCorps=[[1d10]]}}" readonly/>
+
+<!-- Sheet -->
 <table>
   <tr>
     <td>
@@ -90,6 +94,9 @@
               <option value="Voyageur" data-i18n="Voyageur">Voyageur</option>
             </select>
           </td>
+          <td>
+            <button type="roll" value="@{roll_base}" data-i18n-title="roll_base-title" title="Jet de base" name="roll_base_btn"></button>
+          </td>  
         </tr>            
       </table>         
     </td>
@@ -475,3 +482,38 @@
       
   </tr>  
 </table>
+<!-- Roll template -->
+<rolltemplate class="sheet-rolltemplate-shaan-base">
+  <table>
+    <tr>
+      <th colspan="2">
+        {{name}}
+      </th>
+    </tr>
+    <tr class="sheet-de_ame">
+      <td>
+        <span data-i18n="des_ame-t">Dé d'âme</span>
+      </td>
+      <td>
+        {{jetAme}} 
+      </td>
+    </tr>
+    <tr class="sheet-de_esprit">
+      <td>
+        <span data-i18n="des_esprit-t">Dé d'esprit</span>
+      </td>
+      <td>
+        {{jetEsprit}} 
+      </td>
+    </tr>
+    <tr class="sheet-de_corps">
+      <td>
+        <span data-i18n="des_corps-t">Dé de corps</span>
+      </td>
+      <td>
+        {{jetCorps}} 
+      </td>
+    </tr>
+    
+  </table>
+</rolltemplate>
