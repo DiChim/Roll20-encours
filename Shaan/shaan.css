@@ -18,6 +18,15 @@ select {
 
 textarea{
   width:95%;
+  background-color: transparent;
+  border: 0 solid #000;
+  border-bottom-width: 1px;
+  border-left-width: 1px;  
+  font-family: cursive,'Times New Roman', Times, serif;
+}
+
+textarea.sheet-pouvoir{
+  height: 60px;
 }
 
 input[type="text"] {

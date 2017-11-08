@@ -280,8 +280,8 @@
           <td width="25%">
             <div class="sheet-repetition">
                 <fieldset class="repeating_pouvoir-esprit">            
-                  <input type="text" placeholder="Pouvoir" name="attr_pou_esprit" />
-                  <select name="attr_pou_esprit_domaine">
+                  <input type="text" placeholder="Pouvoir" name="attr_pou_esprit" title="Pouvoir" />
+                  <select name="attr_pou_esprit_domaine" title="Domaine">
                     <option value="">Domaine</option>
                     <option value="Savoir">Savoir</option>
                     <option value="Social">Social</option>
@@ -290,10 +290,56 @@
                   <input type="number" name="attr_pou_esprit_rang" title="rang" value="0">
                   <input type="text" placeholder="Fréquence" name="attr_pou_esprit_frequence" title="Fréquence" />
                   <br/>
-                  <textarea name="attr_pou_effet"></textarea>
+                  <textarea class="sheet-pouvoir" name="attr_pou_esprit_effet" placeholder="Effet" title="Effet"></textarea>
                 </fieldset>  
             </div>
           </td>
+          <td width="25%">
+            <div class="sheet-repetition">
+                <fieldset class="repeating_pouvoir-ame">            
+                  <input type="text" placeholder="Pouvoir" name="attr_pou_ame" title="Pouvoir" />
+                  <select name="attr_pou_ame_domaine" title="Domaine">
+                    <option value="">Domaine</option>
+                    <option value="Arts">Arts</option>
+                    <option value="Magie">Magie</option>
+                    <option value="Shaan">Shaan</option>
+                  </select>
+                  <input type="number" name="attr_pou_ame_rang" title="rang" value="0">
+                  <input type="text" placeholder="Fréquence" name="attr_pou_ame_frequence" title="Fréquence" />
+                  <br/>
+                  <textarea class="sheet-pouvoir" name="attr_pou_ame_effet" placeholder="Effet" title="Effet"></textarea>
+                </fieldset>  
+            </div>
+          </td>
+          <td width="25%">
+            <div class="sheet-repetition">
+                <fieldset class="repeating_pouvoir-corps">            
+                  <input type="text" placeholder="Pouvoir" name="attr_pou_corps" title="Pouvoir" />
+                  <select name="attr_pou_corps_domaine" title="Domaine">
+                    <option value="">Domaine</option>
+                    <option value="Combat">Combat</option>
+                    <option value="Rituels">Rituels</option>
+                    <option value="Survie">Survie</option>
+                  </select>
+                  <input type="number" name="attr_pou_corps_rang" title="rang" value="0">
+                  <input type="text" placeholder="Fréquence" name="attr_pou_corps_frequence" title="Fréquence" />
+                  <br/>
+                  <textarea class="sheet-pouvoir" name="attr_pou_corps_effet" placeholder="Effet" title="Effet"></textarea>
+                </fieldset>  
+            </div>
+          </td>
+          <td width="25%">
+            <div class="sheet-repetition">
+                <fieldset class="repeating_pouvoir-necrose">            
+                  <input type="text" placeholder="Pouvoir" name="attr_pou_necrose" title="Pouvoir" />
+                  <input type="number" name="attr_pou_necrose_rang" title="rang" value="0">
+                  <input type="text" placeholder="Fréquence" name="attr_pou_necrose_frequence" title="Fréquence" />
+                  <br/>
+                  <textarea class="sheet-pouvoir" name="attr_pou_necrose_effet" placeholder="Effet" title="Effet"></textarea>
+                </fieldset>  
+            </div>
+          </td>
+          
         </tr>        
       </table>
     </td>
