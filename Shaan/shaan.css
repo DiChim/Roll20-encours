@@ -29,6 +29,11 @@ textarea.sheet-pouvoir{
   height: 60px;
 }
 
+textarea.sheet-motivation{
+  height: 60px;
+}
+
+
 input[type="text"] {
   background-color: transparent;
   border: 0 solid #000;
@@ -64,8 +69,8 @@ input[type="number"] {
 .charsheet th {
   padding: 5px;  
   border: 0 solid #000;
-  background-color: #6d2b35;
-  color: #FFF
+  background-color: #538079;/*#6d2b35; */
+  color: #FFF;
 }
 
 img {
