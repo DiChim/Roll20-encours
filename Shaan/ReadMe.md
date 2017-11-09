@@ -10,11 +10,13 @@ Elle est en français mais comporte le moteur de traduction i18n.
 1.0 
 
 ### La fiche
-[Capture d'écran](shaan.jpg)
+![Capture d'écran](shaan.jpg)
+
+
 
 ### Les templates
 
-[Capture template](shaan_template.jpg)
+![Capture template](shaan_template.jpg)
 
 
 ## v1.0 (2017-11-08)
