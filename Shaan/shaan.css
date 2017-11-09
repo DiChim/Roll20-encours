@@ -34,6 +34,30 @@ textarea.sheet-motivation{
 }
 
 
+
+button[type="roll"].sheet-rollbase {
+  color: #538079;
+  background: transparent;    
+  border: none;
+  border-radius: 0px;
+  font-size: 30pt;
+}
+
+button[type="roll"].sheet-rollnecrose {
+  color: #000000;
+  background: transparent;    
+  border: none;
+  border-radius: 0px;
+  font-size: 30pt;
+}
+
+
+button[type="roll"]:hover{
+  font-weight: bold;
+  text-shadow: 0px 0px 2px #FB667E;
+}
+
+
 input[type="text"] {
   background-color: transparent;
   border: 0 solid #000;
@@ -409,6 +433,7 @@ th.sheet-necrose{
   margin: 5px;
   padding: 3px;
   background-color:#FFFFFF;
+  height: 35px;
 }
 .sheet-rolltemplate-shaan-base tr.sheet-de_ame{
   /*background-color:#6793BA;*/
@@ -417,7 +442,7 @@ th.sheet-necrose{
 .sheet-rolltemplate-shaan-base td.sheet-de_ame{
   color:#6793BA;
   font-family: 'dicefontd10';
-  font-size: 200%;  
+  font-size: 400%;  
 }
 
 .sheet-rolltemplate-shaan-base td.sheet-de_ame_jet{
@@ -437,7 +462,7 @@ th.sheet-necrose{
 .sheet-rolltemplate-shaan-base td.sheet-de_esprit{
   color:#BC9B6A;
   font-family: 'dicefontd10';
-  font-size: 200%;  
+  font-size: 400%;  
 }
 
 .sheet-rolltemplate-shaan-base td.sheet-de_esprit_jet{
@@ -458,7 +483,7 @@ th.sheet-necrose{
 .sheet-rolltemplate-shaan-base td.sheet-de_corps{
   color:#CA6D54;
   font-family: 'dicefontd10';
-  font-size: 200%;  
+  font-size: 400%;  
 }
 
 .sheet-rolltemplate-shaan-base td.sheet-de_corps_jet{
@@ -487,6 +512,56 @@ th.sheet-necrose{
 .sheet-rolltemplate-shaan-base .inlinerollresult.importantroll {
   border: none;
 }
+
+
+
+.sheet-rolltemplate-shaan-necrose table{
+    width: 100%;
+    background-color: #FFFFFF;
+    border: 1px solid;
+    color: ##000000;
+    font-size: 1em;
+    font-family: cursive,'Times New Roman', Times, serif;
+}
+
+.sheet-rolltemplate-shaan-necrose th{
+  background-color:#538079;
+  margin: 5px;
+  padding: 3px;
+  color: #FFFFFF;
+  font-size: 102%;
+}
+
+.sheet-rolltemplate-shaan-necrose td{
+  margin: 5px;
+  padding: 3px;
+  background-color:#FFFFFF;
+  height: 35px;
+}
+
+.sheet-rolltemplate-shaan-necrose td.sheet-de_necrose{
+  color:#000000;
+  font-family: 'dicefontd10';
+  font-size: 400%;  
+}
+
+.sheet-rolltemplate-shaan-base .inlinerollresult  {
+    background-color: #FFFFFF;
+    border: none;
+}
+
+.sheet-rolltemplate-shaan-base .inlinerollresult.fullcrit {
+  border: none;
+}
+ 
+.sheet-rolltemplate-shaan-base .inlinerollresult.fullfail {
+  border: none;
+}
+ 
+.sheet-rolltemplate-shaan-base .inlinerollresult.importantroll {
+  border: none;
+}
+
 
 /* Fin Roll template*/
 

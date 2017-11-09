@@ -41,6 +41,7 @@
 	"Shaaniste": "Shaaniste",
 	"Voyageur": "Voyageur",
 	"roll_base-title": "Jet de base",
+	"roll_necrose-title": "Jet de nécrose",
 	"arts_base": "Arts de base",
 	"arts_actuel": "Arts actuels",
 	"shaan_base": "Shaan de base",
@@ -113,5 +114,6 @@
 	"notes-u": "NOTES",
 	"des_ame-t": "Dé d'âme",
 	"des_esprit-t": "Dé d'esprit",
-	"des_corps-t": "Dé de corps"
+	"des_corps-t": "Dé de corps",
+	"jet_necrose-t": "Jet de nécrose"
 }

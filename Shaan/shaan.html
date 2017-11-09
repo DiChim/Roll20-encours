@@ -1,5 +1,6 @@
 <!-- Dices -->
 <input type="hidden" name="attr_roll_base" value="&{template:shaan-base} {{name=@{character_name}}} {{jetAme=[[1d10]]}} {{jetEsprit=[[1d10]]}} {{jetCorps=[[1d10]]}}" readonly/>
+<input type="hidden" name="attr_roll_necrose" value="&{template:shaan-necrose} {{name=@{character_name}}} {{jetNecrose=[[1d10]]}}" readonly/>
 
 <!-- Sheet -->
 <table>
@@ -94,8 +95,10 @@
               <option value="Voyageur" data-i18n="Voyageur">Voyageur</option>
             </select>
           </td>
-          <td>
-            <button type="roll" value="@{roll_base}" data-i18n-title="roll_base-title" title="Jet de base" name="roll_base_btn"></button>
+          <td colspan="2">
+            <button class="sheet-rollbase" type="roll" value="@{roll_base}" data-i18n-title="roll_base-title" title="Jet de base" name="roll_base_btn"></button>
+            
+            <button class="sheet-rollnecrose" type="roll" value="@{roll_necrose}" data-i18n-title="roll_necrose-title" title="Jet de nécrose" name="roll_necrose_btn"></button>
           </td>  
         </tr>            
       </table>         
@@ -486,43 +489,247 @@
 <rolltemplate class="sheet-rolltemplate-shaan-base">
   <table>
     <tr>
-      <th colspan="3">
+      <th colspan="2">
         {{name}}
       </th>
     </tr>
     <tr class="sheet-de_ame">
-      <td class="sheet-de_ame">
-      A
-      </td>
       <td>
         <span data-i18n="des_ame-t">Dé d'âme</span>
       </td>
-      <td class="sheet-de_ame_jet">
-        {{jetAme}} 
+    {{#rollTotal() jetAme 1}}
+      <td class="sheet-de_ame">
+      A
       </td>
-    </tr>
-    <tr class="sheet-de_esprit">
-      <td class="sheet-de_esprit">
+    {{/rollTotal() jetAme 1}}
+    {{#rollTotal() jetAme 2}}
+      <td class="sheet-de_ame">
       B
       </td>
+    {{/rollTotal() jetAme 2}}
+    {{#rollTotal() jetAme 3}}
+      <td class="sheet-de_ame">
+      C
+      </td>
+    {{/rollTotal() jetAme 3}}
+    {{#rollTotal() jetAme 4}}
+      <td class="sheet-de_ame">
+      D
+      </td>
+    {{/rollTotal() jetAme 4}}
+    {{#rollTotal() jetAme 5}}
+      <td class="sheet-de_ame">
+      E
+      </td>
+    {{/rollTotal() jetAme 5}}
+    {{#rollTotal() jetAme 6}}
+      <td class="sheet-de_ame">
+      F
+      </td>
+    {{/rollTotal() jetAme 6}}
+    {{#rollTotal() jetAme 7}}
+      <td class="sheet-de_ame">
+      G
+      </td>
+    {{/rollTotal() jetAme 7}}
+    {{#rollTotal() jetAme 8}}
+      <td class="sheet-de_ame">
+      H
+      </td>
+    {{/rollTotal() jetAme 8}}
+    {{#rollTotal() jetAme 9}}
+      <td class="sheet-de_ame">
+      I
+      </td>
+    {{/rollTotal() jetAme 9}}
+    {{#rollTotal() jetAme 10}}
+      <td class="sheet-de_ame">
+      J
+      </td>
+    {{/rollTotal() jetAme 10}}
+      
+    </tr>
+    <tr class="sheet-de_esprit">
       <td>
         <span data-i18n="des_esprit-t">Dé d'esprit</span>
       </td>
-      <td class="sheet-de_esprit_jet">
-        {{jetEsprit}} 
+    {{#rollTotal() jetEsprit 1}}
+      <td class="sheet-de_esprit">
+      A
       </td>
-    </tr>
-    <tr class="sheet-de_corps">
-      <td class="sheet-de_corps">
+    {{/rollTotal() jetEsprit 1}}
+    {{#rollTotal() jetEsprit 2}}
+      <td class="sheet-de_esprit">
+      B
+      </td>
+    {{/rollTotal() jetEsprit 2}}
+    {{#rollTotal() jetEsprit 3}}
+      <td class="sheet-de_esprit">
       C
       </td>
+    {{/rollTotal() jetEsprit 3}}
+    {{#rollTotal() jetEsprit 4}}
+      <td class="sheet-de_esprit">
+      D
+      </td>
+    {{/rollTotal() jetEsprit 4}}
+    {{#rollTotal() jetEsprit 5}}
+      <td class="sheet-de_esprit">
+      E
+      </td>
+    {{/rollTotal() jetEsprit 5}}
+    {{#rollTotal() jetEsprit 6}}
+      <td class="sheet-de_esprit">
+      F
+      </td>
+    {{/rollTotal() jetEsprit 6}}
+    {{#rollTotal() jetEsprit 7}}
+      <td class="sheet-de_esprit">
+      G
+      </td>
+    {{/rollTotal() jetEsprit 7}}
+    {{#rollTotal() jetEsprit 8}}
+      <td class="sheet-de_esprit">
+      H
+      </td>
+    {{/rollTotal() jetEsprit 8}}
+    {{#rollTotal() jetEsprit 9}}
+      <td class="sheet-de_esprit">
+      I
+      </td>
+    {{/rollTotal() jetEsprit 9}}
+    {{#rollTotal() jetEsprit 10}}
+      <td class="sheet-de_esprit">
+      J
+      </td>
+    {{/rollTotal() jetEsprit 10}}
+
+      </tr>
+    <tr class="sheet-de_corps">
       <td>
         <span data-i18n="des_corps-t">Dé de corps</span>
       </td>
-      <td class="sheet-de_corps_jet">
-        {{jetCorps}} 
+
+    {{#rollTotal() jetCorps 1}}
+      <td class="sheet-de_corps">
+      A
       </td>
-    </tr>
+    {{/rollTotal() jetCorps 1}}
+    {{#rollTotal() jetCorps 2}}
+      <td class="sheet-de_corps">
+      B
+      </td>
+    {{/rollTotal() jetCorps 2}}
+    {{#rollTotal() jetCorps 3}}
+      <td class="sheet-de_corps">
+      C
+      </td>
+    {{/rollTotal() jetCorps 3}}
+    {{#rollTotal() jetCorps 4}}
+      <td class="sheet-de_corps">
+      D
+      </td>
+    {{/rollTotal() jetCorps 4}}
+    {{#rollTotal() jetCorps 5}}
+      <td class="sheet-de_corps">
+      E
+      </td>
+    {{/rollTotal() jetCorps 5}}
+    {{#rollTotal() jetCorps 6}}
+      <td class="sheet-de_corps">
+      F
+      </td>
+    {{/rollTotal() jetCorps 6}}
+    {{#rollTotal() jetCorps 7}}
+      <td class="sheet-de_corps">
+      G
+      </td>
+    {{/rollTotal() jetCorps 7}}
+    {{#rollTotal() jetCorps 8}}
+      <td class="sheet-de_corps">
+      H
+      </td>
+    {{/rollTotal() jetCorps 8}}
+    {{#rollTotal() jetCorps 9}}
+      <td class="sheet-de_corps">
+      I
+      </td>
+    {{/rollTotal() jetCorps 9}}
+    {{#rollTotal() jetCorps 10}}
+      <td class="sheet-de_corps">
+      J
+      </td>
+    {{/rollTotal() jetCorps 10}}
+
+
+
+      </tr>
     
   </table>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-shaan-necrose">
+  <table>
+    <tr>
+      <th colspan="2">
+        {{name}}
+      </th>
+    </tr>
+    <tr class="sheet-de_necrose">
+      <td>
+        <span data-i18n="jet_necrose-t">Jet de nécrose</span>
+      </td>
+    {{#rollTotal() jetNecrose 1}}
+      <td class="sheet-de_necrose">
+      A
+      </td>
+    {{/rollTotal() jetNecrose 1}}
+    {{#rollTotal() jetNecrose 2}}
+      <td class="sheet-de_necrose">
+      B
+      </td>
+    {{/rollTotal() jetNecrose 2}}
+    {{#rollTotal() jetNecrose 3}}
+      <td class="sheet-de_necrose">
+      C
+      </td>
+    {{/rollTotal() jetNecrose 3}}
+    {{#rollTotal() jetNecrose 4}}
+      <td class="sheet-de_necrose">
+      D
+      </td>
+    {{/rollTotal() jetNecrose 4}}
+    {{#rollTotal() jetNecrose 5}}
+      <td class="sheet-de_necrose">
+      E
+      </td>
+    {{/rollTotal() jetNecrose 5}}
+    {{#rollTotal() jetNecrose 6}}
+      <td class="sheet-de_necrose">
+      F
+      </td>
+    {{/rollTotal() jetNecrose 6}}
+    {{#rollTotal() jetNecrose 7}}
+      <td class="sheet-de_necrose">
+      G
+      </td>
+    {{/rollTotal() jetNecrose 7}}
+    {{#rollTotal() jetNecrose 8}}
+      <td class="sheet-de_necrose">
+      H
+      </td>
+    {{/rollTotal() jetNecrose 8}}
+    {{#rollTotal() jetNecrose 9}}
+      <td class="sheet-de_necrose">
+      I
+      </td>
+    {{/rollTotal() jetNecrose 9}}
+    {{#rollTotal() jetNecrose 10}}
+      <td class="sheet-de_necrose">
+      J
+      </td>
+    {{/rollTotal() jetNecrose 10}}
+      
+    </tr>
+      </table>
 </rolltemplate>
