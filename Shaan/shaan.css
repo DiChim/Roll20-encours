@@ -390,7 +390,7 @@ th.sheet-necrose{
 /* Roll template */
 .sheet-rolltemplate-shaan-base table{
     width: 100%;
-    background-color: #FFFFE5;
+    background-color: #FFFFFF;
     border: 1px solid;
     color: black;
     font-size: 1em;
@@ -408,17 +408,84 @@ th.sheet-necrose{
 .sheet-rolltemplate-shaan-base td{
   margin: 5px;
   padding: 3px;
+  background-color:#FFFFFF;
 }
 .sheet-rolltemplate-shaan-base tr.sheet-de_ame{
-  background-color:#6793BA;
+  /*background-color:#6793BA;*/
+}
+
+.sheet-rolltemplate-shaan-base td.sheet-de_ame{
+  color:#6793BA;
+  font-family: 'dicefontd10';
+  font-size: 200%;  
+}
+
+.sheet-rolltemplate-shaan-base td.sheet-de_ame_jet{
+  color:#6793BA;
+  background-color: transparent;
+  padding: 6px;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;  
 }
 
 .sheet-rolltemplate-shaan-base tr.sheet-de_esprit{
-  background-color:#BC9B6A;;
+  /*background-color:#BC9B6A;;*/
 }
 
+.sheet-rolltemplate-shaan-base td.sheet-de_esprit{
+  color:#BC9B6A;
+  font-family: 'dicefontd10';
+  font-size: 200%;  
+}
+
+.sheet-rolltemplate-shaan-base td.sheet-de_esprit_jet{
+  color:#BC9B6A;
+  background-color: transparent;
+  padding: 6px;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;  
+}
+
+
 .sheet-rolltemplate-shaan-base tr.sheet-de_corps{
-  background-color:#CA6D54;
+  /*background-color:#CA6D54;*/
+}
+
+.sheet-rolltemplate-shaan-base td.sheet-de_corps{
+  color:#CA6D54;
+  font-family: 'dicefontd10';
+  font-size: 200%;  
+}
+
+.sheet-rolltemplate-shaan-base td.sheet-de_corps_jet{
+  color:#CA6D54;
+  background-color: transparent;
+  padding: 6px;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;  
+}
+
+.sheet-rolltemplate-shaan-base .inlinerollresult  {
+    background-color: #ffffff;
+    border: none;
+}
+
+.sheet-rolltemplate-shaan-base .inlinerollresult.fullcrit {
+  border: none;
+}
+ 
+.sheet-rolltemplate-shaan-base .inlinerollresult.fullfail {
+  border: none;
+}
+ 
+.sheet-rolltemplate-shaan-base .inlinerollresult.importantroll {
+  border: none;
 }
 
 /* Fin Roll template*/
